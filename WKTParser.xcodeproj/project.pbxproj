@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1F323E9198D44D200D3FF4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323E8198D44D200D3FF4A /* Foundation.framework */; };
+		A1F323EB198D44D200D3FF4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */; };
+		A1F323ED198D44D200D3FF4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EC198D44D200D3FF4A /* UIKit.framework */; };
+		A1F323F3198D44D200D3FF4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1F323F1198D44D200D3FF4A /* InfoPlist.strings */; };
+		A1F323F5198D44D200D3FF4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F323F4198D44D200D3FF4A /* main.m */; };
+		A1F323F9198D44D200D3FF4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F323F8198D44D200D3FF4A /* AppDelegate.m */; };
+		A1F323FB198D44D200D3FF4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F323FA198D44D200D3FF4A /* Images.xcassets */; };
+		A1F32402198D44D200D3FF4A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F32401198D44D200D3FF4A /* XCTest.framework */; };
+		A1F32403198D44D200D3FF4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323E8198D44D200D3FF4A /* Foundation.framework */; };
+		A1F32404198D44D200D3FF4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EC198D44D200D3FF4A /* UIKit.framework */; };
+		A1F3240C198D44D200D3FF4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1F3240A198D44D200D3FF4A /* InfoPlist.strings */; };
+		A1F3240E198D44D200D3FF4A /* WKTParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3240D198D44D200D3FF4A /* WKTParserTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1F32405198D44D200D3FF4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1F323DD198D44D200D3FF4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1F323E4198D44D200D3FF4A;
+			remoteInfo = WKTParser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A1F323E5198D44D200D3FF4A /* WKTParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKTParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1F323E8198D44D200D3FF4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A1F323EC198D44D200D3FF4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A1F323F0198D44D200D3FF4A /* WKTParser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WKTParser-Info.plist"; sourceTree = "<group>"; };
+		A1F323F2198D44D200D3FF4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1F323F4198D44D200D3FF4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1F323F6198D44D200D3FF4A /* WKTParser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKTParser-Prefix.pch"; sourceTree = "<group>"; };
+		A1F323F7198D44D200D3FF4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1F323F8198D44D200D3FF4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1F323FA198D44D200D3FF4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A1F32400198D44D200D3FF4A /* WKTParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKTParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1F32401198D44D200D3FF4A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A1F32409198D44D200D3FF4A /* WKTParserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WKTParserTests-Info.plist"; sourceTree = "<group>"; };
+		A1F3240B198D44D200D3FF4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1F3240D198D44D200D3FF4A /* WKTParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKTParserTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1F323E2198D44D200D3FF4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1F323EB198D44D200D3FF4A /* CoreGraphics.framework in Frameworks */,
+				A1F323ED198D44D200D3FF4A /* UIKit.framework in Frameworks */,
+				A1F323E9198D44D200D3FF4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F323FD198D44D200D3FF4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1F32402198D44D200D3FF4A /* XCTest.framework in Frameworks */,
+				A1F32404198D44D200D3FF4A /* UIKit.framework in Frameworks */,
+				A1F32403198D44D200D3FF4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1F323DC198D44D200D3FF4A = {
+			isa = PBXGroup;
+			children = (
+				A1F323EE198D44D200D3FF4A /* WKTParser */,
+				A1F32407198D44D200D3FF4A /* WKTParserTests */,
+				A1F323E7198D44D200D3FF4A /* Frameworks */,
+				A1F323E6198D44D200D3FF4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1F323E6198D44D200D3FF4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1F323E5198D44D200D3FF4A /* WKTParser.app */,
+				A1F32400198D44D200D3FF4A /* WKTParserTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1F323E7198D44D200D3FF4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1F323E8198D44D200D3FF4A /* Foundation.framework */,
+				A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */,
+				A1F323EC198D44D200D3FF4A /* UIKit.framework */,
+				A1F32401198D44D200D3FF4A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1F323EE198D44D200D3FF4A /* WKTParser */ = {
+			isa = PBXGroup;
+			children = (
+				A1F323F7198D44D200D3FF4A /* AppDelegate.h */,
+				A1F323F8198D44D200D3FF4A /* AppDelegate.m */,
+				A1F323FA198D44D200D3FF4A /* Images.xcassets */,
+				A1F323EF198D44D200D3FF4A /* Supporting Files */,
+			);
+			path = WKTParser;
+			sourceTree = "<group>";
+		};
+		A1F323EF198D44D200D3FF4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1F323F0198D44D200D3FF4A /* WKTParser-Info.plist */,
+				A1F323F1198D44D200D3FF4A /* InfoPlist.strings */,
+				A1F323F4198D44D200D3FF4A /* main.m */,
+				A1F323F6198D44D200D3FF4A /* WKTParser-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1F32407198D44D200D3FF4A /* WKTParserTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1F3240D198D44D200D3FF4A /* WKTParserTests.m */,
+				A1F32408198D44D200D3FF4A /* Supporting Files */,
+			);
+			path = WKTParserTests;
+			sourceTree = "<group>";
+		};
+		A1F32408198D44D200D3FF4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1F32409198D44D200D3FF4A /* WKTParserTests-Info.plist */,
+				A1F3240A198D44D200D3FF4A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1F323E4198D44D200D3FF4A /* WKTParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1F32411198D44D200D3FF4A /* Build configuration list for PBXNativeTarget "WKTParser" */;
+			buildPhases = (
+				A1F323E1198D44D200D3FF4A /* Sources */,
+				A1F323E2198D44D200D3FF4A /* Frameworks */,
+				A1F323E3198D44D200D3FF4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WKTParser;
+			productName = WKTParser;
+			productReference = A1F323E5198D44D200D3FF4A /* WKTParser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1F323FF198D44D200D3FF4A /* WKTParserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1F32414198D44D200D3FF4A /* Build configuration list for PBXNativeTarget "WKTParserTests" */;
+			buildPhases = (
+				A1F323FC198D44D200D3FF4A /* Sources */,
+				A1F323FD198D44D200D3FF4A /* Frameworks */,
+				A1F323FE198D44D200D3FF4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1F32406198D44D200D3FF4A /* PBXTargetDependency */,
+			);
+			name = WKTParserTests;
+			productName = WKTParserTests;
+			productReference = A1F32400198D44D200D3FF4A /* WKTParserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1F323DD198D44D200D3FF4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Alejandro F. Carrera";
+				TargetAttributes = {
+					A1F323FF198D44D200D3FF4A = {
+						TestTargetID = A1F323E4198D44D200D3FF4A;
+					};
+				};
+			};
+			buildConfigurationList = A1F323E0198D44D200D3FF4A /* Build configuration list for PBXProject "WKTParser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A1F323DC198D44D200D3FF4A;
+			productRefGroup = A1F323E6198D44D200D3FF4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1F323E4198D44D200D3FF4A /* WKTParser */,
+				A1F323FF198D44D200D3FF4A /* WKTParserTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1F323E3198D44D200D3FF4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1F323F3198D44D200D3FF4A /* InfoPlist.strings in Resources */,
+				A1F323FB198D44D200D3FF4A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F323FE198D44D200D3FF4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1F3240C198D44D200D3FF4A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1F323E1198D44D200D3FF4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1F323F9198D44D200D3FF4A /* AppDelegate.m in Sources */,
+				A1F323F5198D44D200D3FF4A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F323FC198D44D200D3FF4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1F3240E198D44D200D3FF4A /* WKTParserTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1F32406198D44D200D3FF4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1F323E4198D44D200D3FF4A /* WKTParser */;
+			targetProxy = A1F32405198D44D200D3FF4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1F323F1198D44D200D3FF4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1F323F2198D44D200D3FF4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A1F3240A198D44D200D3FF4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1F3240B198D44D200D3FF4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1F3240F198D44D200D3FF4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A1F32410198D44D200D3FF4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1F32412198D44D200D3FF4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WKTParser/WKTParser-Prefix.pch";
+				INFOPLIST_FILE = "WKTParser/WKTParser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A1F32413198D44D200D3FF4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WKTParser/WKTParser-Prefix.pch";
+				INFOPLIST_FILE = "WKTParser/WKTParser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A1F32415198D44D200D3FF4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WKTParser.app/WKTParser";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WKTParser/WKTParser-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WKTParserTests/WKTParserTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A1F32416198D44D200D3FF4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WKTParser.app/WKTParser";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WKTParser/WKTParser-Prefix.pch";
+				INFOPLIST_FILE = "WKTParserTests/WKTParserTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1F323E0198D44D200D3FF4A /* Build configuration list for PBXProject "WKTParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1F3240F198D44D200D3FF4A /* Debug */,
+				A1F32410198D44D200D3FF4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1F32411198D44D200D3FF4A /* Build configuration list for PBXNativeTarget "WKTParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1F32412198D44D200D3FF4A /* Debug */,
+				A1F32413198D44D200D3FF4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A1F32414198D44D200D3FF4A /* Build configuration list for PBXNativeTarget "WKTParserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1F32415198D44D200D3FF4A /* Debug */,
+				A1F32416198D44D200D3FF4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1F323DD198D44D200D3FF4A /* Project object */;
+}
