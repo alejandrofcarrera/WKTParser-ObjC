@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1DACBC2198D497C00943BB3 /* WKTString.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DACBBF198D497C00943BB3 /* WKTString.m */; };
 		A1F323E9198D44D200D3FF4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323E8198D44D200D3FF4A /* Foundation.framework */; };
 		A1F323EB198D44D200D3FF4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */; };
 		A1F323ED198D44D200D3FF4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EC198D44D200D3FF4A /* UIKit.framework */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1DACBBE198D497C00943BB3 /* WKTString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTString.h; sourceTree = "<group>"; };
+		A1DACBBF198D497C00943BB3 /* WKTString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTString.m; sourceTree = "<group>"; };
 		A1F323E5198D44D200D3FF4A /* WKTParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKTParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F323E8198D44D200D3FF4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1DACBBD198D496C00943BB3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A1DACBBE198D497C00943BB3 /* WKTString.h */,
+				A1DACBBF198D497C00943BB3 /* WKTString.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		A1F323DC198D44D200D3FF4A = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +123,7 @@
 				A1F323F8198D44D200D3FF4A /* AppDelegate.m */,
 				A1F323FA198D44D200D3FF4A /* Images.xcassets */,
 				A1F323EF198D44D200D3FF4A /* Supporting Files */,
+				A1DACBBD198D496C00943BB3 /* Library */,
 			);
 			path = WKTParser;
 			sourceTree = "<group>";
@@ -240,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1F323F9198D44D200D3FF4A /* AppDelegate.m in Sources */,
+				A1DACBC2198D497C00943BB3 /* WKTString.m in Sources */,
 				A1F323F5198D44D200D3FF4A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +457,7 @@
 				A1F32413198D44D200D3FF4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1F32414198D44D200D3FF4A /* Build configuration list for PBXNativeTarget "WKTParserTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +466,7 @@
 				A1F32416198D44D200D3FF4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
