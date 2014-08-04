@@ -104,4 +104,10 @@
     else return [self splitString:input andRegExp:@"\\)\\)\\s*,\\s*\\(\\("];
 }
 
++ (NSString *)escapeTagsXMLNSString:(NSString *)input {
+    NSString *inputConverted = [input stringByReplacingOccurrencesOfString:@"<" withString:@"&lt;"];
+    inputConverted = [inputConverted stringByReplacingOccurrencesOfString:@">" withString:@"&gt;"];
+    return inputConverted;
+}
+
 @end

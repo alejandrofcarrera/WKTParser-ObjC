@@ -35,5 +35,7 @@
 
 + (NSArray *)splitDoubleParentCommasNSString:(NSString *)input;
 
++ (NSString *)escapeTagsXMLNSString:(NSString *)input;
+
 @end
 
