@@ -41,4 +41,6 @@
 
 - (BOOL)isEqual:(WKTPoint *)otherPoint;
 
+- (void)copyTo:(WKTPoint *)otherPoint;
+
 @end
