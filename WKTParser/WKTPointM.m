@@ -92,7 +92,6 @@
             
         }
         self.dimensions = dimBackup;
-        
     }
 }
 
@@ -119,6 +118,7 @@
     {
         otherPointM.type = self.type;
         otherPointM.dimensions = self.dimensions;
+        [otherPointM removeListPoints];
         [otherPointM setListPoints: listPoints];
     }
 }
