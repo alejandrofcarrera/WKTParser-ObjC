@@ -31,10 +31,12 @@
 
 - (id)init
 {
-    if(self == nil)
+    if (self == nil)
     {
         self = [super init];
         self.type = @"Line";
+        self.dimensions = 0;
+        listPoints = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -48,6 +50,78 @@
     [self removeListPoints];
     [self setListPoints:points];
     return self;
+}
+
+- (void)setListPoints:(NSArray *)points
+{
+    if(points == nil)
+    {
+        @throw [NSException exceptionWithName:@"WKTParser Line"
+            reason:@"Parameter points is nil"
+            userInfo:nil];
+    }
+    else
+    {
+        int dimBackup = 0;
+        for(int i = 0; i < points.count; i++)
+        {
+            if(![points[i] isKindOfClass:[WKTPoint class]])
+            {
+                @throw [NSException exceptionWithName:@"WKTParser Line"
+                    reason:@"Parameter points have a class that is not WKTPoint"
+                    userInfo:nil];
+            }
+            else
+            {
+                if(i == 0)
+                {
+                    dimBackup = [(WKTPoint *) points[0] dimensions];
+                    [listPoints addObject:points[0]];
+                }
+                else if(dimBackup != [(WKTPoint *) points[i] dimensions])
+                {
+                    @throw [NSException exceptionWithName:@"WKTParser Line"
+                        reason:@"Parameter points have WKTPoint with different dimensions"
+                        userInfo:nil];
+                }
+                else
+                {
+                    [listPoints addObject:points[i]];
+                }
+            }
+            
+        }
+        self.dimensions = dimBackup;
+        
+    }
+}
+
+- (NSArray *)getListPoints
+{
+    return listPoints;
+}
+
+- (void)removeListPoints
+{
+    [listPoints removeAllObjects];
+    self.dimensions = 0;
+}
+
+- (void)copyTo:(WKTLine *)otherLine
+{
+    if(otherLine == nil)
+    {
+        @throw [NSException exceptionWithName:@"WKTParser Line [copyTo]"
+            reason:@"Parameter point is nil"
+            userInfo:nil];
+    }
+    else
+    {
+        otherLine.type = self.type;
+        otherLine.dimensions = self.dimensions;
+        [otherLine removeListPoints];
+        [otherLine setListPoints: listPoints];
+    }
 }
 
 @end

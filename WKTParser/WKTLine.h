@@ -25,12 +25,24 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-#include "WKTPointM.h"
+#include "WKTPoint.h"
 
-@interface WKTLine : WKTPointM
+@interface WKTLine : WKTGeometry {
+
+    NSMutableArray *listPoints;
+
+}
 
 - (id)init;
 
 - (id)initWithPoints:(NSArray *)points;
+
+- (void)setListPoints:(NSArray *)points;
+
+- (NSArray *)getListPoints;
+
+- (void)removeListPoints;
+
+- (void)copyTo:(WKTLine *)otherLine;
 
 @end
