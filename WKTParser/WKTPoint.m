@@ -91,7 +91,7 @@
     if(otherPoint == nil)
     {
         @throw [NSException exceptionWithName:@"WKTParser Point [copyTo]"
-            reason:@"Parameter point is nil"
+            reason:@"Parameter Point is nil"
             userInfo:nil];
     }
     else

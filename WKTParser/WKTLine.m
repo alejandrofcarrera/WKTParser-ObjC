@@ -112,7 +112,7 @@
     if(otherLine == nil)
     {
         @throw [NSException exceptionWithName:@"WKTParser Line [copyTo]"
-            reason:@"Parameter point is nil"
+            reason:@"Parameter Line is nil"
             userInfo:nil];
     }
     else

@@ -111,7 +111,7 @@
     if(otherPointM == nil)
     {
         @throw [NSException exceptionWithName:@"WKTParser Multi Point [copyTo]"
-            reason:@"Parameter point is nil"
+            reason:@"Parameter Multi Point is nil"
             userInfo:nil];
     }
     else
