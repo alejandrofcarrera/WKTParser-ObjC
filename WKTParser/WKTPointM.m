@@ -46,8 +46,9 @@
     if (self == nil)
     {
         self = [self init];
-        [self setListPoints:points];
     }
+    [self removeListPoints];
+    [self setListPoints:points];
     return self;
 }
 
