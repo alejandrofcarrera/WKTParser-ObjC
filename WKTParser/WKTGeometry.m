@@ -36,29 +36,11 @@
 {
     if(self == nil)
     {
+        self = [super init];
         type = @"Geometry";
         dimensions = 0;
-        return [super init];
     }
-    else
-    {
-        return self;
-    }
-}
-
-- (void)copyTo:(WKTGeometry *)otherGeometry
-{
-    if(otherGeometry == nil)
-    {
-        @throw [NSException exceptionWithName:@"WKTParser Geometry [copyTo]"
-            reason:@"Parameter geometry is nil"
-            userInfo:nil];
-    }
-    else
-    {
-        otherGeometry.type = self.type;
-        otherGeometry.dimensions = self.dimensions;
-    }
+    return self;
 }
 
 @end

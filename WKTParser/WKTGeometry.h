@@ -33,6 +33,4 @@
 
 - (id)init;
 
-- (void)copyTo:(WKTGeometry *)otherGeometry;
-
 @end
