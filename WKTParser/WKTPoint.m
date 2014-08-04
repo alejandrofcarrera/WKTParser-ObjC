@@ -40,8 +40,8 @@
         self = [super init];
         self.dimensions = 2;
         self.type = @"Point";
-        dimensionX = dimX;
-        dimensionY = dimY;
+        self.dimensionX = dimX;
+        self.dimensionY = dimY;
     }
     return self;
 }
@@ -53,9 +53,9 @@
         self = [super init];
         self.dimensions = 3;
         self.type = @"Point";
-        dimensionX = dimX;
-        dimensionY = dimY;
-        dimensionZ = dimZ;
+        self.dimensionX = dimX;
+        self.dimensionY = dimY;
+        self.dimensionZ = dimZ;
     }
     return self;
 }
@@ -74,14 +74,14 @@
     {
         if(self.dimensions == 2)
         {
-            return dimensionX == otherPoint.dimensionX &&
-                   dimensionY == otherPoint.dimensionY;
+            return self.dimensionX == otherPoint.dimensionX &&
+               self.dimensionY == otherPoint.dimensionY;
         }
         else
         {
-            return dimensionX == otherPoint.dimensionX &&
-                   dimensionY == otherPoint.dimensionY &&
-                   dimensionZ == otherPoint.dimensionZ;
+            return self.dimensionX == otherPoint.dimensionX &&
+               self.dimensionY == otherPoint.dimensionY &&
+               self.dimensionZ == otherPoint.dimensionZ;
         }
     }
 }
