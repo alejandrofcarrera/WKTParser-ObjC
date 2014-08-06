@@ -89,7 +89,6 @@
                     [listMultiPoints addObject:multiPoints[i]];
                 }
             }
-            
         }
         self.dimensions = dimBackup;
     }

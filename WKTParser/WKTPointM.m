@@ -89,7 +89,6 @@
                     [listPoints addObject:points[i]];
                 }
             }
-            
         }
         self.dimensions = dimBackup;
     }

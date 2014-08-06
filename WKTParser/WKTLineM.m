@@ -88,7 +88,6 @@
                 {
                     [listLines addObject:lines[i]];
                 }
-
             }
         }
         self.dimensions = dimBackup;
