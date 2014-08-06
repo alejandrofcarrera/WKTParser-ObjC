@@ -115,7 +115,8 @@
         {
             return [self parsePoint:input withDimensions:2];
         }
-        else if([typeGeometry isEqualToString:@"POINT Z"])
+        else if([typeGeometry isEqualToString:@"POINT Z"] ||
+                [typeGeometry isEqualToString:@"POINTZ"])
         {
             return [self parsePoint:input withDimensions:3];
         }
@@ -123,7 +124,8 @@
         {
             return [self parseMultiPoint:input withDimensions:2];
         }
-        else if([typeGeometry isEqualToString:@"MULTIPOINT Z"])
+        else if([typeGeometry isEqualToString:@"MULTIPOINT Z"] ||
+                [typeGeometry isEqualToString:@"MULTIPOINTZ"])
         {
             return [self parseMultiPoint:input withDimensions:3];
         }
