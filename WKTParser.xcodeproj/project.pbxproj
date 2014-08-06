@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A10F41771992234800BC4663 /* WKTPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F41761992234800BC4663 /* WKTPolygon.m */; };
+		A10F417A19922C5800BC4663 /* WKTPolygonM.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F417919922C5800BC4663 /* WKTPolygonM.m */; };
 		A12FEA5E198F7BB2009B8C6D /* WKTGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = A12FEA5D198F7BB2009B8C6D /* WKTGeometry.m */; };
 		A12FEA62198F7F86009B8C6D /* WKTPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A12FEA61198F7F86009B8C6D /* WKTPoint.m */; };
 		A12FEA65198F86F9009B8C6D /* WKTPointM.m in Sources */ = {isa = PBXBuildFile; fileRef = A12FEA64198F86F9009B8C6D /* WKTPointM.m */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		A10F41751992234800BC4663 /* WKTPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTPolygon.h; sourceTree = "<group>"; };
 		A10F41761992234800BC4663 /* WKTPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTPolygon.m; sourceTree = "<group>"; };
+		A10F417819922C5800BC4663 /* WKTPolygonM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTPolygonM.h; sourceTree = "<group>"; };
+		A10F417919922C5800BC4663 /* WKTPolygonM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTPolygonM.m; sourceTree = "<group>"; };
 		A12FEA5C198F7BB2009B8C6D /* WKTGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTGeometry.h; sourceTree = "<group>"; };
 		A12FEA5D198F7BB2009B8C6D /* WKTGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTGeometry.m; sourceTree = "<group>"; };
 		A12FEA60198F7F86009B8C6D /* WKTPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTPoint.h; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 		A12FEA5F198F7BC1009B8C6D /* Library Support */ = {
 			isa = PBXGroup;
 			children = (
+				A10F417819922C5800BC4663 /* WKTPolygonM.h */,
+				A10F417919922C5800BC4663 /* WKTPolygonM.m */,
 				A10F41751992234800BC4663 /* WKTPolygon.h */,
 				A10F41761992234800BC4663 /* WKTPolygon.m */,
 				A12FEA69198F9396009B8C6D /* WKTLineM.h */,
@@ -294,6 +299,7 @@
 				A12FEA5E198F7BB2009B8C6D /* WKTGeometry.m in Sources */,
 				A1DACBC2198D497C00943BB3 /* WKTString.m in Sources */,
 				A10F41771992234800BC4663 /* WKTPolygon.m in Sources */,
+				A10F417A19922C5800BC4663 /* WKTPolygonM.m in Sources */,
 				A12FEA62198F7F86009B8C6D /* WKTPoint.m in Sources */,
 				A12FEA68198F9031009B8C6D /* WKTLine.m in Sources */,
 				A12FEA65198F86F9009B8C6D /* WKTPointM.m in Sources */,
