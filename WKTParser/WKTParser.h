@@ -35,6 +35,7 @@
 
 + (WKTPoint *)parsePoint:(NSString *)input withDimensions:(int)dims;
 + (WKTPointM *)parseMultiPoint:(NSString *)input withDimensions:(int)dims;
++ (WKTLine *)parseLine:(NSString *)input withDimensions:(int)dims;
 
 // Generic Method
 

@@ -83,6 +83,18 @@
     return [[WKTPointM alloc] initWithPoints:inputPoints];
 }
 
++ (WKTLine *)parseLine:(NSString *)input withDimensions:(int)dims
+{
+    NSArray *inputSplitted = [WKTString splitCommasNSString:input];
+    NSMutableArray *inputPoints = [[NSMutableArray alloc]init];
+    for(int i = 0; i < inputSplitted.count; i++)
+    {
+        [inputPoints addObject:[self parsePoint:inputSplitted[i] withDimensions:dims]];
+    }
+    inputSplitted = nil;
+    return [[WKTLine alloc] initWithPoints:inputPoints];
+}
+
 + (WKTGeometry *)parseGeometry:(NSString *)input
 {
     NSString *typeGeometry;
@@ -128,6 +140,15 @@
                 [typeGeometry isEqualToString:@"MULTIPOINTZ"])
         {
             return [self parseMultiPoint:input withDimensions:3];
+        }
+        else if([typeGeometry isEqualToString:@"LINESTRING"])
+        {
+            return [self parseLine:input withDimensions:2];
+        }
+        else if([typeGeometry isEqualToString:@"LINESTRING Z"] ||
+                [typeGeometry isEqualToString:@"LINESTRINGZ"])
+        {
+            return [self parseLine:input withDimensions:3];
         }
     }
     return nil;
