@@ -46,8 +46,10 @@
     return result;
 }
 
-+ (WKTPoint *)parsePoint:(NSString *)input withDimensions:(int)dims {
++ (WKTPoint *)parsePoint:(NSString *)input withDimensions:(int)dims
+{
     NSArray *inputSplitted = [WKTString splitSpacesNSString:input];
+    WKTPoint *result;
     if(inputSplitted.count != dims)
     {
         @throw [NSException exceptionWithName:@"WKTParser Library"
@@ -56,15 +58,29 @@
     }
     else if(dims == 3)
     {
-        return [[WKTPoint alloc] initWithDimensionX:[inputSplitted[0] doubleValue]
+        result = [[WKTPoint alloc] initWithDimensionX:[inputSplitted[0] doubleValue]
             andDimensionY:[inputSplitted[1] doubleValue] andDimensionZ:
             [inputSplitted[2] doubleValue]];
     }
     else
     {
-        return [[WKTPoint alloc] initWithDimensionX:[inputSplitted[0] doubleValue]
+        result = [[WKTPoint alloc] initWithDimensionX:[inputSplitted[0] doubleValue]
             andDimensionY:[inputSplitted[1] doubleValue]];
     }
+    inputSplitted = nil;
+    return result;
+}
+
++ (WKTPointM *)parseMultiPoint:(NSString *)input withDimensions:(int)dims
+{
+    NSArray *inputSplitted = [WKTString splitCommasNSString:input];
+    NSMutableArray *inputPoints = [[NSMutableArray alloc]init];
+    for(int i = 0; i < inputSplitted.count; i++)
+    {
+        [inputPoints addObject:[self parsePoint:inputSplitted[i] withDimensions:dims]];
+    }
+    inputSplitted = nil;
+    return [[WKTPointM alloc] initWithPoints:inputPoints];
 }
 
 + (WKTGeometry *)parseGeometry:(NSString *)input
@@ -85,16 +101,16 @@
     }
     else
     {
-        if([input rangeOfString:@"<[\\w\\S]*>\\s*" options:
-            NSRegularExpressionSearch].location != NSNotFound)
-        {
-            input = [input stringByReplacingOccurrencesOfString:
-                @"<[\\s\\S]*>\\s*" withString:@"" options:NSRegularExpressionSearch
-                range:NSMakeRange(0, input.length)];
-        }
+        // Remove GeoSpatial Reference <http://>
         input = [input stringByReplacingOccurrencesOfString:
-                 [NSString stringWithFormat:@"%@\\s*", typeGeometry] withString:@""
-                 options:NSRegularExpressionSearch range:NSMakeRange(0, input.length)];
+            @"<[\\s\\S]*>\\s*" withString:@"" options:NSRegularExpressionSearch
+            range:NSMakeRange(0, input.length)];
+        
+        // Remove Whitespaces
+        input = [input stringByReplacingOccurrencesOfString:
+            [NSString stringWithFormat:@"%@\\s*", typeGeometry] withString:@""
+            options:NSRegularExpressionSearch range:NSMakeRange(0, input.length)];
+        
         if([typeGeometry isEqualToString:@"POINT"])
         {
             return [self parsePoint:input withDimensions:2];
@@ -102,6 +118,14 @@
         else if([typeGeometry isEqualToString:@"POINT Z"])
         {
             return [self parsePoint:input withDimensions:3];
+        }
+        else if([typeGeometry isEqualToString:@"MULTIPOINT"])
+        {
+            return [self parseMultiPoint:input withDimensions:2];
+        }
+        else if([typeGeometry isEqualToString:@"MULTIPOINT Z"])
+        {
+            return [self parseMultiPoint:input withDimensions:3];
         }
     }
     return nil;
