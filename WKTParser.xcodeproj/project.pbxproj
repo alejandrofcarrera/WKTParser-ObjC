@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A10F41771992234800BC4663 /* WKTPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F41761992234800BC4663 /* WKTPolygon.m */; };
-		A10F417A19922C5800BC4663 /* WKTPolygonM.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F417919922C5800BC4663 /* WKTPolygonM.m */; };
-		A10F417D1992311A00BC4663 /* WKTParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F417C1992311A00BC4663 /* WKTParser.m */; };
-		A12FEA5E198F7BB2009B8C6D /* WKTGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = A12FEA5D198F7BB2009B8C6D /* WKTGeometry.m */; };
-		A12FEA62198F7F86009B8C6D /* WKTPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A12FEA61198F7F86009B8C6D /* WKTPoint.m */; };
-		A12FEA65198F86F9009B8C6D /* WKTPointM.m in Sources */ = {isa = PBXBuildFile; fileRef = A12FEA64198F86F9009B8C6D /* WKTPointM.m */; };
-		A12FEA68198F9031009B8C6D /* WKTLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A12FEA67198F9031009B8C6D /* WKTLine.m */; };
-		A12FEA6B198F9396009B8C6D /* WKTLineM.m in Sources */ = {isa = PBXBuildFile; fileRef = A12FEA6A198F9396009B8C6D /* WKTLineM.m */; };
-		A1DACBC2198D497C00943BB3 /* WKTString.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DACBBF198D497C00943BB3 /* WKTString.m */; };
+		A19C70D01993724F0027DE51 /* WKTParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70CD1993724F0027DE51 /* WKTParser.m */; };
+		A19C70D11993724F0027DE51 /* WKTString.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70CF1993724F0027DE51 /* WKTString.m */; };
+		A19C70E0199372700027DE51 /* WKTGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70D3199372700027DE51 /* WKTGeometry.m */; };
+		A19C70E1199372700027DE51 /* WKTLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70D5199372700027DE51 /* WKTLine.m */; };
+		A19C70E2199372700027DE51 /* WKTLineM.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70D7199372700027DE51 /* WKTLineM.m */; };
+		A19C70E3199372700027DE51 /* WKTPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70D9199372700027DE51 /* WKTPoint.m */; };
+		A19C70E4199372700027DE51 /* WKTPointM.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70DB199372700027DE51 /* WKTPointM.m */; };
+		A19C70E5199372700027DE51 /* WKTPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70DD199372700027DE51 /* WKTPolygon.m */; };
+		A19C70E6199372700027DE51 /* WKTPolygonM.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70DF199372700027DE51 /* WKTPolygonM.m */; };
 		A1F323E9198D44D200D3FF4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323E8198D44D200D3FF4A /* Foundation.framework */; };
 		A1F323EB198D44D200D3FF4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */; };
 		A1F323ED198D44D200D3FF4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EC198D44D200D3FF4A /* UIKit.framework */; };
@@ -41,24 +41,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A10F41751992234800BC4663 /* WKTPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTPolygon.h; sourceTree = "<group>"; };
-		A10F41761992234800BC4663 /* WKTPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTPolygon.m; sourceTree = "<group>"; };
-		A10F417819922C5800BC4663 /* WKTPolygonM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTPolygonM.h; sourceTree = "<group>"; };
-		A10F417919922C5800BC4663 /* WKTPolygonM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTPolygonM.m; sourceTree = "<group>"; };
-		A10F417B1992311A00BC4663 /* WKTParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTParser.h; sourceTree = "<group>"; };
-		A10F417C1992311A00BC4663 /* WKTParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTParser.m; sourceTree = "<group>"; };
-		A12FEA5C198F7BB2009B8C6D /* WKTGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTGeometry.h; sourceTree = "<group>"; };
-		A12FEA5D198F7BB2009B8C6D /* WKTGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTGeometry.m; sourceTree = "<group>"; };
-		A12FEA60198F7F86009B8C6D /* WKTPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTPoint.h; sourceTree = "<group>"; };
-		A12FEA61198F7F86009B8C6D /* WKTPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTPoint.m; sourceTree = "<group>"; };
-		A12FEA63198F86F9009B8C6D /* WKTPointM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTPointM.h; sourceTree = "<group>"; };
-		A12FEA64198F86F9009B8C6D /* WKTPointM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTPointM.m; sourceTree = "<group>"; };
-		A12FEA66198F9031009B8C6D /* WKTLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTLine.h; sourceTree = "<group>"; };
-		A12FEA67198F9031009B8C6D /* WKTLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTLine.m; sourceTree = "<group>"; };
-		A12FEA69198F9396009B8C6D /* WKTLineM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTLineM.h; sourceTree = "<group>"; };
-		A12FEA6A198F9396009B8C6D /* WKTLineM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTLineM.m; sourceTree = "<group>"; };
-		A1DACBBE198D497C00943BB3 /* WKTString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTString.h; sourceTree = "<group>"; };
-		A1DACBBF198D497C00943BB3 /* WKTString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTString.m; sourceTree = "<group>"; };
+		A19C70CC1993724F0027DE51 /* WKTParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTParser.h; path = Library/WKTParser.h; sourceTree = "<group>"; };
+		A19C70CD1993724F0027DE51 /* WKTParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTParser.m; path = Library/WKTParser.m; sourceTree = "<group>"; };
+		A19C70CE1993724F0027DE51 /* WKTString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTString.h; path = Library/WKTString.h; sourceTree = "<group>"; };
+		A19C70CF1993724F0027DE51 /* WKTString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTString.m; path = Library/WKTString.m; sourceTree = "<group>"; };
+		A19C70D2199372700027DE51 /* WKTGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTGeometry.h; path = Library/WKTGeometry.h; sourceTree = "<group>"; };
+		A19C70D3199372700027DE51 /* WKTGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTGeometry.m; path = Library/WKTGeometry.m; sourceTree = "<group>"; };
+		A19C70D4199372700027DE51 /* WKTLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTLine.h; path = Library/WKTLine.h; sourceTree = "<group>"; };
+		A19C70D5199372700027DE51 /* WKTLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTLine.m; path = Library/WKTLine.m; sourceTree = "<group>"; };
+		A19C70D6199372700027DE51 /* WKTLineM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTLineM.h; path = Library/WKTLineM.h; sourceTree = "<group>"; };
+		A19C70D7199372700027DE51 /* WKTLineM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTLineM.m; path = Library/WKTLineM.m; sourceTree = "<group>"; };
+		A19C70D8199372700027DE51 /* WKTPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTPoint.h; path = Library/WKTPoint.h; sourceTree = "<group>"; };
+		A19C70D9199372700027DE51 /* WKTPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTPoint.m; path = Library/WKTPoint.m; sourceTree = "<group>"; };
+		A19C70DA199372700027DE51 /* WKTPointM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTPointM.h; path = Library/WKTPointM.h; sourceTree = "<group>"; };
+		A19C70DB199372700027DE51 /* WKTPointM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTPointM.m; path = Library/WKTPointM.m; sourceTree = "<group>"; };
+		A19C70DC199372700027DE51 /* WKTPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTPolygon.h; path = Library/WKTPolygon.h; sourceTree = "<group>"; };
+		A19C70DD199372700027DE51 /* WKTPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTPolygon.m; path = Library/WKTPolygon.m; sourceTree = "<group>"; };
+		A19C70DE199372700027DE51 /* WKTPolygonM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTPolygonM.h; path = Library/WKTPolygonM.h; sourceTree = "<group>"; };
+		A19C70DF199372700027DE51 /* WKTPolygonM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTPolygonM.m; path = Library/WKTPolygonM.m; sourceTree = "<group>"; };
 		A1F323E5198D44D200D3FF4A /* WKTParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKTParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F323E8198D44D200D3FF4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,20 +104,20 @@
 		A12FEA5F198F7BC1009B8C6D /* Library Support */ = {
 			isa = PBXGroup;
 			children = (
-				A10F417819922C5800BC4663 /* WKTPolygonM.h */,
-				A10F417919922C5800BC4663 /* WKTPolygonM.m */,
-				A10F41751992234800BC4663 /* WKTPolygon.h */,
-				A10F41761992234800BC4663 /* WKTPolygon.m */,
-				A12FEA69198F9396009B8C6D /* WKTLineM.h */,
-				A12FEA6A198F9396009B8C6D /* WKTLineM.m */,
-				A12FEA66198F9031009B8C6D /* WKTLine.h */,
-				A12FEA67198F9031009B8C6D /* WKTLine.m */,
-				A12FEA63198F86F9009B8C6D /* WKTPointM.h */,
-				A12FEA64198F86F9009B8C6D /* WKTPointM.m */,
-				A12FEA60198F7F86009B8C6D /* WKTPoint.h */,
-				A12FEA61198F7F86009B8C6D /* WKTPoint.m */,
-				A12FEA5C198F7BB2009B8C6D /* WKTGeometry.h */,
-				A12FEA5D198F7BB2009B8C6D /* WKTGeometry.m */,
+				A19C70D2199372700027DE51 /* WKTGeometry.h */,
+				A19C70D3199372700027DE51 /* WKTGeometry.m */,
+				A19C70D4199372700027DE51 /* WKTLine.h */,
+				A19C70D5199372700027DE51 /* WKTLine.m */,
+				A19C70D6199372700027DE51 /* WKTLineM.h */,
+				A19C70D7199372700027DE51 /* WKTLineM.m */,
+				A19C70D8199372700027DE51 /* WKTPoint.h */,
+				A19C70D9199372700027DE51 /* WKTPoint.m */,
+				A19C70DA199372700027DE51 /* WKTPointM.h */,
+				A19C70DB199372700027DE51 /* WKTPointM.m */,
+				A19C70DC199372700027DE51 /* WKTPolygon.h */,
+				A19C70DD199372700027DE51 /* WKTPolygon.m */,
+				A19C70DE199372700027DE51 /* WKTPolygonM.h */,
+				A19C70DF199372700027DE51 /* WKTPolygonM.m */,
 			);
 			name = "Library Support";
 			sourceTree = "<group>";
@@ -125,10 +125,10 @@
 		A1DACBBD198D496C00943BB3 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				A10F417B1992311A00BC4663 /* WKTParser.h */,
-				A10F417C1992311A00BC4663 /* WKTParser.m */,
-				A1DACBBE198D497C00943BB3 /* WKTString.h */,
-				A1DACBBF198D497C00943BB3 /* WKTString.m */,
+				A19C70CC1993724F0027DE51 /* WKTParser.h */,
+				A19C70CD1993724F0027DE51 /* WKTParser.m */,
+				A19C70CE1993724F0027DE51 /* WKTString.h */,
+				A19C70CF1993724F0027DE51 /* WKTString.m */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -252,6 +252,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Alejandro F. Carrera";
 				TargetAttributes = {
+					A1F323E4198D44D200D3FF4A = {
+						DevelopmentTeam = Y28S7RK563;
+					};
 					A1F323FF198D44D200D3FF4A = {
 						TestTargetID = A1F323E4198D44D200D3FF4A;
 					};
@@ -300,16 +303,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19C70E0199372700027DE51 /* WKTGeometry.m in Sources */,
 				A1F323F9198D44D200D3FF4A /* AppDelegate.m in Sources */,
-				A12FEA5E198F7BB2009B8C6D /* WKTGeometry.m in Sources */,
-				A1DACBC2198D497C00943BB3 /* WKTString.m in Sources */,
-				A10F41771992234800BC4663 /* WKTPolygon.m in Sources */,
-				A10F417D1992311A00BC4663 /* WKTParser.m in Sources */,
-				A10F417A19922C5800BC4663 /* WKTPolygonM.m in Sources */,
-				A12FEA62198F7F86009B8C6D /* WKTPoint.m in Sources */,
-				A12FEA68198F9031009B8C6D /* WKTLine.m in Sources */,
-				A12FEA65198F86F9009B8C6D /* WKTPointM.m in Sources */,
-				A12FEA6B198F9396009B8C6D /* WKTLineM.m in Sources */,
+				A19C70D11993724F0027DE51 /* WKTString.m in Sources */,
+				A19C70D01993724F0027DE51 /* WKTParser.m in Sources */,
+				A19C70E4199372700027DE51 /* WKTPointM.m in Sources */,
+				A19C70E2199372700027DE51 /* WKTLineM.m in Sources */,
+				A19C70E3199372700027DE51 /* WKTPoint.m in Sources */,
+				A19C70E5199372700027DE51 /* WKTPolygon.m in Sources */,
+				A19C70E6199372700027DE51 /* WKTPolygonM.m in Sources */,
+				A19C70E1199372700027DE51 /* WKTLine.m in Sources */,
 				A1F323F5198D44D200D3FF4A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
