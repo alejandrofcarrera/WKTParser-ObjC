@@ -16,6 +16,7 @@
 		A19C70E4199372700027DE51 /* WKTPointM.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70DB199372700027DE51 /* WKTPointM.m */; };
 		A19C70E5199372700027DE51 /* WKTPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70DD199372700027DE51 /* WKTPolygon.m */; };
 		A19C70E6199372700027DE51 /* WKTPolygonM.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70DF199372700027DE51 /* WKTPolygonM.m */; };
+		A19C70EA199373EF0027DE51 /* WKTStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70E9199373EF0027DE51 /* WKTStringTest.m */; };
 		A1F323E9198D44D200D3FF4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323E8198D44D200D3FF4A /* Foundation.framework */; };
 		A1F323EB198D44D200D3FF4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */; };
 		A1F323ED198D44D200D3FF4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EC198D44D200D3FF4A /* UIKit.framework */; };
@@ -27,7 +28,6 @@
 		A1F32403198D44D200D3FF4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323E8198D44D200D3FF4A /* Foundation.framework */; };
 		A1F32404198D44D200D3FF4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EC198D44D200D3FF4A /* UIKit.framework */; };
 		A1F3240C198D44D200D3FF4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1F3240A198D44D200D3FF4A /* InfoPlist.strings */; };
-		A1F3240E198D44D200D3FF4A /* WKTParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3240D198D44D200D3FF4A /* WKTParserTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +59,7 @@
 		A19C70DD199372700027DE51 /* WKTPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTPolygon.m; path = Library/WKTPolygon.m; sourceTree = "<group>"; };
 		A19C70DE199372700027DE51 /* WKTPolygonM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTPolygonM.h; path = Library/WKTPolygonM.h; sourceTree = "<group>"; };
 		A19C70DF199372700027DE51 /* WKTPolygonM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTPolygonM.m; path = Library/WKTPolygonM.m; sourceTree = "<group>"; };
+		A19C70E9199373EF0027DE51 /* WKTStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTStringTest.m; sourceTree = "<group>"; };
 		A1F323E5198D44D200D3FF4A /* WKTParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKTParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F323E8198D44D200D3FF4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,7 +75,6 @@
 		A1F32401198D44D200D3FF4A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A1F32409198D44D200D3FF4A /* WKTParserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WKTParserTests-Info.plist"; sourceTree = "<group>"; };
 		A1F3240B198D44D200D3FF4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A1F3240D198D44D200D3FF4A /* WKTParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKTParserTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +190,7 @@
 		A1F32407198D44D200D3FF4A /* WKTParserTests */ = {
 			isa = PBXGroup;
 			children = (
-				A1F3240D198D44D200D3FF4A /* WKTParserTests.m */,
+				A19C70E9199373EF0027DE51 /* WKTStringTest.m */,
 				A1F32408198D44D200D3FF4A /* Supporting Files */,
 			);
 			path = WKTParserTests;
@@ -321,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1F3240E198D44D200D3FF4A /* WKTParserTests.m in Sources */,
+				A19C70EA199373EF0027DE51 /* WKTStringTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

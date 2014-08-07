@@ -1,7 +1,7 @@
 //
-//  WKTParserTests.m
+//  WKTStringTest.m
 //
-//  WKTParser Library
+//  WKTParser String Test Case
 //
 //  The MIT License (MIT)
 //
@@ -27,27 +27,43 @@
 
 #import <XCTest/XCTest.h>
 
-@interface WKTParserTests : XCTestCase
+#import "WKTString.h"
+
+@interface WKTStringTest : XCTestCase
 
 @end
 
-@implementation WKTParserTests
+@implementation WKTStringTest
 
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testSplitOneSpace
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSArray *result = [WKTString splitSpacesNSString:
+             @"Creating Unit Tests"];
+    XCTAssertEqual(result.count, 3, @"Result should be three");
+}
+
+- (void)testSplitMultiSpace
+{
+    NSArray *result = [WKTString splitSpacesNSString:
+             @"Creating   Unit  ,   Tests"];
+    XCTAssertEqual(result.count, 4, @"Result should be four");
+}
+
+- (void)testSplitMixSpace
+{
+    NSArray *result = [WKTString splitSpacesNSString:
+             @"Creating  \\t  Unit ,  \\t   Tests"];
+    XCTAssertEqual(result.count, 6, @"Result should be six");
 }
 
 @end
