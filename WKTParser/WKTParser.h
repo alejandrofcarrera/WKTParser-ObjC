@@ -36,6 +36,9 @@
 + (WKTPoint *)parsePoint:(NSString *)input withDimensions:(int)dims;
 + (WKTPointM *)parseMultiPoint:(NSString *)input withDimensions:(int)dims;
 + (WKTLine *)parseLine:(NSString *)input withDimensions:(int)dims;
++ (WKTLineM *)parseMultiLine:(NSString *)input withDimensions:(int)dims;
++ (WKTPolygon *)parsePolygon:(NSString *)input withDimensions:(int)dims;
++ (WKTPolygonM *)parseMultiPolygon:(NSString *)input withDimensions:(int)dims;
 
 // Generic Method
 

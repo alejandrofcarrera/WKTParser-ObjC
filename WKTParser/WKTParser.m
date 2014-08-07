@@ -107,6 +107,30 @@
     return [[WKTLineM alloc] initWithLines:inputLines];
 }
 
++ (WKTPolygon *)parsePolygon:(NSString *)input withDimensions:(int)dims
+{
+    NSArray *inputSplitted = [WKTString splitParentCommasNSString:input];
+    NSMutableArray *inputPoints = [[NSMutableArray alloc]init];
+    for(int i = 0; i < inputSplitted.count; i++)
+    {
+        [inputPoints addObject:[self parseMultiPoint:inputSplitted[i] withDimensions:dims]];
+    }
+    inputSplitted = nil;
+    return [[WKTPolygon alloc] initWithMultiPoints:inputPoints];
+}
+
++ (WKTPolygonM *)parseMultiPolygon:(NSString *)input withDimensions:(int)dims
+{
+    NSArray *inputSplitted = [WKTString splitDoubleParentCommasNSString:input];
+    NSMutableArray *inputPolygons = [[NSMutableArray alloc]init];
+    for(int i = 0; i < inputSplitted.count; i++)
+    {
+        [inputPolygons addObject:[self parsePolygon:inputSplitted[i] withDimensions:dims]];
+    }
+    inputSplitted = nil;
+    return [[WKTPolygonM alloc] initWithPolygons:inputPolygons];
+}
+
 + (WKTGeometry *)parseGeometry:(NSString *)input
 {
     NSString *typeGeometry;
@@ -171,7 +195,24 @@
         {
             return [self parseMultiLine:input withDimensions:3];
         }
-        
+        else if([typeGeometry isEqualToString:@"POLYGON"])
+        {
+            return [self parsePolygon:input withDimensions:2];
+        }
+        else if([typeGeometry isEqualToString:@"POLYGON Z"] ||
+                [typeGeometry isEqualToString:@"POLYGONZ"])
+        {
+            return [self parsePolygon:input withDimensions:3];
+        }
+        else if([typeGeometry isEqualToString:@"MULTIPOLYGON"])
+        {
+            return [self parseMultiPolygon:input withDimensions:2];
+        }
+        else if([typeGeometry isEqualToString:@"MULTIPOLYGON Z"] ||
+                [typeGeometry isEqualToString:@"MULTIPOLYGONZ"])
+        {
+            return [self parseMultiPolygon:input withDimensions:3];
+        }
     }
     return nil;
 }
