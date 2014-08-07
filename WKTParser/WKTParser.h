@@ -26,7 +26,6 @@
 //  SOFTWARE.
 
 #include "WKTPolygonM.h"
-#include "WKTLineM.h"
 #include "WKTString.h"
 
 @interface WKTParser : NSObject
