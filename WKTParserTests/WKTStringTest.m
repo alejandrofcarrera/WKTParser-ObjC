@@ -47,7 +47,7 @@
 
 // Test for splitSpacesNSString
 
-- (void)testSplitOneSpace
+- (void)test_Space_OneSpace
 {
     NSArray *result = [WKTString splitSpacesNSString:
              @"Creating Unit Tests"];
@@ -61,7 +61,7 @@
              @"Result [2] should be \"Tests\"");
 }
 
-- (void)testSplitMultiSpace
+- (void)test_Space_MultiSpace
 {
     NSArray *result = [WKTString splitSpacesNSString:
              @"Creating    Unit    Tests"];
@@ -75,7 +75,23 @@
              @"Result [2] should be \"Tests\"");
 }
 
-- (void)testSplitCharacterUnescaped
+- (void)test_Space_Empty
+{
+    NSArray *result = [WKTString splitSpacesNSString:
+             @""];
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
+}
+
+- (void)test_Space_Single
+{
+    NSArray *result = [WKTString splitSpacesNSString:
+             @" "];
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
+}
+
+- (void)test_Space_CharacterUnescaped
 {
     NSArray *result = [WKTString splitSpacesNSString:
              @"Creating Unit  \t  Tests"];
@@ -89,7 +105,7 @@
              @"Result [2] should be \"Tests\"");
 }
 
-- (void)testSplitCharacterEscaped
+- (void)test_Space_CharacterEscaped
 {
     NSArray *result = [WKTString splitSpacesNSString:
              @"Creating Unit  \\t  Tests"];
@@ -105,7 +121,7 @@
              @"Result [3] should be \"Tests\"");
 }
 
-- (void)testSplitThrowException
+- (void)test_Space_NilException
 {
     NSArray *result;
     XCTAssertThrows(result =[WKTString splitSpacesNSString:
