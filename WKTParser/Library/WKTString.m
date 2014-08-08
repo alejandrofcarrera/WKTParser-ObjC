@@ -136,8 +136,8 @@
     if(input == nil)
     {
         @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-                                       reason:@"Parameter input is nil"
-                                     userInfo:nil];
+            reason:@"Parameter input is nil"
+            userInfo:nil];
     }
     else
     {
