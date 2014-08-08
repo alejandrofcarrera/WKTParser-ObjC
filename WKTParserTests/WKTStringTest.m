@@ -45,25 +45,73 @@
     [super tearDown];
 }
 
+// Test for splitSpacesNSString
+
 - (void)testSplitOneSpace
 {
     NSArray *result = [WKTString splitSpacesNSString:
              @"Creating Unit Tests"];
-    XCTAssertEqual(result.count, 3, @"Result should be three");
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"Tests",
+             @"Result [2] should be \"Tests\"");
 }
 
 - (void)testSplitMultiSpace
 {
     NSArray *result = [WKTString splitSpacesNSString:
-             @"Creating   Unit  ,   Tests"];
-    XCTAssertEqual(result.count, 4, @"Result should be four");
+             @"Creating    Unit    Tests"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"Tests",
+             @"Result [2] should be \"Tests\"");
 }
 
-- (void)testSplitMixSpace
+- (void)testSplitCharacterUnescaped
 {
     NSArray *result = [WKTString splitSpacesNSString:
-             @"Creating  \\t  Unit ,  \\t   Tests"];
-    XCTAssertEqual(result.count, 6, @"Result should be six");
+             @"Creating Unit  \t  Tests"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"Tests",
+             @"Result [2] should be \"Tests\"");
+}
+
+- (void)testSplitCharacterEscaped
+{
+    NSArray *result = [WKTString splitSpacesNSString:
+             @"Creating Unit  \\t  Tests"];
+    XCTAssertEqual(result.count, 4,
+             @"Result's length should be four");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"\\t",
+             @"Result [2] should be \"Tab\"");
+    XCTAssertEqualObjects(result[3], @"Tests",
+             @"Result [3] should be \"Tests\"");
+}
+
+- (void)testSplitThrowException
+{
+    NSArray *result;
+    XCTAssertThrows(result =[WKTString splitSpacesNSString:
+             nil], @"Should throws Nil Exception");
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
 }
 
 @end
