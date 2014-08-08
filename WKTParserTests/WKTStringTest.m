@@ -245,7 +245,7 @@
 
 // Test for splitParentCommasNSString (13)
 
-- (void)test_ParentComma_OneParent
+- (void)test_PaComma_OneParent
 {
     NSArray *result = [WKTString splitParentCommasNSString:
              @"(Creating Unit Tests)"];
@@ -255,7 +255,7 @@
              @"Result [0] should be \"Creating,Unit,Tests\"");
 }
 
-- (void)test_ParentComma_OneParentOneComma
+- (void)test_PaComma_OneParentOneComma
 {
     NSArray *result = [WKTString splitParentCommasNSString:
              @"(Creating,Unit,Tests)"];
@@ -265,7 +265,7 @@
              @"Result [0] should be \"Creating,Unit,Tests\"");
 }
 
-- (void)test_ParentComma_MultiParent
+- (void)test_PaComma_MultiParent
 {
     NSArray *result = [WKTString splitParentCommasNSString:
              @"(Creating) (Unit) (Tests)"];
@@ -275,7 +275,7 @@
              @"Result [0] should be \"Creating) (Unit) (Tests\"");
 }
 
-- (void)test_ParentComma_MultiParentOneComma
+- (void)test_PaComma_MultiParentOneComma
 {
     NSArray *result = [WKTString splitParentCommasNSString:
              @"(Creating),(Unit),(Tests)"];
@@ -289,7 +289,7 @@
              @"Result [2] should be \"Tests\"");
 }
 
-- (void)test_ParentComma_MultiParentMultiComma
+- (void)test_PaComma_MultiParentMultiComma
 {
     NSArray *result = [WKTString splitParentCommasNSString:
              @"(Creating), ,(Unit), ,(Tests)"];
@@ -303,7 +303,7 @@
              @"Result [2] should be \"Tests\"");
 }
 
-- (void)test_ParentComma_Empty
+- (void)test_PaComma_Empty
 {
     NSArray *result = [WKTString splitParentCommasNSString:
              @""];
@@ -311,7 +311,7 @@
              @"Result's length should be zero");
 }
 
-- (void)test_ParentComma_SingleParent
+- (void)test_PaComma_SingleParent
 {
     NSArray *result = [WKTString splitParentCommasNSString:
              @"()"];
@@ -319,7 +319,7 @@
              @"Result's length should be zero");
 }
 
-- (void)test_ParentComma_SingleParentSingleComma
+- (void)test_PaComma_SingleParentAndComma
 {
     NSArray *result = [WKTString splitParentCommasNSString:
              @"(,)"];
@@ -329,7 +329,7 @@
              @"Result [0] should be \"Comma\"");
 }
 
-- (void)test_ParentComma_CharacterUnescaped
+- (void)test_PaComma_CharacterUnescaped
 {
     NSArray *result = [WKTString splitParentCommasNSString:
              @"\t(Creating) \t, \t(Unit)\t,  (Tests)"];
@@ -343,7 +343,7 @@
              @"Result [2] should be \"Tests\"");
 }
 
-- (void)test_ParentComma_CharacterEscaped
+- (void)test_PaComma_CharacterEscaped
 {
     NSArray *result = [WKTString splitParentCommasNSString:
              @"\\t(Creating), (\\tUnit),  (Tests\\t)"];
@@ -357,7 +357,7 @@
              @"Result [2] should be \"Tests Tab\"");
 }
 
-- (void)test_ParentComma_NilException
+- (void)test_PaComma_NilException
 {
     NSArray *result;
     XCTAssertThrows(result =[WKTString splitParentCommasNSString:
@@ -366,7 +366,7 @@
              @"Result's length should be zero");
 }
 
-- (void)test_ParentComma_FirstParentException
+- (void)test_PaComma_FirstParentException
 {
     NSArray *result;
     XCTAssertThrows(result =[WKTString splitParentCommasNSString:
@@ -375,7 +375,7 @@
              @"Result's length should be zero");
 }
 
-- (void)test_ParentComma_LastParentException
+- (void)test_PaComma_LastParentException
 {
     NSArray *result;
     XCTAssertThrows(result =[WKTString splitParentCommasNSString:
