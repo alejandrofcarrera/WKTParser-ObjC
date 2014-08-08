@@ -384,4 +384,145 @@
              @"Result's length should be zero");
 }
 
+// Test for splitDoubleParentCommasNSString
+
+- (void)test_DoPComma_DoubleParent
+{
+    NSArray *result = [WKTString splitDoubleParentCommasNSString:
+             @"((Creating Unit Tests))"];
+    XCTAssertEqual(result.count, 1,
+             @"Result's length should be one");
+    XCTAssertEqualObjects(result[0], @"Creating Unit Tests",
+             @"Result [0] should be \"Creating,Unit,Tests\"");
+}
+
+- (void)test_DoPaComma_DoubleParentOneComma
+{
+    NSArray *result = [WKTString splitDoubleParentCommasNSString:
+             @"((Creating,Unit,Tests))"];
+    XCTAssertEqual(result.count, 1,
+             @"Result's length should be one");
+    XCTAssertEqualObjects(result[0], @"Creating,Unit,Tests",
+             @"Result [0] should be \"Creating,Unit,Tests\"");
+}
+
+- (void)test_DoPaComma_MultiParent
+{
+    NSArray *result = [WKTString splitDoubleParentCommasNSString:
+             @"((Creating)) ((Unit)) ((Tests))"];
+    XCTAssertEqual(result.count, 1,
+             @"Result's length should be one");
+    XCTAssertEqualObjects(result[0], @"Creating)) ((Unit)) ((Tests",
+             @"Result [0] should be \"Creating)) ((Unit)) ((Tests\"");
+}
+
+- (void)test_DoPaComma_MultiParentOneComma
+{
+    NSArray *result = [WKTString splitDoubleParentCommasNSString:
+             @"((Creating)),((Unit)),((Tests))"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [2] should be \"Tests\"");
+}
+
+- (void)test_DoPaComma_MultiParentMultiComma
+{
+    NSArray *result = [WKTString splitDoubleParentCommasNSString:
+             @"((Creating)), ,((Unit)), ,((Tests))"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [2] should be \"Tests\"");
+}
+
+- (void)test_DoPaComma_Empty
+{
+    NSArray *result = [WKTString splitDoubleParentCommasNSString:
+             @""];
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
+}
+
+- (void)test_DoPaComma_DoubleParent
+{
+    NSArray *result = [WKTString splitDoubleParentCommasNSString:
+             @"(())"];
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
+}
+
+- (void)test_DoPaComma_DoubleParentAndComma
+{
+    NSArray *result = [WKTString splitDoubleParentCommasNSString:
+             @"((,))"];
+    XCTAssertEqual(result.count, 1,
+             @"Result's length should be zero");
+    XCTAssertEqualObjects(result[0], @",",
+             @"Result [0] should be \"Comma\"");
+}
+
+- (void)test_DoPaComma_CharacterUnescaped
+{
+    NSArray *result = [WKTString splitDoubleParentCommasNSString:
+             @"\t((Creating)) \t, \t((Unit))\t,  ((Tests))"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"Tests",
+             @"Result [2] should be \"Tests\"");
+}
+
+- (void)test_DoPaComma_CharacterEscaped
+{
+    NSArray *result = [WKTString splitDoubleParentCommasNSString:
+             @"\\t((Creating)), ((\\tUnit)),  ((Tests\\t))"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be four");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"\\tUnit",
+             @"Result [1] should be \"Tab Unit\"");
+    XCTAssertEqualObjects(result[2], @"Tests\\t",
+             @"Result [2] should be \"Tests Tab\"");
+}
+
+- (void)test_DoPaComma_NilException
+{
+    NSArray *result;
+    XCTAssertThrows(result =[WKTString splitDoubleParentCommasNSString:
+             nil], @"Should throws Nil Exception");
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
+}
+
+- (void)test_DoPaComma_FirstParentException
+{
+    NSArray *result;
+    XCTAssertThrows(result =[WKTString splitDoubleParentCommasNSString:
+             @"Creating, Unit, Tests))"], @"Should throws First Parent Exception");
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
+}
+
+- (void)test_DoPaComma_LastParentException
+{
+    NSArray *result;
+    XCTAssertThrows(result =[WKTString splitDoubleParentCommasNSString:
+             @"((Creating, Unit, Tests"], @"Should throws Last Parent Exception");
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
+}
+
 @end
