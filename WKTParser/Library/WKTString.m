@@ -31,21 +31,30 @@
 
 + (NSArray *)splitString:(NSString *)input andRegExp:(NSString *)regExp
 {
-    NSString *inputConverted = [input stringByReplacingOccurrencesOfString:regExp
-              withString:@"[SPLIT]" options:NSRegularExpressionSearch
-              range:NSMakeRange(0, input.length)];
-    NSMutableArray *result = [[NSMutableArray alloc] init];
-    NSArray *inputSplit = [inputConverted componentsSeparatedByString:@"[SPLIT]"];
-    for (NSString *i in inputSplit)
+    if(input == nil)
     {
-        if (i.length > 0)
-        {
-            [result addObject:i];
-        }
+        @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+            reason:@"Parameter input is nil"
+            userInfo:nil];
     }
-    inputSplit = nil;
-    inputConverted = nil;
-    return result;
+    else
+    {
+        NSString *inputConverted = [input stringByReplacingOccurrencesOfString:regExp
+                 withString:@"[SPLIT]" options:NSRegularExpressionSearch
+                 range:NSMakeRange(0, input.length)];
+        NSMutableArray *result = [[NSMutableArray alloc] init];
+        NSArray *inputSplit = [inputConverted componentsSeparatedByString:@"[SPLIT]"];
+        for (NSString *i in inputSplit)
+        {
+            if (i.length > 0)
+            {
+                [result addObject:i];
+            }
+        }
+        inputSplit = nil;
+        inputConverted = nil;
+        return result;
+    }
 }
 
 + (NSArray *)splitSpacesNSString:(NSString *)input
@@ -60,54 +69,82 @@
 
 + (NSArray *)splitParentCommasNSString:(NSString *)input
 {
-    if ([input characterAtIndex:0] != '(')
+    if(input == nil)
     {
         @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-            reason:@"Can't perform split String because first character is not ("
+            reason:@"Parameter input is nil"
             userInfo:nil];
     }
-    else if ([input characterAtIndex:input.length-1] != ')')
+    else
     {
-        @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-            reason:@"Can't perform split String because last character is not )"
-            userInfo:nil];
+        if ([input characterAtIndex:0] != '(')
+        {
+            @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+                reason:@"Can't perform split String because first character is not ("
+                userInfo:nil];
+        }
+        else if ([input characterAtIndex:input.length-1] != ')')
+        {
+            @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+                reason:@"Can't perform split String because last character is not )"
+                userInfo:nil];
+        }
+        else return [self splitString:input andRegExp:@"\\)\\s*,\\s*\\("];
     }
-    else return [self splitString:input andRegExp:@"\\)\\s*,\\s*\\("];
 }
 
 + (NSArray *)splitDoubleParentCommasNSString:(NSString *)input
 {
-    if ([input characterAtIndex:0] != '(')
+    if(input == nil)
     {
         @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-            reason:@"Can't perform split String because first character is not ("
-            userInfo:nil];
+                                       reason:@"Parameter input is nil"
+                                     userInfo:nil];
     }
-    else if ([input characterAtIndex:1] != '(')
+    else
     {
-        @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-            reason:@"Can't perform split String because second character is not ("
-            userInfo:nil];
+        if ([input characterAtIndex:0] != '(')
+        {
+            @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+                reason:@"Can't perform split String because first character is not ("
+                userInfo:nil];
+        }
+        else if ([input characterAtIndex:1] != '(')
+        {
+            @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+                reason:@"Can't perform split String because second character is not ("
+                userInfo:nil];
+        }
+        else if ([input characterAtIndex:input.length-2] != ')')
+        {
+            @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+                reason:@"Can't perform split String because penultimate character is not )"
+                userInfo:nil];
+        }
+        else if ([input characterAtIndex:input.length-1] != ')')
+        {
+            @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+                reason:@"Can't perform split String because last character is not )"
+                userInfo:nil];
+        }
+        else return [self splitString:input andRegExp:@"\\)\\)\\s*,\\s*\\(\\("];
     }
-    else if ([input characterAtIndex:input.length-2] != ')')
-    {
-        @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-            reason:@"Can't perform split String because penultimate character is not )"
-            userInfo:nil];
-    }
-    else if ([input characterAtIndex:input.length-1] != ')')
-    {
-        @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-            reason:@"Can't perform split String because last character is not )"
-            userInfo:nil];
-    }
-    else return [self splitString:input andRegExp:@"\\)\\)\\s*,\\s*\\(\\("];
 }
 
-+ (NSString *)escapeTagsXMLNSString:(NSString *)input {
-    NSString *inputConverted = [input stringByReplacingOccurrencesOfString:@"<" withString:@"&lt;"];
-    inputConverted = [inputConverted stringByReplacingOccurrencesOfString:@">" withString:@"&gt;"];
-    return inputConverted;
++ (NSString *)escapeTagsXMLNSString:(NSString *)input
+{
+    if(input == nil)
+    {
+        @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+                                       reason:@"Parameter input is nil"
+                                     userInfo:nil];
+    }
+    else
+    {
+        NSString *inputConverted = [input stringByReplacingOccurrencesOfString:@"<" withString:@"&lt;"];
+        inputConverted = [inputConverted stringByReplacingOccurrencesOfString:@">" withString:@"&gt;"];
+        return inputConverted;
+    }
 }
 
 @end
