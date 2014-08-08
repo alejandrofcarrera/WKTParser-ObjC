@@ -89,7 +89,14 @@
                 reason:@"Can't perform split String because last character is not )"
                 userInfo:nil];
         }
-        else return [self splitString:input andRegExp:@"\\)\\s*,\\s*\\("];
+        else
+        {
+            input = [input stringByReplacingCharactersInRange:
+                     NSMakeRange(0, 1) withString:@""];
+            input = [input stringByReplacingCharactersInRange:
+                     NSMakeRange(input.length-1, 1) withString:@""];
+            return [self splitString:input andRegExp:@"\\)(\\s*,\\s*)*\\("];
+        }
     }
 }
 
