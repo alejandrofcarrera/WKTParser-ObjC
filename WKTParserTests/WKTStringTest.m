@@ -45,7 +45,7 @@
     [super tearDown];
 }
 
-// Test for splitSpacesNSString
+// Test for splitSpacesNSString (7)
 
 - (void)test_Space_OneSpace
 {
@@ -125,6 +125,119 @@
 {
     NSArray *result;
     XCTAssertThrows(result =[WKTString splitSpacesNSString:
+             nil], @"Should throws Nil Exception");
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
+}
+
+// Test for splitCommasNSString (9)
+
+- (void)test_Comma_OneComma
+{
+    NSArray *result = [WKTString splitCommasNSString:
+             @"Creating,Unit,Tests"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"Tests",
+             @"Result [2] should be \"Tests\"");
+}
+
+- (void)test_Comma_OneCommaOneSpace
+{
+    NSArray *result = [WKTString splitCommasNSString:
+             @"Creating , Unit , Tests"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"Tests",
+             @"Result [2] should be \"Tests\"");
+}
+
+- (void)test_Comma_MultiCommaOneSpace
+{
+    NSArray *result = [WKTString splitCommasNSString:
+             @"Creating ,, Unit , Tests"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"Tests",
+             @"Result [2] should be \"Tests\"");
+}
+
+- (void)test_Comma_MultiCommaMultiSpace
+{
+    NSArray *result = [WKTString splitCommasNSString:
+             @"Creating ,,  ,    Unit   , Tests"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"Tests",
+             @"Result [2] should be \"Tests\"");
+}
+
+- (void)test_Comma_Empty
+{
+    NSArray *result = [WKTString splitCommasNSString:
+             @""];
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
+}
+
+- (void)test_Comma_Single
+{
+    NSArray *result = [WKTString splitCommasNSString:
+             @","];
+    XCTAssertEqual(result.count, 0,
+             @"Result's length should be zero");
+}
+
+- (void)test_Comma_CharacterUnescaped
+{
+    NSArray *result = [WKTString splitCommasNSString:
+             @"Creating,Unit,  \t  ,Tests"];
+    XCTAssertEqual(result.count, 3,
+             @"Result's length should be three");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"Tests",
+             @"Result [2] should be \"Tests\"");
+}
+
+- (void)test_Comma_CharacterEscaped
+{
+    NSArray *result = [WKTString splitCommasNSString:
+             @"Creating   ,  Unit,  \\t,  Tests"];
+    XCTAssertEqual(result.count, 4,
+             @"Result's length should be four");
+    XCTAssertEqualObjects(result[0], @"Creating",
+             @"Result [0] should be \"Creating\"");
+    XCTAssertEqualObjects(result[1], @"Unit",
+             @"Result [1] should be \"Unit\"");
+    XCTAssertEqualObjects(result[2], @"\\t",
+             @"Result [2] should be \"Tab\"");
+    XCTAssertEqualObjects(result[3], @"Tests",
+             @"Result [3] should be \"Tests\"");
+}
+
+- (void)test_Comma_NilException
+{
+    NSArray *result;
+    XCTAssertThrows(result =[WKTString splitCommasNSString:
              nil], @"Should throws Nil Exception");
     XCTAssertEqual(result.count, 0,
              @"Result's length should be zero");
