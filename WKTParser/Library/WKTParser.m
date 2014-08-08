@@ -140,7 +140,6 @@
             reason:@"Parameter input is nil"
             userInfo:nil];
     }
-    
     else if ((typeGeometry = [self checkTypeWKT:input]) != nil)
     {
         @throw [NSException exceptionWithName:@"WKTParser Library"
@@ -212,6 +211,12 @@
                 [typeGeometry isEqualToString:@"MULTIPOLYGONZ"])
         {
             return [self parseMultiPolygon:input withDimensions:3];
+        }
+        else
+        {
+            @throw [NSException exceptionWithName:@"WKTParser Library"
+                reason:@"Parameter input is invalid (WKT Geometry not recognised)"
+                userInfo:nil];
         }
     }
     return nil;
