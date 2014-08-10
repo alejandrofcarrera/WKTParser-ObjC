@@ -43,6 +43,8 @@
 
 - (void)removeListLines;
 
+- (BOOL)isEqual:(WKTLineM *)otherLineM;
+
 - (void)copyTo:(WKTLineM *)otherLineM;
 
 @end

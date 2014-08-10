@@ -75,7 +75,6 @@
              @"Result Points should be 3");
 }
 
-
 - (void)test_Line_Equal
 {
     // Split Single Parent and Spaces to Format
@@ -210,6 +209,51 @@
              @"Result dimensions should be 2");
     XCTAssertEqual([result getListLines].count, 2,
              @"Result Lines should be 2");
+}
+
+- (void)test_Line_MultiEqual
+{
+    // Split Single Parent, Commas and Spaces to Format
+    NSArray *split = [WKTString splitParentCommasNSString:
+             @"(10 10, 20 20, 10 40),(40 40, 30 30, 40 20, 30 10)"];
+    
+    // Create Lines from Array's Values
+    NSMutableArray *listLines = [[NSMutableArray alloc] init];
+    for(int i = 0; i < split.count; i++)
+    {
+        NSMutableArray *line = [[NSMutableArray alloc] init];
+        NSArray *pLine = [WKTString splitCommasNSString:split[i]];
+        for(int j = 0; j < pLine.count; j++)
+        {
+            NSArray *point = [WKTString splitSpacesNSString:pLine[i]];
+            WKTPoint *p = [[WKTPoint alloc]
+                 initWithDimensionX:[point[0] doubleValue]
+                 andDimensionY:[point[1] doubleValue]];
+            [line addObject:p];
+            point = nil;
+        }
+        [listLines addObject:[[WKTLine alloc] initWithPoints:line]];
+    }
+    
+    // Create Multi Line Geometry
+    WKTLineM *result = [[WKTLineM alloc] initWithLines:listLines];
+    
+    // Create Multi Line Geometry
+    WKTLineM *result2 = [[WKTLineM alloc] initWithLines:listLines];
+    
+    // Create Multi Line Geometry with another Line
+    NSMutableArray *listLines2 = [[NSMutableArray alloc] initWithArray:listLines];
+    [listLines2 addObject:[listLines2 lastObject]];
+    WKTLineM *result3 = [[WKTLineM alloc] initWithLines:listLines2];
+    
+    XCTAssertFalse([result isEqual:nil],
+             @"WKTLineM is not Equal to nil");
+    XCTAssertTrue([result isEqual:result],
+             @"WKTLineM is Equal to itself");
+    XCTAssertTrue([result isEqual:result2],
+             @"WKTLineM is Equal to WKTLineM with same lines");
+    XCTAssertFalse([result isEqual:result3],
+             @"WKTLineM is not Equal to WKTLineM with other lines");
 }
 
 - (void)test_Line_MultiCopy

@@ -102,6 +102,34 @@
     self.dimensions = 0;
 }
 
+- (BOOL)isEqual:(WKTLineM *)otherLineM
+{
+    if(otherLineM == nil || ![otherLineM isKindOfClass:[WKTLineM class]])
+    {
+        return NO;
+    }
+    else if(self.dimensions != otherLineM.dimensions)
+    {
+        return NO;
+    }
+    else if(listLines.count != [otherLineM getListLines].count)
+    {
+        return NO;
+    }
+    else
+    {
+        NSArray *listOtherLines = [otherLineM getListLines];
+        for(int i = 0; i < listLines.count; i++)
+        {
+            if(![(WKTLine *) listLines[i] isEqual:listOtherLines[i]])
+            {
+                return NO;
+            }
+        }
+        return YES;
+    }
+}
+
 - (void)copyTo:(WKTLineM *)otherLineM
 {
     if(otherLineM == nil)
