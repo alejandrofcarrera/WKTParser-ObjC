@@ -102,6 +102,33 @@
     self.dimensions = 0;
 }
 
+- (BOOL)isEqual:(WKTPointM *)otherPointM
+{
+    if(otherPointM == nil || ![otherPointM isKindOfClass:[WKTPointM class]])
+    {
+        return NO;
+    }
+    else if(self.dimensions != otherPointM.dimensions)
+    {
+        return NO;
+    }
+    else
+    {
+        NSArray *listOtherPointM = [otherPointM getListPoints];
+        for(int i = 0; i < listPoints.count; i++)
+        {
+            for(int j = 0; j < listOtherPointM.count; j++)
+            {
+                if(![(WKTPoint *) listPoints[i] isEqual:listOtherPointM[j]])
+                {
+                    return NO;
+                }
+            }
+        }
+        return YES;
+    }
+}
+
 - (void)copyTo:(WKTPointM *)otherPointM
 {
     if(otherPointM == nil)

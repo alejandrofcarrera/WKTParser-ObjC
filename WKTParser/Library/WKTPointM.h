@@ -43,6 +43,8 @@
 
 - (void)removeListPoints;
 
+- (BOOL)isEqual:(WKTPointM *)otherPointM;
+
 - (void)copyTo:(WKTPointM *)otherPointM;
 
 @end
