@@ -28,6 +28,8 @@
 #include "WKTPolygonM.h"
 #include "WKTString.h"
 
+#include <MapKit/MapKit.h>
+
 @interface WKTParser : NSObject
 
 // Specific Methods
@@ -38,6 +40,15 @@
 + (WKTLineM *)parseMultiLine:(NSString *)input withDimensions:(int)dims;
 + (WKTPolygon *)parsePolygon:(NSString *)input withDimensions:(int)dims;
 + (WKTPolygonM *)parseMultiPolygon:(NSString *)input withDimensions:(int)dims;
+
+// Specific Conversions
+
+- (MKPolygon *)convertPolygon:(WKTPolygon *)polygon;
+- (MKPolygon *)convertMultiPolygon:(WKTPolygonM *)polygons;
+- (MKPointAnnotation *)convertPoint:(WKTPoint *)point;
+- (MKPolyline *)convertMultiPoint:(WKTPointM *)points;
+- (MKPolyline *)convertLine:(WKTLine *)line;
+- (NSArray *)convertLines:(WKTLineM *)lines;
 
 // Generic Method
 

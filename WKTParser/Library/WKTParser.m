@@ -29,7 +29,7 @@
 
 @implementation WKTParser
 
-+ (NSString *) checkTypeWKT:(NSString *)input
++ (NSString *)checkTypeWKT:(NSString *)input
 {
     NSArray *WKT_Types = @[@"POINT", @"MULTIPOINT", @"LINESTRING",
             @"MULTILINESTRING", @"POLYGON", @"MULTIPOLYGON"];
@@ -219,6 +219,36 @@
                 userInfo:nil];
         }
     }
+    return nil;
+}
+
+- (MKPolygon *)convertPolygon:(WKTPolygon *)polygon
+{
+    return nil;
+}
+
+- (MKPolygon *)convertMultiPolygon:(WKTPolygonM *)polygons
+{
+    return nil;
+}
+
+- (MKPointAnnotation *)convertPoint:(WKTPoint *)point
+{
+    return nil;
+}
+
+- (MKPolyline *)convertMultiPoint:(WKTPointM *)points
+{
+    return nil;
+}
+
+- (MKPolyline *)convertLine:(WKTLine *)line
+{
+    return nil;
+}
+
+- (NSArray *)convertLines:(WKTLineM *)lines
+{
     return nil;
 }
 
