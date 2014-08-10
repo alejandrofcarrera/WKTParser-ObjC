@@ -31,9 +31,8 @@
 
 - (id)init
 {
-    if (self == nil)
+    if (self = [super init])
     {
-        self = [super init];
         self.type = @"MultiPolygon";
         self.dimensions = 0;
         listPolygons = [[NSMutableArray alloc] init];
@@ -43,12 +42,10 @@
 
 - (id)initWithPolygons:(NSArray *)polygons
 {
-    if (self == nil)
+    if (self = [self init])
     {
-        self = [self init];
+        [self setPolygons:polygons];
     }
-    [self removePolygons];
-    [self setPolygons:polygons];
     return self;
 }
 

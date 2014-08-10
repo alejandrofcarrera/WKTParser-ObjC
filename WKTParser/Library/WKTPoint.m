@@ -35,9 +35,8 @@
 
 - (id)initWithDimensionX:(double)dimX andDimensionY:(double)dimY
 {
-    if(self == nil)
+    if(self = [super init])
     {
-        self = [super init];
         self.dimensions = 2;
         self.type = @"Point";
         self.dimensionX = dimX;
@@ -48,9 +47,8 @@
 
 - (id)initWithDimensionX:(double)dimX andDimensionY:(double)dimY andDimensionZ:(double)dimZ
 {
-    if(self == nil)
+    if(self = [super init])
     {
-        self = [super init];
         self.dimensions = 3;
         self.type = @"Point";
         self.dimensionX = dimX;

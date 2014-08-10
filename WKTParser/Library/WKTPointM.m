@@ -31,9 +31,8 @@
 
 - (id)init
 {
-    if (self == nil)
+    if (self = [super init])
     {
-        self = [super init];
         self.type = @"MultiPoint";
         self.dimensions = 0;
         listPoints = [[NSMutableArray alloc] init];
@@ -43,12 +42,10 @@
 
 - (id)initWithPoints:(NSArray *)points
 {
-    if (self == nil)
+    if (self = [self init])
     {
-        self = [self init];
+        [self setListPoints:points];
     }
-    [self removeListPoints];
-    [self setListPoints:points];
     return self;
 }
 

@@ -31,9 +31,8 @@
 
 - (id)init
 {
-    if (self == nil)
+    if (self = [super init])
     {
-        self = [super init];
         self.type = @"MultiLine";
         self.dimensions = 0;
         listLines = [[NSMutableArray alloc] init];
@@ -43,12 +42,10 @@
 
 - (id)initWithLines:(NSArray *)lines
 {
-    if (self == nil)
+    if (self = [self init])
     {
-        self = [self init];
+        [self setListLines:lines];
     }
-    [self removeListLines];
-    [self setListLines:lines];
     return self;
 }
 
