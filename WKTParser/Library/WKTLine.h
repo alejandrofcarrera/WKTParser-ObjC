@@ -43,6 +43,8 @@
 
 - (void)removeListPoints;
 
+- (BOOL)isEqual:(WKTLine *)otherLine;
+
 - (void)copyTo:(WKTLine *)otherLine;
 
 @end

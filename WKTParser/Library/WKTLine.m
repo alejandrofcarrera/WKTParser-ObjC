@@ -102,6 +102,34 @@
     self.dimensions = 0;
 }
 
+- (BOOL)isEqual:(WKTLine *)otherLine
+{
+    if(otherLine == nil || ![otherLine isKindOfClass:[WKTLine class]])
+    {
+        return NO;
+    }
+    else if(self.dimensions != otherLine.dimensions)
+    {
+        return NO;
+    }
+    else if(listPoints.count != [otherLine getListPoints].count)
+    {
+        return NO;
+    }
+    else
+    {
+        NSArray *listOtherPoints = [otherLine getListPoints];
+        for(int i = 0; i < listPoints.count; i++)
+        {
+            if(![(WKTPoint *) listPoints[i] isEqual:listOtherPoints[i]])
+            {
+                return NO;
+            }
+        }
+        return YES;
+    }
+}
+
 - (void)copyTo:(WKTLine *)otherLine
 {
     if(otherLine == nil)

@@ -112,17 +112,18 @@
     {
         return NO;
     }
+    else if(listPoints.count != [otherPointM getListPoints].count)
+    {
+        return NO;
+    }
     else
     {
-        NSArray *listOtherPointM = [otherPointM getListPoints];
+        NSArray *listOtherPoints = [otherPointM getListPoints];
         for(int i = 0; i < listPoints.count; i++)
         {
-            for(int j = 0; j < listOtherPointM.count; j++)
+            if(![(WKTPoint *) listPoints[i] isEqual:listOtherPoints[i]])
             {
-                if(![(WKTPoint *) listPoints[i] isEqual:listOtherPointM[j]])
-                {
-                    return NO;
-                }
+                return NO;
             }
         }
         return YES;
