@@ -49,8 +49,12 @@
 - (void)test_Point_Single
 {
     // Split Single Parent and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:@"(30 10)"];
-    split = [WKTString splitSpacesNSString:split[0]];
+    NSString *input = @"(30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitSpacesNSString:input];
     
     // Create Point from Array's Values
     WKTPoint *result = [[WKTPoint alloc] initWithDimensionX:[split[0] doubleValue]
@@ -71,8 +75,12 @@
 - (void)test_Point_Equal
 {
     // Split Single Parent and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:@"(30 10)"];
-    split = [WKTString splitSpacesNSString:split[0]];
+    NSString *input = @"(30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitSpacesNSString:input];
     
     // Create Point from Array's Values
     WKTPoint *result = [[WKTPoint alloc] initWithDimensionX:[split[0] doubleValue]
@@ -105,8 +113,12 @@
 - (void)test_Point_Copy
 {
     // Split Single Parent and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:@"(30 10)"];
-    split = [WKTString splitSpacesNSString:split[0]];
+    NSString *input = @"(30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitSpacesNSString:input];
     
     // Create Point from Array's Values
     WKTPoint *result = [[WKTPoint alloc] initWithDimensionX:[split[0] doubleValue]
@@ -133,8 +145,12 @@
 - (void)test_Point_CopyNilException
 {
     // Split Single Parent and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:@"(30 10)"];
-    split = [WKTString splitSpacesNSString:split[0]];
+    NSString *input = @"(30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitSpacesNSString:input];
     
     // Create Point from Array's Values
     WKTPoint *result = [[WKTPoint alloc] initWithDimensionX:[split[0] doubleValue]
@@ -146,9 +162,12 @@
 - (void)test_Point_MultiSimple
 {
     // Split Single Parent, Commas and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:
-             @"(10 40, 40 30, 20 20, 30 10)"];
-    split = [WKTString splitCommasNSString:split[0]];
+    NSString *input = @"(10 40, 40 30, 20 20, 30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitCommasNSString:input];
     NSMutableArray *splitSpace = [[NSMutableArray alloc] init];
     for(int i = 0; i < split.count; i++)
     {
@@ -181,9 +200,12 @@
 - (void)test_Point_MultiEqual
 {
     // Split Single Parent, Commas and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:
-             @"(10 40, 40 30, 20 20, 30 10)"];
-    split = [WKTString splitCommasNSString:split[0]];
+    NSString *input = @"(10 40, 40 30, 20 20, 30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitCommasNSString:input];
     NSMutableArray *splitSpace = [[NSMutableArray alloc] init];
     for(int i = 0; i < split.count; i++)
     {
@@ -225,8 +247,12 @@
 - (void)test_Point_MultiDouble
 {
     // Split Single Parent, Commas and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:
-             @"(10 40), (40 30), (20 20), (30 10)"];
+    NSString *input = @"(10 40), (40 30), (20 20), (30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitParentCommasNSString:input];
     NSMutableArray *splitSpace = [[NSMutableArray alloc] init];
     for(int i = 0; i < split.count; i++)
     {
@@ -259,9 +285,12 @@
 - (void)test_Point_MultiCopy
 {
     // Split Single Parent, Commas and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:
-             @"(10 40, 40 30, 20 20, 30 10)"];
-    split = [WKTString splitCommasNSString:split[0]];
+    NSString *input = @"(10 40, 40 30, 20 20, 30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitCommasNSString:input];
     NSMutableArray *splitSpace = [[NSMutableArray alloc] init];
     for(int i = 0; i < split.count; i++)
     {
@@ -299,9 +328,12 @@
 - (void)test_Point_MultiCopyNilException
 {
     // Split Single Parent, Commas and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:
-             @"(10 40, 40 30, 20 20, 30 10)"];
-    split = [WKTString splitCommasNSString:split[0]];
+    NSString *input = @"(10 40, 40 30, 20 20, 30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitCommasNSString:input];
     NSMutableArray *splitSpace = [[NSMutableArray alloc] init];
     for(int i = 0; i < split.count; i++)
     {
@@ -328,9 +360,12 @@
 - (void)test_Point_MultiWKTPointException
 {
     // Split Single Parent, Commas and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:
-             @"(10 40, 40 30, 20 20, 30 10)"];
-    split = [WKTString splitCommasNSString:split[0]];
+    NSString *input = @"(10 40, 40 30, 20 20, 30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitCommasNSString:input];
     NSMutableArray *splitSpace = [[NSMutableArray alloc] init];
     for(int i = 0; i < split.count; i++)
     {
@@ -359,9 +394,12 @@
 - (void)test_Point_MultiDimensionsException
 {
     // Split Single Parent, Commas and Spaces to Format
-    NSArray *split = [WKTString splitParentCommasNSString:
-             @"(10 40, 40 30, 20 20, 30 10)"];
-    split = [WKTString splitCommasNSString:split[0]];
+    NSString *input = @"(10 40, 40 30, 20 20, 30 10)";
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(0, 1) withString:@""];
+    input = [input stringByReplacingCharactersInRange:
+             NSMakeRange(input.length-1, 1) withString:@""];
+    NSArray *split = [WKTString splitCommasNSString:input];
     NSMutableArray *splitSpace = [[NSMutableArray alloc] init];
     for(int i = 0; i < split.count; i++)
     {

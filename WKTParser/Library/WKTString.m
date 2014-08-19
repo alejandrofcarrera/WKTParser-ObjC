@@ -79,27 +79,7 @@
     {
         if(input.length > 0)
         {
-            input = [input substringFromIndex:[input rangeOfString:@"("].location];
-            if ([input characterAtIndex:0] != '(')
-            {
-                @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-                    reason:@"Can't perform split String because first character is not ("
-                    userInfo:nil];
-            }
-            else if ([input characterAtIndex:input.length-1] != ')')
-            {
-                @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-                    reason:@"Can't perform split String because last character is not )"
-                    userInfo:nil];
-            }
-            else
-            {
-                input = [input stringByReplacingCharactersInRange:
-                         NSMakeRange(0, 1) withString:@""];
-                input = [input stringByReplacingCharactersInRange:
-                         NSMakeRange(input.length-1, 1) withString:@""];
-                return [self splitString:input andRegExp:@"\\)(\\s*,\\s*)*\\("];
-            }
+            return [self splitString:input andRegExp:@"\\)(\\s*,\\s*)*\\("];
         }
         else
         {
@@ -120,39 +100,7 @@
     {
         if(input.length > 0)
         {
-            input = [input substringFromIndex:[input rangeOfString:@"("].location];
-            if ([input characterAtIndex:0] != '(')
-            {
-                @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-                    reason:@"Can't perform split String because first character is not ("
-                    userInfo:nil];
-            }
-            else if ([input characterAtIndex:1] != '(')
-            {
-                @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-                    reason:@"Can't perform split String because second character is not ("
-                    userInfo:nil];
-            }
-            else if ([input characterAtIndex:input.length-2] != ')')
-            {
-                @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-                    reason:@"Can't perform split String because penultimate character is not )"
-                    userInfo:nil];
-            }
-            else if ([input characterAtIndex:input.length-1] != ')')
-            {
-                @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
-                    reason:@"Can't perform split String because last character is not )"
-                    userInfo:nil];
-            }
-            else
-            {
-                input = [input stringByReplacingCharactersInRange:
-                         NSMakeRange(0, 2) withString:@""];
-                input = [input stringByReplacingCharactersInRange:
-                         NSMakeRange(input.length-2, 2) withString:@""];
-                return [self splitString:input andRegExp:@"\\)\\)(\\s*,\\s*)*\\(\\("];
-            }
+            return [self splitString:input andRegExp:@"\\)\\)(\\s*,\\s*)*\\(\\("];
         }
         else
         {
