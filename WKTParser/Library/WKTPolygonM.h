@@ -43,6 +43,8 @@
 
 - (NSArray *)getPolygons;
 
+- (BOOL)isEqual:(WKTPolygonM *)otherPolygonM;
+
 - (void)copyTo:(WKTPolygonM *)otherPolygonM;
 
 @end

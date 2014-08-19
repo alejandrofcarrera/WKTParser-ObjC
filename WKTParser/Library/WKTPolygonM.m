@@ -102,6 +102,34 @@
     self.dimensions = 0;
 }
 
+- (BOOL)isEqual:(WKTPolygonM *)otherPolygonM
+{
+    if(otherPolygonM == nil || ![otherPolygonM isKindOfClass:[WKTPolygonM class]])
+    {
+        return NO;
+    }
+    else if(self.dimensions != otherPolygonM.dimensions)
+    {
+        return NO;
+    }
+    else if(listPolygons.count != [otherPolygonM getPolygons].count)
+    {
+        return NO;
+    }
+    else
+    {
+        NSArray *listOtherPolygons = [otherPolygonM getPolygons];
+        for(int i = 0; i < listPolygons.count; i++)
+        {
+            if(![(WKTPolygon *) listPolygons[i] isEqual:listOtherPolygons[i]])
+            {
+                return NO;
+            }
+        }
+        return YES;
+    }
+}
+
 - (void)copyTo:(WKTPolygonM *)otherPolygonM
 {
     if(otherPolygonM == nil)
