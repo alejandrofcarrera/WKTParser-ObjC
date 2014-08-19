@@ -47,6 +47,8 @@
 
 - (WKTPointM *)getExteriorPolygon;
 
+- (BOOL)isEqual:(WKTPolygon *)otherPolygon;
+
 - (void)copyTo:(WKTPolygon *)otherPolygon;
 
 @end

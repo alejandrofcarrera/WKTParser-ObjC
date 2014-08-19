@@ -131,6 +131,42 @@
     self.dimensions = 0;
 }
 
+- (BOOL)isEqual:(WKTPolygon *)otherPolygon
+{
+    if(otherPolygon == nil || ![otherPolygon isKindOfClass:[WKTPolygon class]])
+    {
+        return NO;
+    }
+    else if(self.dimensions != otherPolygon.dimensions)
+    {
+        return NO;
+    }
+    else if(listMultiPoints.count != [otherPolygon getPolygon].count)
+    {
+        return NO;
+    }
+    else if(![[self getExteriorPolygon] isEqual:[otherPolygon getExteriorPolygon]])
+    {
+        return NO;
+    }
+    else if([self getInteriorPolygons].count != [otherPolygon getInteriorPolygons].count)
+    {
+        return NO;
+    }
+    else
+    {
+        NSArray *listOtherPoints = [otherPolygon getPolygon];
+        for(int i = 0; i < listMultiPoints.count; i++)
+        {
+            if(![(WKTPointM *) listMultiPoints[i] isEqual:listOtherPoints[i]])
+            {
+                return NO;
+            }
+        }
+        return YES;
+    }
+}
+
 - (void)copyTo:(WKTPolygon *)otherPolygon
 {
     if(otherPolygon == nil)
