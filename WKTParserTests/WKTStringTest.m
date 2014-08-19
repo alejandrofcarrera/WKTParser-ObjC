@@ -370,7 +370,7 @@
 
 // Test for splitDoubleParentCommasNSString
 
-- (void)test_DoPComma_DoubleParent
+- (void)test_DoPaComma_DoubleParent
 {
     NSArray *result = [WKTString splitDoubleParentCommasNSString:
              @"((Creating Unit Tests))"];
@@ -436,7 +436,7 @@
              @"Result's length should be zero");
 }
 
-- (void)test_DoPaComma_DoubleParent
+- (void)test_DoPaComma_DoubleParentEmpty
 {
     NSArray *result = [WKTString splitDoubleParentCommasNSString:
              @"(())"];
