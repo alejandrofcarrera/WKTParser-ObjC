@@ -188,7 +188,7 @@
     XCTAssertThrows([result copyTo:nil], @"Should throws Nil Exception");
 }
 
-- (void)test_Line_Multi
+- (void)test_Line_MultiSimple
 {
     // Split Single Parent and Commas to Format
     NSString *input = @"(10 10, 20 20, 10 40),(40 40, 30 30, 40 20, 30 10)";
