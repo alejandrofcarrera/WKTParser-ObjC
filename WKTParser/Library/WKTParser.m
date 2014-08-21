@@ -32,14 +32,16 @@
 + (NSString *)checkTypeWKT:(NSString *)input
 {
     NSArray *WKT_Types = @[@"POINT", @"MULTIPOINT", @"LINESTRING",
-            @"MULTILINESTRING", @"POLYGON", @"MULTIPOLYGON"];
+            @"MULTILINESTRING", @"POLYGON", @"MULTIPOLYGON", @"POINTZ",
+            @"POINT Z", @"MULTIPOINTZ", @"MULTIPOINT Z", @"LINESTRINGZ",
+            @"LINESTRING Z", @"MULTILINESTRINGZ", @"MULTILINESTRING Z",
+            @"POLYGONZ", @"POLYGON Z", @"MULTIPOLYGONZ", @"MULTIPOLYGON Z"];
     NSString *result = nil;
     for(NSString *i in WKT_Types)
     {
         if([input rangeOfString:i].location != NSNotFound)
         {
             result = i;
-            break;
         }
     }
     WKT_Types = nil;
