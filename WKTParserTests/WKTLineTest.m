@@ -73,9 +73,9 @@
     XCTAssertEqualObjects(result.type, @"Line",
              @"Result type should be \"Line\"");
     XCTAssertEqual(result.dimensions, 2,
-             @"Result dimensions should be 2");
+             @"Result dimensions should be two");
     XCTAssertEqual([result getListPoints].count, 3,
-             @"Result Points should be 3");
+             @"Result Points should be three");
 }
 
 - (void)test_Line_Equal
@@ -155,9 +155,9 @@
     XCTAssertEqualObjects(result2.type, @"Line",
              @"Result type should be \"Line\"");
     XCTAssertEqual(result2.dimensions, 2,
-             @"Result dimensions should be 2");
+             @"Result dimensions should be two");
     XCTAssertEqual([result2 getListPoints].count, 3,
-             @"Result Points should be 3");
+             @"Result Points should be three");
 }
 
 - (void)test_Line_CopyNilException
@@ -222,9 +222,9 @@
     XCTAssertEqualObjects(result.type, @"MultiLine",
              @"Result type should be \"MultiLine\"");
     XCTAssertEqual(result.dimensions, 2,
-             @"Result dimensions should be 2");
+             @"Result dimensions should be two");
     XCTAssertEqual([result getListLines].count, 2,
-             @"Result Lines should be 2");
+             @"Result Lines should be two");
 }
 
 - (void)test_Line_MultiEqual
@@ -316,9 +316,9 @@
     XCTAssertEqualObjects(result2.type, @"MultiLine",
              @"Result type should be \"MultiLine\"");
     XCTAssertEqual(result2.dimensions, 2,
-             @"Result dimensions should be 2");
+             @"Result dimensions should be two");
     XCTAssertEqual([result2 getListLines].count, 2,
-             @"Result Lines should be 2");
+             @"Result Lines should be two");
 }
 
 - (void)test_Line_MultiCopyNilException

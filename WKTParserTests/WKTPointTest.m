@@ -63,7 +63,7 @@
     XCTAssertEqualObjects(result.type, @"Point",
              @"Result type should be \"Point\"");
     XCTAssertEqual(result.dimensions, 2,
-             @"Result dimensions should be 2");
+             @"Result dimensions should be two");
     XCTAssertEqual(result.dimensionX, 30,
              @"Result dimension X should be 30");
     XCTAssertEqual(result.dimensionY, 10,
@@ -133,7 +133,7 @@
     XCTAssertEqualObjects(result2.type, @"Point",
              @"Result type should be \"Point\"");
     XCTAssertEqual(result2.dimensions, 2,
-             @"Result dimensions should be 2");
+             @"Result dimensions should be two");
     XCTAssertEqual(result2.dimensionX, 30,
              @"Result dimension X should be 30");
     XCTAssertEqual(result2.dimensionY, 10,
@@ -192,9 +192,9 @@
     XCTAssertEqualObjects(points.type, @"MultiPoint",
              @"Result type should be \"MultiPoint\"");
     XCTAssertEqual(points.dimensions, 2,
-             @"Result dimensions should be 2");
+             @"Result dimensions should be two");
     XCTAssertEqual([points getListPoints].count, 4,
-             @"Result points should be 4");
+             @"Result points should be four");
 }
 
 - (void)test_Point_MultiEqual
@@ -277,9 +277,9 @@
     XCTAssertEqualObjects(points.type, @"MultiPoint",
              @"Result type should be \"MultiPoint\"");
     XCTAssertEqual(points.dimensions, 2,
-             @"Result dimensions should be 2");
+             @"Result dimensions should be two");
     XCTAssertEqual([points getListPoints].count, 4,
-             @"Result points should be 4");
+             @"Result points should be four");
 }
 
 - (void)test_Point_MultiCopy
@@ -320,9 +320,9 @@
     XCTAssertEqualObjects(points2.type, @"MultiPoint",
              @"Result type should be \"MultiPoint\"");
     XCTAssertEqual(points2.dimensions, 2,
-             @"Result dimensions should be 2");
+             @"Result dimensions should be two");
     XCTAssertEqual([points2 getListPoints].count, 4,
-             @"Result points should be 4");
+             @"Result points should be four");
 }
 
 - (void)test_Point_MultiCopyNilException
