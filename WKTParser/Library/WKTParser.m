@@ -46,6 +46,65 @@
     return result;
 }
 
++ (NSString *)cleanParents:(NSString *)input withTypeGeometry:(NSString *)tGeometry
+{
+    // Remove one Parent
+    if([tGeometry isEqualToString:@"POINT"] || [tGeometry isEqualToString:@"POINT Z"] ||
+       [tGeometry isEqualToString:@"POINTZ"] || [tGeometry isEqualToString:@"MULTIPOINT"] ||
+       [tGeometry isEqualToString:@"MULTIPOINT Z"] || [tGeometry isEqualToString:@"MULTIPOINTZ"] ||
+       [tGeometry isEqualToString:@"LINESTRING"] || [tGeometry isEqualToString:@"LINESTRING Z"] ||
+       [tGeometry isEqualToString:@"LINESTRINGZ"])
+    {
+        if([input characterAtIndex:0] != '(' || [input characterAtIndex:input.length-1] != ')')
+        {
+            @throw [NSException exceptionWithName:@"WKTParser Library"
+                reason:@"Parameter input is invalid (Bad Format WKT Geometry)"
+                userInfo:nil];
+        }
+        input = [input stringByReplacingCharactersInRange:
+                 NSMakeRange(0, 1) withString:@""];
+        input = [input stringByReplacingCharactersInRange:
+                 NSMakeRange(input.length-1, 1) withString:@""];
+    }
+    
+    // Remove two Parents
+    else if([tGeometry isEqualToString:@"MULTILINESTRING"] || [tGeometry isEqualToString:@"MULTILINESTRING Z"] ||
+       [tGeometry isEqualToString:@"MULTILINESTRINGZ"] || [tGeometry isEqualToString:@"POLYGON"] ||
+       [tGeometry isEqualToString:@"POLYGON Z"] || [tGeometry isEqualToString:@"POLYGONZ"])
+    {
+        if([input characterAtIndex:0] != '(' || [input characterAtIndex:input.length-1] != ')' ||
+           [input characterAtIndex:1] != '(' || [input characterAtIndex:input.length-2] != ')')
+        {
+            @throw [NSException exceptionWithName:@"WKTParser Library"
+                reason:@"Parameter input is invalid (Bad Format WKT Geometry)"
+                userInfo:nil];
+        }
+        input = [input stringByReplacingCharactersInRange:
+                 NSMakeRange(0, 2) withString:@""];
+        input = [input stringByReplacingCharactersInRange:
+                 NSMakeRange(input.length-2, 2) withString:@""];
+    }
+    
+    // Remove three Parents
+    else if([tGeometry isEqualToString:@"MULTIPOLYGON"] || [tGeometry isEqualToString:@"MULTIPOLYGON Z"] ||
+        [tGeometry isEqualToString:@"MULTIPOLYGONZ"])
+    {
+        if([input characterAtIndex:0] != '(' || [input characterAtIndex:input.length-1] != ')' ||
+           [input characterAtIndex:1] != '(' || [input characterAtIndex:input.length-2] != ')' ||
+           [input characterAtIndex:2] != '(' || [input characterAtIndex:input.length-3] != ')')
+        {
+            @throw [NSException exceptionWithName:@"WKTParser Library"
+                reason:@"Parameter input is invalid (Bad Format WKT Geometry)"
+                userInfo:nil];
+        }
+        input = [input stringByReplacingCharactersInRange:
+                 NSMakeRange(0, 3) withString:@""];
+        input = [input stringByReplacingCharactersInRange:
+                 NSMakeRange(input.length-3, 3) withString:@""];
+    }
+    return input;
+}
+
 + (WKTPoint *)parsePoint:(NSString *)input withDimensions:(int)dims
 {
     NSArray *inputSplitted = [WKTString splitSpacesNSString:input];
@@ -73,7 +132,20 @@
 
 + (WKTPointM *)parseMultiPoint:(NSString *)input withDimensions:(int)dims
 {
-    NSArray *inputSplitted = [WKTString splitCommasNSString:input];
+    NSArray *inputSplitted = [WKTString splitParentCommasNSString:input];
+    NSString *newInput = input;
+    if(inputSplitted.count > 1)
+    {
+        newInput = [newInput stringByReplacingCharactersInRange:
+                 NSMakeRange(0, 1) withString:@""];
+        newInput = [newInput stringByReplacingCharactersInRange:
+                 NSMakeRange(newInput.length-1, 1) withString:@""];
+        inputSplitted = [WKTString splitParentCommasNSString:newInput];
+    }
+    else
+    {
+        inputSplitted = [WKTString splitCommasNSString:newInput];
+    }
     NSMutableArray *inputPoints = [[NSMutableArray alloc]init];
     for(int i = 0; i < inputSplitted.count; i++)
     {
@@ -110,6 +182,15 @@
 + (WKTPolygon *)parsePolygon:(NSString *)input withDimensions:(int)dims
 {
     NSArray *inputSplitted = [WKTString splitParentCommasNSString:input];
+    NSString *newInput = input;
+    if(inputSplitted.count > 1)
+    {
+        newInput = [newInput stringByReplacingCharactersInRange:
+                    NSMakeRange(0, 1) withString:@""];
+        newInput = [newInput stringByReplacingCharactersInRange:
+                    NSMakeRange(newInput.length-1, 1) withString:@""];
+        inputSplitted = [WKTString splitParentCommasNSString:newInput];
+    }
     NSMutableArray *inputPoints = [[NSMutableArray alloc]init];
     for(int i = 0; i < inputSplitted.count; i++)
     {
@@ -140,7 +221,7 @@
             reason:@"Parameter input is nil"
             userInfo:nil];
     }
-    else if ((typeGeometry = [self checkTypeWKT:input]) != nil)
+    else if ((typeGeometry = [self checkTypeWKT:input]) == nil)
     {
         @throw [NSException exceptionWithName:@"WKTParser Library"
             reason:@"Parameter input is invalid (WKT Geometry not recognised)"
@@ -157,6 +238,9 @@
         input = [input stringByReplacingOccurrencesOfString:
             [NSString stringWithFormat:@"%@\\s*", typeGeometry] withString:@""
             options:NSRegularExpressionSearch range:NSMakeRange(0, input.length)];
+        
+        // Clean Parents of Input and throw Exceptions
+        input = [self cleanParents:input withTypeGeometry:typeGeometry];
         
         if([typeGeometry isEqualToString:@"POINT"])
         {
