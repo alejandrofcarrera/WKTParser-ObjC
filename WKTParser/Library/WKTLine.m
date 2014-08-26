@@ -176,14 +176,14 @@
 
 - (MKPolyline *)toMapLine
 {
-    MKMapPoint *points = calloc(listPoints.count, sizeof(MKMapPoint));
-    int indexI = 0;
+    CLLocationCoordinate2D points[listPoints.count];
     for(int i = 0; i < listPoints.count; i++)
     {
-        points[indexI++] = [(WKTPoint *) listPoints[i] toMapPoint];
+        WKTPoint *p = listPoints[i];
+        points[i] = CLLocationCoordinate2DMake(p.dimensionY, p.dimensionX);
+        p = nil;
     }
-    MKPolyline *result = [MKPolyline polylineWithPoints:points count:indexI];
-    free(points);
+    MKPolyline *result = [MKPolyline polylineWithCoordinates:points count:listPoints.count];
     return result;
 }
 
