@@ -137,6 +137,7 @@
     }
 }
 
+// Latitude (DimensionY) Longitude (DimensionX)
 - (MKPointAnnotation *)toMapPointAnnotation
 {
     MKPointAnnotation *result = [[MKPointAnnotation alloc] init];
@@ -144,6 +145,7 @@
     return result;
 }
 
+// X (DimensionX) Y (DimensionY)
 - (MKMapPoint)toMapPoint
 {
     return MKMapPointMake(dimensionX, dimensionY);
