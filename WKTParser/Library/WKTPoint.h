@@ -45,4 +45,8 @@
 
 - (NSString *)toWKT;
 
+- (MKPointAnnotation *)toMapPointAnnotation;
+
+- (MKMapPoint)toMapPoint;
+
 @end

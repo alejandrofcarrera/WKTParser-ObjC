@@ -174,4 +174,17 @@
     }
 }
 
+- (MKPolyline *)toMapLine
+{
+    MKMapPoint *points = calloc(listPoints.count, sizeof(MKMapPoint));
+    int indexI = 0;
+    for(int i = 0; i < listPoints.count; i++)
+    {
+        points[indexI++] = [(WKTPoint *) listPoints[i] toMapPoint];
+    }
+    MKPolyline *result = [MKPolyline polylineWithPoints:points count:indexI];
+    free(points);
+    return result;
+}
+
 @end

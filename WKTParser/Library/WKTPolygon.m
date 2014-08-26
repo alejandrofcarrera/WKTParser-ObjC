@@ -217,4 +217,49 @@
     }
 }
 
+- (MKPolygon *)toMapPolygon
+{
+    
+    // Create Exterior Polygon
+    NSArray *listExtPolygon = [[self getExteriorPolygon] getListPoints];
+    MKMapPoint *exteriorPolygon = calloc(listExtPolygon.count, sizeof(MKMapPoint));
+    int indexE = 0;
+    for(int i = 0; i < listExtPolygon.count; i++)
+    {
+        exteriorPolygon[indexE++] = [(WKTPoint *) listExtPolygon[i] toMapPoint];
+    }
+    listExtPolygon = nil;
+    
+    // Create return Polygon
+    MKPolygon *result;
+    
+    // Create Interior Polygon
+    NSArray *listIntPolygons = [self getInteriorPolygons];
+    if(listIntPolygons.count > 0)
+    {
+        NSMutableArray *intPolygons = [[NSMutableArray alloc] init];
+        for(int i = 0; i < listIntPolygons.count; i++)
+        {
+            NSArray *listPoints = [(WKTPointM *) listIntPolygons[i] getListPoints];
+            MKMapPoint *interiorPolygon = calloc(listPoints.count, sizeof(MKMapPoint));
+            int indexI = 0;
+            for(int j = 0; j < listPoints.count; j++)
+            {
+                interiorPolygon[indexI++] = [(WKTPoint *) listPoints[i] toMapPoint];
+            }
+            MKPolygon *pInterior = [MKPolygon polygonWithPoints:interiorPolygon count:indexI];
+            free(interiorPolygon);
+            [intPolygons addObject:pInterior];
+            pInterior = nil;
+        }
+        result = [MKPolygon polygonWithPoints:exteriorPolygon count:indexE interiorPolygons:intPolygons];
+    }
+    else
+    {
+        result = [MKPolygon polygonWithPoints:exteriorPolygon count:indexE];
+    }
+    free(exteriorPolygon);
+    return result;
+}
+
 @end

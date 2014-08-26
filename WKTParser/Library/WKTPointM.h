@@ -49,4 +49,6 @@
 
 - (NSString *)toWKT;
 
+- (NSArray *)toMapMultiPoint;
+
 @end

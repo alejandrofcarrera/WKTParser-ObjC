@@ -176,4 +176,17 @@
     }
 }
 
+- (NSArray *)toMapMultiPolygon
+{
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    NSArray *polygons = [self getPolygons];
+    for(int i = 0; i < polygons.count; i++)
+    {
+        [result addObject:[(WKTPolygon *) polygons[i] toMapPolygon]];
+    }
+    polygons = nil;
+    return result;
+}
+
+
 @end

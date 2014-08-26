@@ -129,4 +129,16 @@
     }
 }
 
+- (MKPointAnnotation *)toMapPointAnnotation
+{
+    MKPointAnnotation *result = [[MKPointAnnotation alloc] init];
+    result.coordinate = CLLocationCoordinate2DMake(dimensionX, dimensionY);
+    return result;
+}
+
+- (MKMapPoint)toMapPoint
+{
+    return MKMapPointMake(dimensionX, dimensionY);
+}
+
 @end

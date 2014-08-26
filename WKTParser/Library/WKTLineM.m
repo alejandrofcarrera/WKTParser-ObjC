@@ -174,4 +174,14 @@
     }
 }
 
+- (NSArray *)toMapMultiLine
+{
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    for(int i = 0; i < listLines.count; i++)
+    {
+        [result addObject:[(WKTLine *) listLines[i] toMapLine]];
+    }
+    return result;
+}
+
 @end

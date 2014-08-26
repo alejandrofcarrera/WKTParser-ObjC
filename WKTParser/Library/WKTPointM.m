@@ -174,4 +174,14 @@
     }
 }
 
+- (NSArray *)toMapMultiPoint
+{
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    for(int i = 0; i < listPoints.count; i++)
+    {
+        [result addObject: [(WKTPoint *) listPoints[i] toMapPointAnnotation]];
+    }
+    return result;
+}
+
 @end

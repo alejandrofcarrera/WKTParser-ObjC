@@ -53,5 +53,7 @@
 
 - (NSString *)toWKT;
 
+- (MKPolygon *)toMapPolygon;
+
 @end
 

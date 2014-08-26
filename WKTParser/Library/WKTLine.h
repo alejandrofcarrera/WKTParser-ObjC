@@ -49,4 +49,6 @@
 
 - (NSString *)toWKT;
 
+- (MKPolyline *)toMapLine;
+
 @end
