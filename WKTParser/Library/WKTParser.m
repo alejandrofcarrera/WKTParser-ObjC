@@ -187,10 +187,6 @@
     NSString *newInput = input;
     if(inputSplitted.count > 1)
     {
-        newInput = [newInput stringByReplacingCharactersInRange:
-                    NSMakeRange(0, 1) withString:@""];
-        newInput = [newInput stringByReplacingCharactersInRange:
-                    NSMakeRange(newInput.length-1, 1) withString:@""];
         inputSplitted = [WKTString splitParentCommasNSString:newInput];
     }
     NSMutableArray *inputPoints = [[NSMutableArray alloc]init];
