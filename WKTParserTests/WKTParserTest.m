@@ -109,7 +109,7 @@
     input = [input stringByReplacingCharactersInRange:
              NSMakeRange(input.length-1, 1) withString:@""];
     WKTPointM *result = [WKTParser parseMultiPoint:input withDimensions:2];
-    NSLog(@"%@ - %@", input, [result getListPoints]);
+
     XCTAssertEqualObjects(result.type, @"MultiPoint",
              @"Result type should be \"MultiPoint\"");
     XCTAssertEqual(result.dimensions, 2,
@@ -126,7 +126,6 @@
     input = [input stringByReplacingCharactersInRange:
              NSMakeRange(input.length-1, 1) withString:@""];
     WKTPointM *result = [WKTParser parseMultiPoint:input withDimensions:2];
-    NSLog(@"%@ - %@", input, [result getListPoints]);
 
     XCTAssertEqualObjects(result.type, @"MultiPoint",
              @"Result type should be \"MultiPoint\"");
@@ -144,7 +143,6 @@
     input = [input stringByReplacingCharactersInRange:
              NSMakeRange(input.length-1, 1) withString:@""];
     WKTPointM *result = [WKTParser parseMultiPoint:input withDimensions:3];
-    NSLog(@"%@ - %@", input, [result getListPoints]);
 
     XCTAssertEqualObjects(result.type, @"MultiPoint",
              @"Result type should be \"MultiPoint\"");
