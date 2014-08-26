@@ -132,7 +132,7 @@
 - (MKPointAnnotation *)toMapPointAnnotation
 {
     MKPointAnnotation *result = [[MKPointAnnotation alloc] init];
-    result.coordinate = CLLocationCoordinate2DMake(dimensionX, dimensionY);
+    result.coordinate = CLLocationCoordinate2DMake(dimensionY, dimensionX);
     return result;
 }
 
