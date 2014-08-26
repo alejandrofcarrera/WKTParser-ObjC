@@ -25,6 +25,9 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
+// Map Reference for Library files
+#include <MapKit/MapKit.h>
+
 @interface WKTGeometry : NSObject
 
 @property (nonatomic, readwrite) int dimensions;
