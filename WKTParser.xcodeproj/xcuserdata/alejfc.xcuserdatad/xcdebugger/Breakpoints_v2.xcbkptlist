@@ -9,117 +9,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WKTParserTests/WKTStringTest.m"
-            timestampString = "429183896.08119"
+            filePath = "WKTParserTests/WKTParserTest.m"
+            timestampString = "430734011.588502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-testSplitThrowException"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[WKTStringTest testSplitThrowException]"
-                  moduleName = "WKTParserTests"
-                  urlString = "file:///Volumes/Work/iOS/WKTParser/WKTParserTests/WKTStringTest.m"
-                  timestampString = "429179626.765375"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "364">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[WKTStringTest testSplitThrowException]"
-                  moduleName = "WKTParserTests"
-                  urlString = "file:///Volumes/Work/iOS/WKTParser/WKTParserTests/WKTStringTest.m"
-                  timestampString = "429179626.766595"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "414">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[WKTStringTest testSplitThrowException]"
-                  moduleName = "WKTParserTests"
-                  urlString = "file:///Volumes/Work/iOS/WKTParser/WKTParserTests/WKTStringTest.m"
-                  timestampString = "429179626.766864"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "431">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[WKTStringTest testSplitThrowException]"
-                  moduleName = "WKTParserTests"
-                  urlString = "file:///Volumes/Work/iOS/WKTParser/WKTParserTests/WKTStringTest.m"
-                  timestampString = "429179626.767134"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "1094">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[WKTStringTest testSplitThrowException]"
-                  moduleName = "WKTParserTests"
-                  urlString = "file:///Volumes/Work/iOS/WKTParser/WKTParserTests/WKTStringTest.m"
-                  timestampString = "429179626.767356"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "1142">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WKTParser/Library/WKTString.m"
-            timestampString = "429180385.721504"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "+splitCommasNSString:"
+            startingLineNumber = "736"
+            endingLineNumber = "736"
+            landmarkName = "-test_parseGeometry_SinglePolygon"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WKTParser/Library/WKTString.m"
-            timestampString = "429180394.46149"
+            filePath = "WKTParserTests/WKTParserTest.m"
+            timestampString = "430734021.886759"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "+splitString:andRegExp:"
+            startingLineNumber = "740"
+            endingLineNumber = "740"
+            landmarkName = "-test_parseGeometry_SinglePolygon"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
