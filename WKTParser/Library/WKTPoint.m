@@ -33,12 +33,21 @@
 @synthesize dimensionY;
 @synthesize dimensionZ;
 
+- (id)init
+{
+    if (self = [super init])
+    {
+        self.type = @"Point";
+        self.dimensions = 0;
+    }
+    return self;
+}
+
 - (id)initWithDimensionX:(double)dimX andDimensionY:(double)dimY
 {
-    if(self = [super init])
+    if(self = [self init])
     {
         self.dimensions = 2;
-        self.type = @"Point";
         self.dimensionX = dimX;
         self.dimensionY = dimY;
     }
@@ -47,10 +56,9 @@
 
 - (id)initWithDimensionX:(double)dimX andDimensionY:(double)dimY andDimensionZ:(double)dimZ
 {
-    if(self = [super init])
+    if(self = [self init])
     {
         self.dimensions = 3;
-        self.type = @"Point";
         self.dimensionX = dimX;
         self.dimensionY = dimY;
         self.dimensionZ = dimZ;

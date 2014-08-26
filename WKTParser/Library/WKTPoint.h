@@ -35,6 +35,8 @@
 
 @property (nonatomic, readwrite) double dimensionZ;
 
+- (id)init;
+
 - (id)initWithDimensionX:(double)dimX andDimensionY:(double)dimY;
 
 - (id)initWithDimensionX:(double)dimX andDimensionY:(double)dimY andDimensionZ:(double)dimZ;

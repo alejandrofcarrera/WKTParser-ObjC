@@ -109,6 +109,10 @@
 
 + (WKTPoint *)parsePoint:(NSString *)input withDimensions:(int)dims
 {
+    if([input isEqualToString:@"EMPTY"])
+    {
+        return [[WKTPoint alloc] init];
+    }
     NSArray *inputSplitted = [WKTString splitSpacesNSString:input];
     WKTPoint *result;
     if(inputSplitted.count != dims)
@@ -134,6 +138,10 @@
 
 + (WKTPointM *)parseMultiPoint:(NSString *)input withDimensions:(int)dims
 {
+    if([input isEqualToString:@"EMPTY"])
+    {
+        return [[WKTPointM alloc] init];
+    }
     NSArray *inputSplitted = [WKTString splitParentCommasNSString:input];
     NSString *newInput = input;
     if(inputSplitted.count > 1)
@@ -159,6 +167,10 @@
 
 + (WKTLine *)parseLine:(NSString *)input withDimensions:(int)dims
 {
+    if([input isEqualToString:@"EMPTY"])
+    {
+        return [[WKTLine alloc] init];
+    }
     NSArray *inputSplitted = [WKTString splitCommasNSString:input];
     NSMutableArray *inputPoints = [[NSMutableArray alloc]init];
     for(int i = 0; i < inputSplitted.count; i++)
@@ -171,6 +183,10 @@
 
 + (WKTLineM *)parseMultiLine:(NSString *)input withDimensions:(int)dims
 {
+    if([input isEqualToString:@"EMPTY"])
+    {
+        return [[WKTLineM alloc] init];
+    }
     NSArray *inputSplitted = [WKTString splitParentCommasNSString:input];
     NSMutableArray *inputLines = [[NSMutableArray alloc]init];
     for(int i = 0; i < inputSplitted.count; i++)
@@ -183,6 +199,10 @@
 
 + (WKTPolygon *)parsePolygon:(NSString *)input withDimensions:(int)dims
 {
+    if([input isEqualToString:@"EMPTY"])
+    {
+        return [[WKTPolygon alloc] init];
+    }
     NSArray *inputSplitted = [WKTString splitParentCommasNSString:input];
     NSString *newInput = input;
     if(inputSplitted.count > 1)
@@ -200,6 +220,10 @@
 
 + (WKTPolygonM *)parseMultiPolygon:(NSString *)input withDimensions:(int)dims
 {
+    if([input isEqualToString:@"EMPTY"])
+    {
+        return [[WKTPolygonM alloc] init];
+    }
     NSArray *inputSplitted = [WKTString splitDoubleParentCommasNSString:input];
     NSMutableArray *inputPolygons = [[NSMutableArray alloc]init];
     for(int i = 0; i < inputSplitted.count; i++)
@@ -301,36 +325,6 @@
                 userInfo:nil];
         }
     }
-    return nil;
-}
-
-- (MKPolygon *)convertPolygon:(WKTPolygon *)polygon
-{
-    return nil;
-}
-
-- (MKPolygon *)convertMultiPolygon:(WKTPolygonM *)polygons
-{
-    return nil;
-}
-
-- (MKPointAnnotation *)convertPoint:(WKTPoint *)point
-{
-    return nil;
-}
-
-- (MKPolyline *)convertMultiPoint:(WKTPointM *)points
-{
-    return nil;
-}
-
-- (MKPolyline *)convertLine:(WKTLine *)line
-{
-    return nil;
-}
-
-- (NSArray *)convertLines:(WKTLineM *)lines
-{
     return nil;
 }
 
