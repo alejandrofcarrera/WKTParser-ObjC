@@ -117,11 +117,11 @@
 {
     if(self.dimensions == 2)
     {
-        return [NSString stringWithFormat:@"%.0f %.0f", dimensionX, dimensionY];
+        return [NSString stringWithFormat:@"%f %f", dimensionX, dimensionY];
     }
     else
     {
-        return [NSString stringWithFormat:@"%.0f %.0f %.0f", dimensionX, dimensionY, dimensionZ];
+        return [NSString stringWithFormat:@"%f %f %f", dimensionX, dimensionY, dimensionZ];
     }
 }
 
