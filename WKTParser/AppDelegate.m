@@ -31,9 +31,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    if([UIDevice currentDevice].systemVersion.floatValue < 7.0)
+    {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
+    }
+    self.vc = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    self.nvc = [[UINavigationController alloc] initWithRootViewController:self.vc];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window setRootViewController:self.nvc];
     [self.window makeKeyAndVisible];
     return YES;
 }

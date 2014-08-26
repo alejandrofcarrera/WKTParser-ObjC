@@ -1,7 +1,7 @@
 //
-//  AppDelegate.h
+//  ViewController.h
 //
-//  WKTParser Library
+//  WKTParser View Controller
 //
 //  The MIT License (MIT)
 //
@@ -27,14 +27,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ViewController.h"
+#import "WKTParser.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) ViewController *vc;
-
-@property (strong, nonatomic) UINavigationController *nvc;
+@interface ViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, UIAlertViewDelegate> {
+        
+    MKMapView *map;
+    
+}
 
 @end
