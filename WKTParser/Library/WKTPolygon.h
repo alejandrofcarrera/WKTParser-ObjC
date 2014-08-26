@@ -51,5 +51,7 @@
 
 - (void)copyTo:(WKTPolygon *)otherPolygon;
 
+- (NSString *)toWKT;
+
 @end
 

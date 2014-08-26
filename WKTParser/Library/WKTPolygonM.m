@@ -147,4 +147,33 @@
     }
 }
 
+- (NSString *)description
+{
+    NSString *description = @"";
+    NSArray *lPolygons = [self getPolygons];
+    for(int i = 0; i < lPolygons.count; i++)
+    {
+        NSString *lString = [NSString stringWithFormat:@"(%@)", lPolygons[i]];
+        description = [description stringByAppendingString:lString];
+        if(i < lPolygons.count - 1)
+        {
+            description = [description stringByAppendingString:@", "];
+        }
+    }
+    lPolygons = nil;
+    return description;
+}
+
+- (NSString *)toWKT
+{
+    if(self.dimensions == 2)
+    {
+        return [NSString stringWithFormat:@"MULTIPOLYGON (%@)", self];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"MULTIPOLYGONZ (%@)", self];
+    }
+}
+
 @end

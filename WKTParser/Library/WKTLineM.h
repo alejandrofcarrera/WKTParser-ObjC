@@ -47,4 +47,6 @@
 
 - (void)copyTo:(WKTLineM *)otherLineM;
 
+- (NSString *)toWKT;
+
 @end

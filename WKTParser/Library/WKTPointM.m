@@ -147,4 +147,31 @@
     }
 }
 
+- (NSString *)description
+{
+    NSString *description = @"";
+    for(int i = 0; i < listPoints.count; i++)
+    {
+        NSString *pString = [NSString stringWithFormat:@"%@", listPoints[i]];
+        description = [description stringByAppendingString:pString];
+        if(i < listPoints.count - 1)
+        {
+            description = [description stringByAppendingString:@", "];
+        }
+    }
+    return description;
+}
+
+- (NSString *)toWKT
+{
+    if(self.dimensions == 2)
+    {
+        return [NSString stringWithFormat:@"MULTIPOINT (%@)", self];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"MULTIPOINTZ (%@)", self];
+    }
+}
+
 @end

@@ -147,4 +147,31 @@
     }
 }
 
+- (NSString *)description
+{
+    NSString *description = @"";
+    for(int i = 0; i < listLines.count; i++)
+    {
+        NSString *lString = [NSString stringWithFormat:@"(%@)", listLines[i]];
+        description = [description stringByAppendingString:lString];
+        if(i < listLines.count - 1)
+        {
+            description = [description stringByAppendingString:@", "];
+        }
+    }
+    return description;
+}
+
+- (NSString *)toWKT
+{
+    if(self.dimensions == 2)
+    {
+        return [NSString stringWithFormat:@"MULTILINESTRING (%@)", self];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"MULTILINESTRINGZ (%@)", self];
+    }
+}
+
 @end

@@ -43,4 +43,6 @@
 
 - (void)copyTo:(WKTPoint *)otherPoint;
 
+- (NSString *)toWKT;
+
 @end

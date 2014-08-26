@@ -105,4 +105,28 @@
     }
 }
 
+- (NSString *)description
+{
+    if(self.dimensions == 2)
+    {
+        return [NSString stringWithFormat:@"%.0f %.0f", dimensionX, dimensionY];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"%.0f %.0f %.0f", dimensionX, dimensionY, dimensionZ];
+    }
+}
+
+- (NSString *)toWKT
+{
+    if(self.dimensions == 2)
+    {
+        return [NSString stringWithFormat:@"POINT (%@)", self];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"POINTZ (%@)", self];
+    }
+}
+
 @end
