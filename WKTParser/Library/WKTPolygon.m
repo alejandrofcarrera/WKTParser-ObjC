@@ -221,14 +221,14 @@
 {
     
     // Create Exterior Polygon
-    NSArray *listExtPolygon = [[self getExteriorPolygon] getListPoints];
-    MKMapPoint *exteriorPolygon = calloc(listExtPolygon.count, sizeof(MKMapPoint));
-    int indexE = 0;
-    for(int i = 0; i < listExtPolygon.count; i++)
+    NSArray *pointsExtPolygon = [[self getExteriorPolygon] getListPoints];
+    CLLocationCoordinate2D extPolygon[pointsExtPolygon.count];
+    for(int i = 0; i < pointsExtPolygon.count; i++)
     {
-        exteriorPolygon[indexE++] = [(WKTPoint *) listExtPolygon[i] toMapPoint];
+        WKTPoint *p = pointsExtPolygon[i];
+        extPolygon[i] = CLLocationCoordinate2DMake(p.dimensionY, p.dimensionX);
+        p = nil;
     }
-    listExtPolygon = nil;
     
     // Create return Polygon
     MKPolygon *result;
@@ -240,25 +240,25 @@
         NSMutableArray *intPolygons = [[NSMutableArray alloc] init];
         for(int i = 0; i < listIntPolygons.count; i++)
         {
-            NSArray *listPoints = [(WKTPointM *) listIntPolygons[i] getListPoints];
-            MKMapPoint *interiorPolygon = calloc(listPoints.count, sizeof(MKMapPoint));
-            int indexI = 0;
-            for(int j = 0; j < listPoints.count; j++)
+            NSArray *pointsIntPolygon = [(WKTPointM *) listIntPolygons[i] getListPoints];
+            CLLocationCoordinate2D intPolygon[pointsIntPolygon.count];
+            for(int j = 0; j < pointsIntPolygon.count; j++)
             {
-                interiorPolygon[indexI++] = [(WKTPoint *) listPoints[i] toMapPoint];
+                WKTPoint *p = pointsIntPolygon[j];
+                intPolygon[j] = CLLocationCoordinate2DMake(p.dimensionY, p.dimensionX);
+                p = nil;
             }
-            MKPolygon *pInterior = [MKPolygon polygonWithPoints:interiorPolygon count:indexI];
-            free(interiorPolygon);
+            MKPolygon *pInterior = [MKPolygon polygonWithCoordinates:intPolygon count:pointsIntPolygon.count];
             [intPolygons addObject:pInterior];
+            pointsIntPolygon = nil;
             pInterior = nil;
         }
-        result = [MKPolygon polygonWithPoints:exteriorPolygon count:indexE interiorPolygons:intPolygons];
+        result = [MKPolygon polygonWithCoordinates:extPolygon count:pointsExtPolygon.count interiorPolygons:intPolygons];
     }
     else
     {
-        result = [MKPolygon polygonWithPoints:exteriorPolygon count:indexE];
+        result = [MKPolygon polygonWithCoordinates:extPolygon count:pointsExtPolygon.count];
     }
-    free(exteriorPolygon);
     return result;
 }
 
