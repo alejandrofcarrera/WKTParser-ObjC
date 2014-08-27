@@ -4,6 +4,7 @@
 WKTParser Library have any conversions, parsers and formats. This library allow you parser three main types of WKT data: points, lines and polygons (single, multi, 2D and 3D).
 Also you can convert WKT format to MK format (2D) like MKMapPoint, Polyline, Polygon or Annotation.
 
+![WKT_Screenshot](./Resources/Screenshot.png)
 =========
 
 **Installation**
@@ -68,6 +69,10 @@ Run via the Product menu > Test or CMD + U
 **Credits**
 
 Alejandro Fdez. Carrera
+
+**Apps using this library**
+
+Ontology Engineering Group (OEG) [Map4RDF Lite](https://itunes.apple.com/es/app/map4rdf-lite/id828604407?mt=8)
 
 **License**
 
