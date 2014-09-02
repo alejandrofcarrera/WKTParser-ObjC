@@ -318,6 +318,24 @@
         {
             return [self parseMultiPolygon:input withDimensions:3];
         }
+        else if([typeGeometry isEqualToString:@"GEOMETRYCOLLECTION"])
+        {
+            NSArray *collection = [WKTString splitCommasNSString:input];
+            WKTGeometryCollection *result = [[WKTGeometryCollection alloc] init];
+            for(int i = 0; i < collection.count; i++)
+            {
+                @try
+                {
+                    [result addGeometry:[self parseGeometry:collection[i]]];
+                }
+                @catch (NSException *exception)
+                {
+                    @throw exception;
+                    break;
+                }
+            }
+            return result;
+        }
         else
         {
             @throw [NSException exceptionWithName:@"WKTParser Library"

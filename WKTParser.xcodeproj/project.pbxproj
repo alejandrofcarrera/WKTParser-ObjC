@@ -23,6 +23,7 @@
 		A19C70E6199372700027DE51 /* WKTPolygonM.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70DF199372700027DE51 /* WKTPolygonM.m */; };
 		A19C70EA199373EF0027DE51 /* WKTStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70E9199373EF0027DE51 /* WKTStringTest.m */; };
 		A1D6A8001997AB9E00F5B230 /* WKTPointTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6A7FF1997AB9E00F5B230 /* WKTPointTest.m */; };
+		A1E8364F19B4C04A00170362 /* WKTGeometryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E8364E19B4C04A00170362 /* WKTGeometryCollection.m */; };
 		A1F323E9198D44D200D3FF4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323E8198D44D200D3FF4A /* Foundation.framework */; };
 		A1F323EB198D44D200D3FF4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */; };
 		A1F323ED198D44D200D3FF4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F323EC198D44D200D3FF4A /* UIKit.framework */; };
@@ -73,6 +74,8 @@
 		A19C70DF199372700027DE51 /* WKTPolygonM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTPolygonM.m; path = Library/WKTPolygonM.m; sourceTree = "<group>"; };
 		A19C70E9199373EF0027DE51 /* WKTStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTStringTest.m; sourceTree = "<group>"; };
 		A1D6A7FF1997AB9E00F5B230 /* WKTPointTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTPointTest.m; sourceTree = "<group>"; };
+		A1E8364D19B4C04A00170362 /* WKTGeometryCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WKTGeometryCollection.h; path = Library/WKTGeometryCollection.h; sourceTree = "<group>"; };
+		A1E8364E19B4C04A00170362 /* WKTGeometryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WKTGeometryCollection.m; path = Library/WKTGeometryCollection.m; sourceTree = "<group>"; };
 		A1F323E5198D44D200D3FF4A /* WKTParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKTParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F323E8198D44D200D3FF4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1F323EA198D44D200D3FF4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -132,6 +135,8 @@
 				A19C70DD199372700027DE51 /* WKTPolygon.m */,
 				A19C70DE199372700027DE51 /* WKTPolygonM.h */,
 				A19C70DF199372700027DE51 /* WKTPolygonM.m */,
+				A1E8364D19B4C04A00170362 /* WKTGeometryCollection.h */,
+				A1E8364E19B4C04A00170362 /* WKTGeometryCollection.m */,
 			);
 			name = "Library Support";
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 			files = (
 				A19C70E0199372700027DE51 /* WKTGeometry.m in Sources */,
 				A1F323F9198D44D200D3FF4A /* AppDelegate.m in Sources */,
+				A1E8364F19B4C04A00170362 /* WKTGeometryCollection.m in Sources */,
 				A19C70D11993724F0027DE51 /* WKTString.m in Sources */,
 				A19C70D01993724F0027DE51 /* WKTParser.m in Sources */,
 				A19C70E4199372700027DE51 /* WKTPointM.m in Sources */,

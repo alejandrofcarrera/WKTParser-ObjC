@@ -1,7 +1,7 @@
 //
-//  WKTParser.h
+//  WKTGeometryCollection.h
 //
-//  WKTParser Library
+//  WKTParser Geometry Collection
 //
 //  The MIT License (MIT)
 //
@@ -25,23 +25,26 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-#include "WKTGeometryCollection.h"
-#include "WKTString.h"
+#include "WKTPolygonM.h"
 
-@interface WKTParser : NSObject
+@interface WKTGeometryCollection : WKTGeometry {
+    
+    NSMutableArray *listGeometry;
+    
+}
 
-// Specific Methods
+- (id)init;
 
-+ (WKTPoint *)parsePoint:(NSString *)input withDimensions:(int)dims;
-+ (WKTPointM *)parseMultiPoint:(NSString *)input withDimensions:(int)dims;
-+ (WKTLine *)parseLine:(NSString *)input withDimensions:(int)dims;
-+ (WKTLineM *)parseMultiLine:(NSString *)input withDimensions:(int)dims;
-+ (WKTPolygon *)parsePolygon:(NSString *)input withDimensions:(int)dims;
-+ (WKTPolygonM *)parseMultiPolygon:(NSString *)input withDimensions:(int)dims;
+- (void)addGeometry:(WKTGeometry *)geometry;
 
-// Generic Method
+- (void)removeGeometries;
 
-+ (WKTGeometry *)parseGeometry:(NSString *)input;
+- (NSArray *)getGeometries;
+
+- (BOOL)isEqual:(WKTGeometryCollection *)otherGeometries;
+
+- (void)copyTo:(WKTGeometryCollection *)otherGeometries;
+
+- (NSString *)toWKT;
 
 @end
-
