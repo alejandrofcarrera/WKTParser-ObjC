@@ -207,6 +207,10 @@
 
 - (NSString *)toWKT
 {
+    if(listMultiPoints.count == 0)
+    {
+        return @"POLYGON EMPTY";
+    }
     if(self.dimensions == 2)
     {
         return [NSString stringWithFormat:@"POLYGON (%@)", self];

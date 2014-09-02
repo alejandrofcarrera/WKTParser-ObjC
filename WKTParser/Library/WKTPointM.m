@@ -164,6 +164,10 @@
 
 - (NSString *)toWKT
 {
+    if(listPoints.count == 0)
+    {
+        return @"MULTIPOINT EMPTY";
+    }
     if(self.dimensions == 2)
     {
         return [NSString stringWithFormat:@"MULTIPOINT (%@)", self];

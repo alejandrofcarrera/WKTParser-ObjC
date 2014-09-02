@@ -164,6 +164,10 @@
 
 - (NSString *)toWKT
 {
+    if(listLines.count == 0)
+    {
+        return @"MULTILINESTRING EMPTY";
+    }
     if(self.dimensions == 2)
     {
         return [NSString stringWithFormat:@"MULTILINESTRING (%@)", self];

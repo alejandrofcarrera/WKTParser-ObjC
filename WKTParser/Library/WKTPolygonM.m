@@ -166,6 +166,10 @@
 
 - (NSString *)toWKT
 {
+    if(listPolygons.count == 0)
+    {
+        return @"MULTIPOLYGON EMPTY";
+    }
     if(self.dimensions == 2)
     {
         return [NSString stringWithFormat:@"MULTIPOLYGON (%@)", self];

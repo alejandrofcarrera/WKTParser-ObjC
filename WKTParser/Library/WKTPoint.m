@@ -127,6 +127,10 @@
 
 - (NSString *)toWKT
 {
+    if(self.dimensions == 0)
+    {
+        return @"POINT EMPTY";
+    }
     if(self.dimensions == 2)
     {
         return [NSString stringWithFormat:@"POINT (%@)", self];
