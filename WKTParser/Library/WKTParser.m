@@ -35,7 +35,8 @@
             @"MULTILINESTRING", @"POLYGON", @"MULTIPOLYGON", @"POINTZ",
             @"POINT Z", @"MULTIPOINTZ", @"MULTIPOINT Z", @"LINESTRINGZ",
             @"LINESTRING Z", @"MULTILINESTRINGZ", @"MULTILINESTRING Z",
-            @"POLYGONZ", @"POLYGON Z", @"MULTIPOLYGONZ", @"MULTIPOLYGON Z"];
+            @"POLYGONZ", @"POLYGON Z", @"MULTIPOLYGONZ", @"MULTIPOLYGON Z",
+            @"GEOMETRYCOLLECTION"];
     NSString *result = nil;
     for(NSString *i in WKT_Types)
     {
@@ -55,7 +56,7 @@
        [tGeometry isEqualToString:@"POINTZ"] || [tGeometry isEqualToString:@"MULTIPOINT"] ||
        [tGeometry isEqualToString:@"MULTIPOINT Z"] || [tGeometry isEqualToString:@"MULTIPOINTZ"] ||
        [tGeometry isEqualToString:@"LINESTRING"] || [tGeometry isEqualToString:@"LINESTRING Z"] ||
-       [tGeometry isEqualToString:@"LINESTRINGZ"])
+       [tGeometry isEqualToString:@"LINESTRINGZ"] || [tGeometry isEqualToString:@"GEOMETRYCOLLECTION"])
     {
         if([input characterAtIndex:0] != '(' || [input characterAtIndex:input.length-1] != ')')
         {
