@@ -28,19 +28,78 @@
 #include "WKTGeometryCollection.h"
 #include "WKTString.h"
 
+/** 
+ This class represent Class Parser Utilities.
+ 
+ It is recommend use generic method.
+ */
+
 @interface WKTParser : NSObject
 
-// Specific Methods
+/// @name Specific Methods
 
+/**
+ Specific parser for generate Point Geometry
+
+ @param dims dimension value (int format)
+ @param input string value for parse
+ @return WKTPoint instance
+*/
 + (WKTPoint *)parsePoint:(NSString *)input withDimensions:(int)dims;
+
+/**
+ Specific parser for generate Multi Point Geometry
+ 
+ @param dims dimension value (int format)
+ @param input string value for parse
+ @return WKTPointM instance
+ */
 + (WKTPointM *)parseMultiPoint:(NSString *)input withDimensions:(int)dims;
+
+/**
+ Specific parser for generate Line Geometry
+ 
+ @param dims dimension value (int format)
+ @param input string value for parse
+ @return WKTLine instance
+ */
 + (WKTLine *)parseLine:(NSString *)input withDimensions:(int)dims;
+
+/**
+ Specific parser for generate Multi Line Geometry
+ 
+ @param dims dimension value (int format)
+ @param input string value for parse
+ @return WKTLineM instance
+ */
 + (WKTLineM *)parseMultiLine:(NSString *)input withDimensions:(int)dims;
+
+/**
+ Specific parser for generate Polygon Geometry
+ 
+ @param dims dimension value (int format)
+ @param input string value for parse
+ @return WKTPolygon instance
+ */
 + (WKTPolygon *)parsePolygon:(NSString *)input withDimensions:(int)dims;
+
+/**
+ Specific parser for generate Multi Polygon Geometry
+ 
+ @param dims dimension value (int format)
+ @param input string value for parse
+ @return WKTPolygonM instance
+ */
 + (WKTPolygonM *)parseMultiPolygon:(NSString *)input withDimensions:(int)dims;
 
-// Generic Method
+/// @name Generic Method
 
+/**
+ Return Geometry from String parsed.
+ 
+ @param input String for generate WKTGeometry
+ @return WKTGeometry parsed
+ */
 + (WKTGeometry *)parseGeometry:(NSString *)input;
 
 @end

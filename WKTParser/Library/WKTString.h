@@ -27,16 +27,52 @@
 
 #import <UIKit/UIKit.h>
 
+/// This class represent Class String Utilities.
 @interface WKTString : NSObject
 
+/**
+ Return NSString list with regular expression splitted
+ 
+ @param input String for split spaces
+ @exception WKTString Parameter is nil.
+ @return NSArray with NSString
+ */
 + (NSArray *)splitSpacesNSString:(NSString *)input;
 
+/**
+ Return NSString list with regular expression splitted
+ 
+ @param input String for split commas
+ @exception WKTString Parameter is nil.
+ @return NSArray with NSString
+ */
 + (NSArray *)splitCommasNSString:(NSString *)input;
 
+/**
+ Return NSString list with regular expression splitted
+ 
+ @param input String for split parent plus commas
+ @exception WKTString Parameter is nil.
+ @return NSArray with NSString
+ */
 + (NSArray *)splitParentCommasNSString:(NSString *)input;
 
+/**
+ Return NSString list with regular expression splitted
+ 
+ @param input String for split double parent plus commas
+ @exception WKTString Parameter is nil.
+ @return NSArray with NSString
+ */
 + (NSArray *)splitDoubleParentCommasNSString:(NSString *)input;
 
+/**
+ Return NSString with replace of XML brackets
+ 
+ @param input String for replace characters
+ @exception WKTString Parameter is nil.
+ @return NSString with tags replaced
+ */
 + (NSString *)escapeTagsXMLNSString:(NSString *)input;
 
 @end

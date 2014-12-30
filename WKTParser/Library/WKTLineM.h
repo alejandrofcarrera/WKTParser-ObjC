@@ -88,7 +88,7 @@
  
  This method is the same that init join setListLines:
  
- @param polygons List of WKTLine
+ @param lines List of WKTLine
  @return WKTLineM instance
  */
 - (instancetype)initWithLines:(NSArray *)lines;

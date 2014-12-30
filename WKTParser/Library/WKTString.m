@@ -33,7 +33,7 @@
 {
     if(input == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+        @throw [NSException exceptionWithName:@"WKTString [splitString]"
             reason:@"Parameter input is nil"
             userInfo:nil];
     }
@@ -71,7 +71,7 @@
 {
     if(input == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+        @throw [NSException exceptionWithName:@"WKTString [splitParentCommasNSString]"
             reason:@"Parameter input is nil"
             userInfo:nil];
     }
@@ -92,7 +92,7 @@
 {
     if(input == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+        @throw [NSException exceptionWithName:@"WKTString [splitDoubleParentCommasNSString]"
             reason:@"Parameter input is nil"
             userInfo:nil];
     }
@@ -113,7 +113,7 @@
 {
     if(input == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Utils String Library"
+        @throw [NSException exceptionWithName:@"WKTString [escapeTagsXMLNSString]"
             reason:@"Parameter input is nil"
             userInfo:nil];
     }

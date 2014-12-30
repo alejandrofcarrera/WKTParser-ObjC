@@ -28,14 +28,45 @@
 // Map Reference for Library files
 #include <MapKit/MapKit.h>
 
+/**
+ This class represent Meta Class WKTGeometry on WKT Format.
+ 
+ It has not String representation.
+ 
+ Parent class of: WKTPoint, WKTPointM, WKTPolygon, WKTPolygonM, WKTLine, WKTLineM, WKTGeometryCollection
+ 
+ */
 @interface WKTGeometry : NSObject
 
+/// @name Properties
+
+/**
+ Dimensions property
+ 
+ Range is 2 - 3
+ */
 @property (nonatomic, readwrite) int dimensions;
 
+/**
+ Type property
+ 
+ Range is Line, MultiLine, Point, MultiPoint, Polygon, MultiPolygon and GeometryCollection
+ */
 @property (nonatomic, readwrite, strong) NSString *type;
 
+/**
+ GIS property
+ 
+ Range is WGS or EPSG or other Georeference system
+ */
 @property (nonatomic, readwrite, strong) NSString *gis;
 
+/// @name Constructor
+
+/**
+ Basic Constructor that set default values to new instance.
+ @return WKTGeometry instance
+ */
 - (instancetype)init;
 
 @end
