@@ -112,9 +112,9 @@
     NSLog(@" - Data WKTGeometry");
     NSLog(@"   * Class: %@", [p class]);
     NSLog(@"   * Dimension: %d", p.dimensions);
-    NSLog(@"   * Dimension X: %f", p.dimensionX);
-    NSLog(@"   * Dimension Y: %f", p.dimensionY);
-    NSLog(@"   * Dimension Z: %f", p.dimensionZ);
+    NSLog(@"   * Dimension X: %lu", p.dimensionX);
+    NSLog(@"   * Dimension Y: %lu", p.dimensionY);
+    NSLog(@"   * Dimension Z: %lu", p.dimensionZ);
     MKPointAnnotation *a = [p toMapPointAnnotation];
     a.title = @"New York City";
     a.subtitle = @"POINT (41.145556 -73.995)";

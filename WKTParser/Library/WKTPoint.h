@@ -27,30 +27,173 @@
 
 #include "WKTGeometry.h"
 
+/**
+ This class represent Point [Geometry](WKTGeometry) on WKT Format.
+ 
+ Its String representation are:
+ 
+ - 2D Representation: POINT (0 0)
+ 
+ - 3D Representation: POINTZ (0 0 0)
+ 
+ At 3D representation may be POINT Z too.
+ 
+ Example of use:
+ 
+	WKTPoint *p1 = [[WKTPoint alloc] initWithDimensionX:5.0 andDimensionY:10.0];
+	
+	WKTPoint *p2 = [[WKTPoint alloc] initWithDimensionX:10.0 andDimensionY:10.0 andDimensionZ:5.0];
+ 
+ Example of MapKit Annotation creation:
+ 
+	MKPointAnnotation *mapPoint = [p1 toMapPointAnnotation];
+	[mapPoint setTitle: @"Annotation title"];
+ 	[mapPoint setSubtitle: @"Annotation subtitle"];
+	MKMapView *map = [[MKMapView alloc] init];
+ 	[map addAnnotation: mapPoint];
+ 
+ Example of MapKit Point creation:
+ 
+	MKMapPoint coordinateMPoint = [p1 toMapPoint];
+	MKPointAnnotation *a1 = [[MKPointAnnotation alloc] init];
+	[a1 setCoordinate:MKCoordinateForMapPoint(coordinateMPoint)];
+ 	[a1 setTitle: @"Annotation title"];
+ 	[a1 setSubtitle: @"Annotation subtitle"];
+	[map addAnnotation: a1];
+
+ Example of Location creation:
+ 
+	CLLocation *loc1 = [p1 toLocation];
+ 	CLLocation *loc2 = [p2 toLocation];
+ 
+ 	// Distance between two locations
+ 	CLLocationDistance distance = [loc1 distanceFromLocation:loc2];
+ 
+ Example of Coordinate creation:
+ 
+	CLLocationCoordinate2D coord1 = [p1 toMapCoordinate];
+ 
+	MKPointAnnotation *a2 = [[MKPointAnnotation alloc] init];
+	[a2 setCoordinate:coordinatePoint];
+ 	[a2 setTitle: @"Annotation title"];
+ 	[a2 setSubtitle: @"Annotation subtitle"];
+	[map addAnnotation: a2];
+ 
+ Example of WKT representation:
+ 
+	NSString *wktString = [p1 toWKT];
+ 	NSLog(@"WKT: %@", wktString);
+ 
+	// WKT: POINT (5.000000 10.000000)
+ 
+ */
 @interface WKTPoint : WKTGeometry
 
-@property (nonatomic, readwrite) double dimensionX;
+/// @name Properties
 
-@property (nonatomic, readwrite) double dimensionY;
+/**
+ Dimension X property same as Longitude
+ */
+@property (nonatomic, readwrite) long dimensionX;
 
-@property (nonatomic, readwrite) double dimensionZ;
+/**
+ Dimension Y property same as Latitude
+ */
+@property (nonatomic, readwrite) long dimensionY;
 
+/**
+ Dimension Z property same as Altitude
+ */
+@property (nonatomic, readwrite) long dimensionZ;
+
+/// @name Constructor
+
+/**
+ Basic Constructor that set default values to new instance.
+ @return WKTPoint instance
+ */
 - (instancetype)init;
 
-- (instancetype)initWithDimensionX:(double)dimX andDimensionY:(double)dimY;
+/**
+ Complex Constructor that set default values and dimensions to new instance.
+ 
+ This method is the same that init join setDimensionX: and setDimensionY:
+ 
+ @param dimX longitude value (long format)
+ @param dimY latitude value (long format)
+ @return WKTPoint instance
+ */
+- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY;
 
-- (instancetype)initWithDimensionX:(double)dimX andDimensionY:(double)dimY andDimensionZ:(double)dimZ;
+/**
+ Complex Constructor that set default values and dimensions to new instance.
+ 
+ This method is the same that init join setDimensionX:, setDimensionY: and setDimensionZ: 
+ 
+ @param dimX longitude value (long format)
+ @param dimY latitude value (long format)
+ @param dimZ altitude value (long format)
+ @return WKTPoint instance
+ */
+- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY andDimensionZ:(long)dimZ;
 
+/// @name WKTPoint operations
+
+/**
+ Check if two WKTPoint are equal.
+ 
+ @param otherPoint WKTPoint to compare with itself
+ @return Boolean
+ */
 - (BOOL)isEqual:(WKTPoint *)otherPoint;
 
+/**
+ Pass all properties from itself to other WKTPoint reference.
+ 
+ @exception WKTPoint Parameter is nil.
+ @param otherPoint WKTPoint to pass properties
+ */
 - (void)copyTo:(WKTPoint *)otherPoint;
 
+/**
+ Return WKT representation.
+ 
+ @return String like POINT ( .... ) or POINT EMPTY
+ */
 - (NSString *)toWKT;
 
+/// @name MapKit operations
+
+/**
+ Return MKPointAnnotation representation.
+
+ @exception WKTPoint coordinate is not valid WGS84 format.
+ @return MapKit Annotation for add to map
+ */
 - (MKPointAnnotation *)toMapPointAnnotation;
 
+/**
+ Return Coordinate representation.
+
+ @exception WKTPoint coordinate is not valid WGS84 format.
+ @return CLLocationCoordinate2D to use
+ */
 - (CLLocationCoordinate2D)toMapCoordinate;
 
+/**
+ Return Location representation.
+ 
+ @exception WKTPoint coordinate is not valid WGS84 format.
+ @return CLLocation to use
+ */
+- (CLLocation *)toLocation;
+
+/**
+ Return Point representation.
+ 
+ @exception WKTPoint coordinate is not valid WGS84 format.
+ @return MKMapPoint to use
+ */
 - (MKMapPoint)toMapPoint;
 
 @end

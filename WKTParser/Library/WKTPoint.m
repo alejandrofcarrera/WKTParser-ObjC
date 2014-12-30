@@ -96,7 +96,7 @@
 {
     if(otherPoint == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Point [copyTo]"
+        @throw [NSException exceptionWithName:@"WKTPoint [copyTo]"
             reason:@"Parameter Point is nil"
             userInfo:nil];
     }
@@ -154,7 +154,7 @@
 {
     if(![self.gis isEqualToString:@"CRS84"])
     {
-        @throw [NSException exceptionWithName:@"WKTParser Point [toMapCoordinate]"
+        @throw [NSException exceptionWithName:@"WKTPoint [toMapCoordinate]"
             reason:@"Point dimensions are not CRS84 system"
             userInfo:nil];
     }
@@ -166,7 +166,7 @@
 {
     if(![self.gis isEqualToString:@"CRS84"])
     {
-        @throw [NSException exceptionWithName:@"WKTParser Point [toLocation]"
+        @throw [NSException exceptionWithName:@"WKTPoint [toLocation]"
             reason:@"Point dimensions are not CRS84 system"
             userInfo:nil];
     }
@@ -178,7 +178,7 @@
 {
     if(![self.gis isEqualToString:@"CRS84"])
     {
-        @throw [NSException exceptionWithName:@"WKTParser Point [toMapPoint]"
+        @throw [NSException exceptionWithName:@"WKTPoint [toMapPoint]"
             reason:@"Point dimensions are not CRS84 system"
             userInfo:nil];
     }

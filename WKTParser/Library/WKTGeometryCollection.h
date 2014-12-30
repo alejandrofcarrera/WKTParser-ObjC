@@ -116,7 +116,7 @@
 /**
  Return WKT representation.
  
- @return String like GEOMETRYCOLLECTION (( .... )) or GEOMETRYCOLLECTION EMPTY
+ @return String like GEOMETRYCOLLECTION ( .... ) or GEOMETRYCOLLECTION EMPTY
  */
 - (NSString *)toWKT;
 
