@@ -41,50 +41,25 @@
  Example of use:
  
 	WKTPoint *p1 = [[WKTPoint alloc] initWithDimensionX:5.0 andDimensionY:10.0];
-	
 	WKTPoint *p2 = [[WKTPoint alloc] initWithDimensionX:10.0 andDimensionY:10.0 andDimensionZ:5.0];
+ 
+ 	WKTPointM *mPoint = [[WKTPointM alloc] initWithPoints:@[p1, p1]];
  
  Example of MapKit Annotation creation:
  
-	MKPointAnnotation *mapPoint = [p1 toMapPointAnnotation];
-	[mapPoint setTitle: @"Annotation title"];
- [mapPoint setSubtitle: @"Annotation subtitle"];
+	NSArray *mapPoints = [mPoint toMapMultiAnnotation];
 	MKMapView *map = [[MKMapView alloc] init];
- [map addAnnotation: mapPoint];
- 
- Example of MapKit Point creation:
- 
-	MKMapPoint coordinateMPoint = [p1 toMapPoint];
-	MKPointAnnotation *a1 = [[MKPointAnnotation alloc] init];
-	[a1 setCoordinate:MKCoordinateForMapPoint(coordinateMPoint)];
- [a1 setTitle: @"Annotation title"];
- [a1 setSubtitle: @"Annotation subtitle"];
-	[map addAnnotation: a1];
- 
- Example of Location creation:
- 
-	CLLocation *loc1 = [p1 toLocation];
- CLLocation *loc2 = [p2 toLocation];
- 
- // Distance between two locations
- CLLocationDistance distance = [loc1 distanceFromLocation:loc2];
- 
- Example of Coordinate creation:
- 
-	CLLocationCoordinate2D coord1 = [p1 toMapCoordinate];
- 
-	MKPointAnnotation *a2 = [[MKPointAnnotation alloc] init];
-	[a2 setCoordinate:coordinatePoint];
- [a2 setTitle: @"Annotation title"];
- [a2 setSubtitle: @"Annotation subtitle"];
-	[map addAnnotation: a2];
- 
+ 	for(MKPointAnnotation *i : mapPoints)
+ 	{
+ 		[map addAnnotation: i];
+ 	}
+
  Example of WKT representation:
  
-	NSString *wktString = [p1 toWKT];
- NSLog(@"WKT: %@", wktString);
+	NSString *wktString = [mPoint toWKT];
+ 	NSLog(@"WKT: %@", wktString);
  
-	// WKT: POINT (5.000000 10.000000)
+	// WKT: MULTIPOINT (5 10, 5 10)
  
  */
 @interface WKTPointM : WKTGeometry {
