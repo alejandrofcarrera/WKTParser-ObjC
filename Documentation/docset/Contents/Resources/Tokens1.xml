@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/WKTGeometry.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/WKTGeometry</TokenIdentifier>
+			<Abstract type="html">This class represent Meta Class WKTGeometry on WKT Format.</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometry/setDimensions:</TokenIdentifier>
+			<Abstract type="html">Dimensions property</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) int dimensions</Declaration>
+			
+			
+			<Anchor>//api/name/dimensions</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometry/dimensions</TokenIdentifier>
+			<Abstract type="html">Dimensions property</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) int dimensions</Declaration>
+			
+			
+			<Anchor>//api/name/dimensions</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/WKTGeometry/dimensions</TokenIdentifier>
+			<Abstract type="html">Dimensions property</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) int dimensions</Declaration>
+			
+			
+			<Anchor>//api/name/dimensions</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometry/setType:</TokenIdentifier>
+			<Abstract type="html">Type property</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, strong) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometry/type</TokenIdentifier>
+			<Abstract type="html">Type property</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, strong) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/WKTGeometry/type</TokenIdentifier>
+			<Abstract type="html">Type property</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, strong) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometry/setGis:</TokenIdentifier>
+			<Abstract type="html">GIS property</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, strong) NSString *gis</Declaration>
+			
+			
+			<Anchor>//api/name/gis</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometry/gis</TokenIdentifier>
+			<Abstract type="html">GIS property</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, strong) NSString *gis</Declaration>
+			
+			
+			<Anchor>//api/name/gis</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/WKTGeometry/gis</TokenIdentifier>
+			<Abstract type="html">GIS property</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, strong) NSString *gis</Declaration>
+			
+			
+			<Anchor>//api/name/gis</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometry/init</TokenIdentifier>
+			<Abstract type="html">Basic Constructor that set default values to new instance.</Abstract>
+			<DeclaredIn>WKTGeometry.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)init</Declaration>
+			
+			<ReturnValue><Abstract type="html">WKTGeometry instance</Abstract></ReturnValue>
+			<Anchor>//api/name/init</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

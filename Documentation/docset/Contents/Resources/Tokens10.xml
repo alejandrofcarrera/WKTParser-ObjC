@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/WKTString.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/WKTString</TokenIdentifier>
+			<Abstract type="html">This class represent Class String Utilities.</Abstract>
+			<DeclaredIn>WKTString.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTString/splitSpacesNSString:</TokenIdentifier>
+			<Abstract type="html">Return NSString list with regular expression splitted</Abstract>
+			<DeclaredIn>WKTString.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)splitSpacesNSString:(NSString *)input</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">String for split spaces</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSArray with NSString</Abstract></ReturnValue>
+			<Anchor>//api/name/splitSpacesNSString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTString/splitCommasNSString:</TokenIdentifier>
+			<Abstract type="html">Return NSString list with regular expression splitted</Abstract>
+			<DeclaredIn>WKTString.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)splitCommasNSString:(NSString *)input</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">String for split commas</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSArray with NSString</Abstract></ReturnValue>
+			<Anchor>//api/name/splitCommasNSString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTString/splitParentCommasNSString:</TokenIdentifier>
+			<Abstract type="html">Return NSString list with regular expression splitted</Abstract>
+			<DeclaredIn>WKTString.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)splitParentCommasNSString:(NSString *)input</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">String for split parent plus commas</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSArray with NSString</Abstract></ReturnValue>
+			<Anchor>//api/name/splitParentCommasNSString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTString/splitDoubleParentCommasNSString:</TokenIdentifier>
+			<Abstract type="html">Return NSString list with regular expression splitted</Abstract>
+			<DeclaredIn>WKTString.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)splitDoubleParentCommasNSString:(NSString *)input</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">String for split double parent plus commas</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSArray with NSString</Abstract></ReturnValue>
+			<Anchor>//api/name/splitDoubleParentCommasNSString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTString/escapeTagsXMLNSString:</TokenIdentifier>
+			<Abstract type="html">Return NSString with replace of XML brackets</Abstract>
+			<DeclaredIn>WKTString.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)escapeTagsXMLNSString:(NSString *)input</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">String for replace characters</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSString with tags replaced</Abstract></ReturnValue>
+			<Anchor>//api/name/escapeTagsXMLNSString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

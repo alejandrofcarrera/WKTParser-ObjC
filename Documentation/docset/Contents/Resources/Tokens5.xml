@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/WKTParser.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/WKTParser</TokenIdentifier>
+			<Abstract type="html">This class represent Class Parser Utilities.</Abstract>
+			<DeclaredIn>WKTParser.h</DeclaredIn>
+            
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTParser/parsePoint:withDimensions:</TokenIdentifier>
+			<Abstract type="html">Specific parser for generate Point Geometry</Abstract>
+			<DeclaredIn>WKTParser.h</DeclaredIn>
+			
+			<Declaration>+ (WKTPoint *)parsePoint:(NSString *)input withDimensions:(int)dims</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">string value for parse</Abstract>
+				</Parameter><Parameter>
+					<Name>dims</Name>
+					<Abstract type="html">dimension value (int format)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTPoint instance</Abstract></ReturnValue>
+			<Anchor>//api/name/parsePoint:withDimensions:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTParser/parseMultiPoint:withDimensions:</TokenIdentifier>
+			<Abstract type="html">Specific parser for generate Multi Point Geometry</Abstract>
+			<DeclaredIn>WKTParser.h</DeclaredIn>
+			
+			<Declaration>+ (WKTPointM *)parseMultiPoint:(NSString *)input withDimensions:(int)dims</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">string value for parse</Abstract>
+				</Parameter><Parameter>
+					<Name>dims</Name>
+					<Abstract type="html">dimension value (int format)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTPointM instance</Abstract></ReturnValue>
+			<Anchor>//api/name/parseMultiPoint:withDimensions:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTParser/parseLine:withDimensions:</TokenIdentifier>
+			<Abstract type="html">Specific parser for generate Line Geometry</Abstract>
+			<DeclaredIn>WKTParser.h</DeclaredIn>
+			
+			<Declaration>+ (WKTLine *)parseLine:(NSString *)input withDimensions:(int)dims</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">string value for parse</Abstract>
+				</Parameter><Parameter>
+					<Name>dims</Name>
+					<Abstract type="html">dimension value (int format)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTLine instance</Abstract></ReturnValue>
+			<Anchor>//api/name/parseLine:withDimensions:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTParser/parseMultiLine:withDimensions:</TokenIdentifier>
+			<Abstract type="html">Specific parser for generate Multi Line Geometry</Abstract>
+			<DeclaredIn>WKTParser.h</DeclaredIn>
+			
+			<Declaration>+ (WKTLineM *)parseMultiLine:(NSString *)input withDimensions:(int)dims</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">string value for parse</Abstract>
+				</Parameter><Parameter>
+					<Name>dims</Name>
+					<Abstract type="html">dimension value (int format)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTLineM instance</Abstract></ReturnValue>
+			<Anchor>//api/name/parseMultiLine:withDimensions:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTParser/parsePolygon:withDimensions:</TokenIdentifier>
+			<Abstract type="html">Specific parser for generate Polygon Geometry</Abstract>
+			<DeclaredIn>WKTParser.h</DeclaredIn>
+			
+			<Declaration>+ (WKTPolygon *)parsePolygon:(NSString *)input withDimensions:(int)dims</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">string value for parse</Abstract>
+				</Parameter><Parameter>
+					<Name>dims</Name>
+					<Abstract type="html">dimension value (int format)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTPolygon instance</Abstract></ReturnValue>
+			<Anchor>//api/name/parsePolygon:withDimensions:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTParser/parseMultiPolygon:withDimensions:</TokenIdentifier>
+			<Abstract type="html">Specific parser for generate Multi Polygon Geometry</Abstract>
+			<DeclaredIn>WKTParser.h</DeclaredIn>
+			
+			<Declaration>+ (WKTPolygonM *)parseMultiPolygon:(NSString *)input withDimensions:(int)dims</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">string value for parse</Abstract>
+				</Parameter><Parameter>
+					<Name>dims</Name>
+					<Abstract type="html">dimension value (int format)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTPolygonM instance</Abstract></ReturnValue>
+			<Anchor>//api/name/parseMultiPolygon:withDimensions:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/WKTParser/parseGeometry:</TokenIdentifier>
+			<Abstract type="html">Return Geometry from String parsed.</Abstract>
+			<DeclaredIn>WKTParser.h</DeclaredIn>
+			
+			<Declaration>+ (WKTGeometry *)parseGeometry:(NSString *)input</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>input</Name>
+					<Abstract type="html">String for generate WKTGeometry</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTGeometry parsed</Abstract></ReturnValue>
+			<Anchor>//api/name/parseGeometry:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

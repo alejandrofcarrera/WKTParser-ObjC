@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/WKTGeometryCollection.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/WKTGeometryCollection</TokenIdentifier>
+			<Abstract type="html">This class represent Geometry Collection on WKT Format.</Abstract>
+			<DeclaredIn>WKTGeometryCollection.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometryCollection/init</TokenIdentifier>
+			<Abstract type="html">Basic Constructor that set default values to new instance.</Abstract>
+			<DeclaredIn>WKTGeometryCollection.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)init</Declaration>
+			
+			<ReturnValue><Abstract type="html">WKTGeometryCollection instance</Abstract></ReturnValue>
+			<Anchor>//api/name/init</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometryCollection/addGeometry:</TokenIdentifier>
+			<Abstract type="html">Add WKTGeometry to Geometry List internal property.</Abstract>
+			<DeclaredIn>WKTGeometryCollection.h</DeclaredIn>
+			
+			<Declaration>- (void)addGeometry:(WKTGeometry *)geometry</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>geometry</Name>
+					<Abstract type="html">WKTGeometry to add</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addGeometry:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometryCollection/removeGeometries</TokenIdentifier>
+			<Abstract type="html">Clear Geometry List internal property.</Abstract>
+			<DeclaredIn>WKTGeometryCollection.h</DeclaredIn>
+			
+			<Declaration>- (void)removeGeometries</Declaration>
+			
+			
+			<Anchor>//api/name/removeGeometries</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometryCollection/getGeometries</TokenIdentifier>
+			<Abstract type="html">Return Geometry List internal property.</Abstract>
+			<DeclaredIn>WKTGeometryCollection.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)getGeometries</Declaration>
+			
+			<ReturnValue><Abstract type="html">List of WKTGeometry that its count always will be equal or greater than zero</Abstract></ReturnValue>
+			<Anchor>//api/name/getGeometries</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometryCollection/isEqual:</TokenIdentifier>
+			<Abstract type="html">Check if two WKTGeometryCollection are equal.</Abstract>
+			<DeclaredIn>WKTGeometryCollection.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isEqual:(WKTGeometryCollection *)otherGeometries</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>otherGeometries</Name>
+					<Abstract type="html">WKTGeometryCollection to compare with itself</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Boolean</Abstract></ReturnValue>
+			<Anchor>//api/name/isEqual:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometryCollection/copyTo:</TokenIdentifier>
+			<Abstract type="html">Pass all properties from itself to other WKTGeometryCollection reference.</Abstract>
+			<DeclaredIn>WKTGeometryCollection.h</DeclaredIn>
+			
+			<Declaration>- (void)copyTo:(WKTGeometryCollection *)otherGeometries</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>otherGeometries</Name>
+					<Abstract type="html">WKTGeometryCollection to pass properties</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/copyTo:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTGeometryCollection/toWKT</TokenIdentifier>
+			<Abstract type="html">Return WKT representation.</Abstract>
+			<DeclaredIn>WKTGeometryCollection.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)toWKT</Declaration>
+			
+			<ReturnValue><Abstract type="html">String like GEOMETRYCOLLECTION ( .... ) or GEOMETRYCOLLECTION EMPTY</Abstract></ReturnValue>
+			<Anchor>//api/name/toWKT</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

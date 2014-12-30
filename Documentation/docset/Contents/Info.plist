@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.wktparser.WKTParser</string>
+	<key>CFBundleName</key>
+	<string>WKTParser Documentation</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	
+	
+	
+	<key>DocSetFallbackURL</key>
+	<string>https://github.com/alejandrofcarrera/WKTParser/</string>
+	<key>DocSetFeedName</key>
+	<string>WKTParser Documentation</string>
+	<key>DocSetFeedURL</key>
+	<string>https://github.com/alejandrofcarrera/WKTParser/Documentation/publish/WKTParser.atom</string>
+	<key>DocSetMinimumXcodeVersion</key>
+	<string>3.0</string>
+	
+	<key>DashDocSetFamily</key>
+	<string>appledoc</string>
+	<key>DocSetPublisherIdentifier</key>
+	<string>com.wktparser.documentation</string>
+	<key>DocSetPublisherName</key>
+	<string>Alejandro F. Carrera</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2014 Alejandro F. Carrera. All rights reserved.</string>
+</dict>
+</plist>

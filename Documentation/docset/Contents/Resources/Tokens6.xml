@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/WKTPoint.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/WKTPoint</TokenIdentifier>
+			<Abstract type="html">This class represent Point Geometry on WKT Format.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/setDimensionX:</TokenIdentifier>
+			<Abstract type="html">Dimension X property same as Longitude</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) long dimensionX</Declaration>
+			
+			
+			<Anchor>//api/name/dimensionX</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/dimensionX</TokenIdentifier>
+			<Abstract type="html">Dimension X property same as Longitude</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) long dimensionX</Declaration>
+			
+			
+			<Anchor>//api/name/dimensionX</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/WKTPoint/dimensionX</TokenIdentifier>
+			<Abstract type="html">Dimension X property same as Longitude</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) long dimensionX</Declaration>
+			
+			
+			<Anchor>//api/name/dimensionX</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/setDimensionY:</TokenIdentifier>
+			<Abstract type="html">Dimension Y property same as Latitude</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) long dimensionY</Declaration>
+			
+			
+			<Anchor>//api/name/dimensionY</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/dimensionY</TokenIdentifier>
+			<Abstract type="html">Dimension Y property same as Latitude</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) long dimensionY</Declaration>
+			
+			
+			<Anchor>//api/name/dimensionY</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/WKTPoint/dimensionY</TokenIdentifier>
+			<Abstract type="html">Dimension Y property same as Latitude</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) long dimensionY</Declaration>
+			
+			
+			<Anchor>//api/name/dimensionY</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/setDimensionZ:</TokenIdentifier>
+			<Abstract type="html">Dimension Z property same as Altitude</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) long dimensionZ</Declaration>
+			
+			
+			<Anchor>//api/name/dimensionZ</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/dimensionZ</TokenIdentifier>
+			<Abstract type="html">Dimension Z property same as Altitude</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) long dimensionZ</Declaration>
+			
+			
+			<Anchor>//api/name/dimensionZ</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/WKTPoint/dimensionZ</TokenIdentifier>
+			<Abstract type="html">Dimension Z property same as Altitude</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite) long dimensionZ</Declaration>
+			
+			
+			<Anchor>//api/name/dimensionZ</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/init</TokenIdentifier>
+			<Abstract type="html">Basic Constructor that set default values to new instance.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)init</Declaration>
+			
+			<ReturnValue><Abstract type="html">WKTPoint instance</Abstract></ReturnValue>
+			<Anchor>//api/name/init</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/initWithDimensionX:andDimensionY:</TokenIdentifier>
+			<Abstract type="html">Complex Constructor that set default values and dimensions to new instance.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dimX</Name>
+					<Abstract type="html">longitude value (long format)</Abstract>
+				</Parameter><Parameter>
+					<Name>dimY</Name>
+					<Abstract type="html">latitude value (long format)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTPoint instance</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithDimensionX:andDimensionY:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/initWithDimensionX:andDimensionY:andDimensionZ:</TokenIdentifier>
+			<Abstract type="html">Complex Constructor that set default values and dimensions to new instance.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY andDimensionZ:(long)dimZ</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dimX</Name>
+					<Abstract type="html">longitude value (long format)</Abstract>
+				</Parameter><Parameter>
+					<Name>dimY</Name>
+					<Abstract type="html">latitude value (long format)</Abstract>
+				</Parameter><Parameter>
+					<Name>dimZ</Name>
+					<Abstract type="html">altitude value (long format)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTPoint instance</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithDimensionX:andDimensionY:andDimensionZ:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/isEqual:</TokenIdentifier>
+			<Abstract type="html">Check if two WKTPoint are equal.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isEqual:(WKTPoint *)otherPoint</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>otherPoint</Name>
+					<Abstract type="html">WKTPoint to compare with itself</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Boolean</Abstract></ReturnValue>
+			<Anchor>//api/name/isEqual:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/copyTo:</TokenIdentifier>
+			<Abstract type="html">Pass all properties from itself to other WKTPoint reference.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>- (void)copyTo:(WKTPoint *)otherPoint</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>otherPoint</Name>
+					<Abstract type="html">WKTPoint to pass properties</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/copyTo:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/toWKT</TokenIdentifier>
+			<Abstract type="html">Return WKT representation.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)toWKT</Declaration>
+			
+			<ReturnValue><Abstract type="html">String like POINT ( .... ) or POINT EMPTY</Abstract></ReturnValue>
+			<Anchor>//api/name/toWKT</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/toMapPointAnnotation</TokenIdentifier>
+			<Abstract type="html">Return MKPointAnnotation representation.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>- (MKPointAnnotation *)toMapPointAnnotation</Declaration>
+			
+			<ReturnValue><Abstract type="html">MapKit Annotation for add to map</Abstract></ReturnValue>
+			<Anchor>//api/name/toMapPointAnnotation</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/toMapCoordinate</TokenIdentifier>
+			<Abstract type="html">Return Coordinate representation.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>- (CLLocationCoordinate2D)toMapCoordinate</Declaration>
+			
+			<ReturnValue><Abstract type="html">CLLocationCoordinate2D to use</Abstract></ReturnValue>
+			<Anchor>//api/name/toMapCoordinate</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/toLocation</TokenIdentifier>
+			<Abstract type="html">Return Location representation.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>- (CLLocation *)toLocation</Declaration>
+			
+			<ReturnValue><Abstract type="html">CLLocation to use</Abstract></ReturnValue>
+			<Anchor>//api/name/toLocation</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPoint/toMapPoint</TokenIdentifier>
+			<Abstract type="html">Return Point representation.</Abstract>
+			<DeclaredIn>WKTPoint.h</DeclaredIn>
+			
+			<Declaration>- (MKMapPoint)toMapPoint</Declaration>
+			
+			<ReturnValue><Abstract type="html">MKMapPoint to use</Abstract></ReturnValue>
+			<Anchor>//api/name/toMapPoint</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

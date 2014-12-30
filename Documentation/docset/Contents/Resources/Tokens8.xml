@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/WKTPolygon.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/WKTPolygon</TokenIdentifier>
+			<Abstract type="html">This class represent Polygon Geometry on WKT Format.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+            
+			
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/init</TokenIdentifier>
+			<Abstract type="html">Basic Constructor that set default values to new instance.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)init</Declaration>
+			
+			<ReturnValue><Abstract type="html">WKTPolygon instance</Abstract></ReturnValue>
+			<Anchor>//api/name/init</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/initWithMultiPoints:</TokenIdentifier>
+			<Abstract type="html">Complex Constructor that set default values and points to new instance.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithMultiPoints:(NSArray *)multiPoints</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>multiPoints</Name>
+					<Abstract type="html">List of WKTPointM</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTPolygon instance</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithMultiPoints:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/setPolygons:</TokenIdentifier>
+			<Abstract type="html">Set and check Multi Points List internal property for after that to generate polygon correctly.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (void)setPolygons:(NSArray *)multiPoints</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>multiPoints</Name>
+					<Abstract type="html">List of WKTPointM</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setPolygons:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/removePolygons</TokenIdentifier>
+			<Abstract type="html">Clear Multi Points List internal property</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (void)removePolygons</Declaration>
+			
+			
+			<Anchor>//api/name/removePolygons</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/getPolygon</TokenIdentifier>
+			<Abstract type="html">Return Multi Points List internal property.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)getPolygon</Declaration>
+			
+			<ReturnValue><Abstract type="html">List of WKTPointM that its count always will be equal or greater than zero</Abstract></ReturnValue>
+			<Anchor>//api/name/getPolygon</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/getInteriorPolygons</TokenIdentifier>
+			<Abstract type="html">Return Multi Points List which are internal polygons.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)getInteriorPolygons</Declaration>
+			
+			<ReturnValue><Abstract type="html">List of WKTPointM that its count always will be equal or greater than zero</Abstract></ReturnValue>
+			<Anchor>//api/name/getInteriorPolygons</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/getExteriorPolygon</TokenIdentifier>
+			<Abstract type="html">Return Multi Points which is external polygon.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (WKTPointM *)getExteriorPolygon</Declaration>
+			
+			<ReturnValue><Abstract type="html">WKTPointM</Abstract></ReturnValue>
+			<Anchor>//api/name/getExteriorPolygon</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/isEqual:</TokenIdentifier>
+			<Abstract type="html">Check if two WKTPolygon are equal.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isEqual:(WKTPolygon *)otherPolygon</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>otherPolygon</Name>
+					<Abstract type="html">WKTPolygon to compare with itself</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Boolean</Abstract></ReturnValue>
+			<Anchor>//api/name/isEqual:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/copyTo:</TokenIdentifier>
+			<Abstract type="html">Pass all properties from itself to other WKTPolygon reference.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (void)copyTo:(WKTPolygon *)otherPolygon</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>otherPolygon</Name>
+					<Abstract type="html">WKTPolygon to pass properties</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/copyTo:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/toWKT</TokenIdentifier>
+			<Abstract type="html">Return WKT representation.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)toWKT</Declaration>
+			
+			<ReturnValue><Abstract type="html">String like POLYGON (( .... )) or POLYGON EMPTY</Abstract></ReturnValue>
+			<Anchor>//api/name/toWKT</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTPolygon/toMapPolygon</TokenIdentifier>
+			<Abstract type="html">Return MKPolygon representation.</Abstract>
+			<DeclaredIn>WKTPolygon.h</DeclaredIn>
+			
+			<Declaration>- (MKPolygon *)toMapPolygon</Declaration>
+			
+			<ReturnValue><Abstract type="html">MapKit Polygon for add overlay to map or nil if there is not valid polygon</Abstract></ReturnValue>
+			<Anchor>//api/name/toMapPolygon</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

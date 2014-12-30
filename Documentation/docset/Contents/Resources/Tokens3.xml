@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/WKTLine.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/WKTLine</TokenIdentifier>
+			<Abstract type="html">This class represent Multi Line Geometry on WKT Format.</Abstract>
+			<DeclaredIn>WKTLine.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTLine/init</TokenIdentifier>
+			<Abstract type="html">Basic Constructor that set default values to new instance.</Abstract>
+			<DeclaredIn>WKTLine.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)init</Declaration>
+			
+			<ReturnValue><Abstract type="html">WKTLine instance</Abstract></ReturnValue>
+			<Anchor>//api/name/init</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTLine/initWithPoints:</TokenIdentifier>
+			<Abstract type="html">Complex Constructor that set default values and points to new instance.</Abstract>
+			<DeclaredIn>WKTLine.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithPoints:(NSArray *)points</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>points</Name>
+					<Abstract type="html">List of WKTPoint</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">WKTLine instance</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithPoints:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTLine/setListPoints:</TokenIdentifier>
+			<Abstract type="html">Set and check Points List internal property for after that to generate polyline correctly.</Abstract>
+			<DeclaredIn>WKTLine.h</DeclaredIn>
+			
+			<Declaration>- (void)setListPoints:(NSArray *)points</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>points</Name>
+					<Abstract type="html">List of WKTPoint</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setListPoints:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTLine/getListPoints</TokenIdentifier>
+			<Abstract type="html">Return Points List internal property.</Abstract>
+			<DeclaredIn>WKTLine.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)getListPoints</Declaration>
+			
+			<ReturnValue><Abstract type="html">List of WKTPoint that its count always will be equal or greater than zero</Abstract></ReturnValue>
+			<Anchor>//api/name/getListPoints</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTLine/removeListPoints</TokenIdentifier>
+			<Abstract type="html">Clear Points List internal property</Abstract>
+			<DeclaredIn>WKTLine.h</DeclaredIn>
+			
+			<Declaration>- (void)removeListPoints</Declaration>
+			
+			
+			<Anchor>//api/name/removeListPoints</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTLine/isEqual:</TokenIdentifier>
+			<Abstract type="html">Check if two WKTLine are equal.</Abstract>
+			<DeclaredIn>WKTLine.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isEqual:(WKTLine *)otherLine</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>otherLine</Name>
+					<Abstract type="html">WKTLine to compare with itself</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Boolean</Abstract></ReturnValue>
+			<Anchor>//api/name/isEqual:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTLine/copyTo:</TokenIdentifier>
+			<Abstract type="html">Pass all properties from itself to other WKTLine reference.</Abstract>
+			<DeclaredIn>WKTLine.h</DeclaredIn>
+			
+			<Declaration>- (void)copyTo:(WKTLine *)otherLine</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>otherLine</Name>
+					<Abstract type="html">WKTLine to pass properties</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/copyTo:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTLine/toWKT</TokenIdentifier>
+			<Abstract type="html">Return WKT representation.</Abstract>
+			<DeclaredIn>WKTLine.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)toWKT</Declaration>
+			
+			<ReturnValue><Abstract type="html">String like LINESTRING ( .... ) or LINESTRING EMPTY</Abstract></ReturnValue>
+			<Anchor>//api/name/toWKT</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/WKTLine/toMapLine</TokenIdentifier>
+			<Abstract type="html">Return MKPolyline representation.</Abstract>
+			<DeclaredIn>WKTLine.h</DeclaredIn>
+			
+			<Declaration>- (MKPolyline *)toMapLine</Declaration>
+			
+			<ReturnValue><Abstract type="html">MapKit Polyline for add overlay to map</Abstract></ReturnValue>
+			<Anchor>//api/name/toMapLine</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

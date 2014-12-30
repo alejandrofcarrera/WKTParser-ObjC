@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:docset="http://developer.apple.com/rss/docset_extensions" xml:lang="en">
+    <id>https://github.com/alejandrofcarrera/WKTParser/Documentation/publish/WKTParser.atom/20141231005552</id>
+    <title type="text">WKTParser Documentation</title>
+    <rights>Copyright © 2014 Alejandro F. Carrera. All rights reserved.</rights>
+    <link rel="self" href="https://github.com/alejandrofcarrera/WKTParser/Documentation/publish/WKTParser.atom"></link>
+    <docset:publisherName>Alejandro F. Carrera</docset:publisherName>
+    <docset:publisherID>com.wktparser.documentation</docset:publisherID>
+    <updated>2014-12-31T00:55:52+01:00</updated>
+    <entry>
+        <id>tag:github.com,2014-12-31:com.wktparser.WKTParser/1.0.0</id>
+        <title type="text">WKTParser Documentation</title>
+        <updated>2014-12-31T00:55:52+01:00</updated>
+        <content type="text">WKTParser Documentation (v1.0.0)</content>
+        <link rel="enclosure" type="application/octet-stream" href="https://github.com/alejandrofcarrera/WKTParser/Documentation/publish/WKTParser.xar" length="152384"></link>
+        <docset:identifier>com.wktparser.WKTParser</docset:identifier>
+        <docset:version>1.0.0</docset:version>
+        <docset:minimumXcodeVersion>3.0.0</docset:minimumXcodeVersion>
+    </entry>
+</feed>
