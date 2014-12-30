@@ -66,6 +66,15 @@
     return self;
 }
 
+- (void)setDimensionZ:(long)dimZ
+{
+    if(self.dimensions)
+    {
+        self.dimensions = 3;
+    }
+    dimensionZ = dimZ;
+}
+
 - (BOOL)isEqual:(WKTPoint *)otherPoint
 {
     if(otherPoint == nil || ![otherPoint isKindOfClass:[WKTPoint class]])
