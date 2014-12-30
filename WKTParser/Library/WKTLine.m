@@ -158,6 +158,7 @@
         {
             description = [description stringByAppendingString:@", "];
         }
+        pString = nil;
     }
     return description;
 }
@@ -183,12 +184,9 @@
     CLLocationCoordinate2D points[listPoints.count];
     for(int i = 0; i < listPoints.count; i++)
     {
-        WKTPoint *p = listPoints[i];
-        points[i] = CLLocationCoordinate2DMake(p.dimensionY, p.dimensionX);
-        p = nil;
+        points[i] = [listPoints[i] toMapCoordinate];
     }
-    MKPolyline *result = [MKPolyline polylineWithCoordinates:points count:listPoints.count];
-    return result;
+    return [MKPolyline polylineWithCoordinates:points count:listPoints.count];
 }
 
 @end

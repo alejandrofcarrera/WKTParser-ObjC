@@ -145,13 +145,31 @@
 - (MKPointAnnotation *)toMapPointAnnotation
 {
     MKPointAnnotation *result = [[MKPointAnnotation alloc] init];
-    result.coordinate = CLLocationCoordinate2DMake(dimensionY, dimensionX);
+    result.coordinate = [self toMapCoordinate];
     return result;
+}
+
+// Latitude (DimensionY) Longitude (DimensionX)
+- (CLLocationCoordinate2D)toMapCoordinate
+{
+    if(![self.gis isEqualToString:@"CRS84"])
+    {
+        @throw [NSException exceptionWithName:@"WKTParser Point [toMapCoordinate]"
+            reason:@"Point dimensions are not CRS84 system"
+            userInfo:nil];
+    }
+    return CLLocationCoordinate2DMake(dimensionY, dimensionX);
 }
 
 // X (DimensionX) Y (DimensionY)
 - (MKMapPoint)toMapPoint
 {
+    if(![self.gis isEqualToString:@"CRS84"])
+    {
+        @throw [NSException exceptionWithName:@"WKTParser Point [toMapPoint]"
+            reason:@"Point dimensions are not CRS84 system"
+            userInfo:nil];
+    }
     return MKMapPointMake(dimensionX, dimensionY);
 }
 

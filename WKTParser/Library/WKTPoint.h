@@ -49,6 +49,8 @@
 
 - (MKPointAnnotation *)toMapPointAnnotation;
 
+- (CLLocationCoordinate2D)toMapCoordinate;
+
 - (MKMapPoint)toMapPoint;
 
 @end

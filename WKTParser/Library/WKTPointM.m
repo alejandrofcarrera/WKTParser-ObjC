@@ -158,6 +158,7 @@
         {
             description = [description stringByAppendingString:@", "];
         }
+        pString = nil;
     }
     return description;
 }

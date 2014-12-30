@@ -253,9 +253,29 @@
     else
     {
         // Remove GeoSpatial Reference <http://>
-        input = [input stringByReplacingOccurrencesOfString:
+        long inputLength = input.length;
+        NSString *inputWGeo = [input stringByReplacingOccurrencesOfString:
             @"<[\\s\\S]*>\\s*" withString:@"" options:NSRegularExpressionSearch
             range:NSMakeRange(0, input.length)];
+        
+        // GeoSpatial Reference
+        NSString *gisType = @"CRS84";
+        if(inputWGeo.length != inputLength)
+        {
+            long inputWGeoLength = inputLength - inputWGeo.length;
+            NSString *geoURI = [input substringToIndex:inputWGeoLength];
+            geoURI = [geoURI substringToIndex:geoURI.length-1];
+            geoURI = [geoURI stringByReplacingOccurrencesOfString:@"<http://www.opengis.net/def/crs/" withString:@""];
+            NSArray *geoURIParameters = [geoURI componentsSeparatedByString:@"/"];
+            if(![geoURIParameters[2] isEqualToString:@"CRS84"])
+            {
+                gisType = [NSString stringWithFormat:@"%@ %@", geoURIParameters[0], geoURIParameters[2]];
+            }
+            geoURIParameters = nil;
+            geoURI = nil;
+            input = inputWGeo;
+        }
+        inputWGeo = nil;
         
         // Remove Whitespaces
         input = [input stringByReplacingOccurrencesOfString:
@@ -265,69 +285,72 @@
         // Clean Parents of Input and throw Exceptions
         input = [self cleanParents:input withTypeGeometry:typeGeometry];
         
+        // Result of parse
+        WKTGeometry *result;
+        
         if([typeGeometry isEqualToString:@"POINT"])
         {
-            return [self parsePoint:input withDimensions:2];
+            result = [self parsePoint:input withDimensions:2];
         }
         else if([typeGeometry isEqualToString:@"POINT Z"] ||
                 [typeGeometry isEqualToString:@"POINTZ"])
         {
-            return [self parsePoint:input withDimensions:3];
+            result = [self parsePoint:input withDimensions:3];
         }
         else if([typeGeometry isEqualToString:@"MULTIPOINT"])
         {
-            return [self parseMultiPoint:input withDimensions:2];
+            result = [self parseMultiPoint:input withDimensions:2];
         }
         else if([typeGeometry isEqualToString:@"MULTIPOINT Z"] ||
                 [typeGeometry isEqualToString:@"MULTIPOINTZ"])
         {
-            return [self parseMultiPoint:input withDimensions:3];
+            result = [self parseMultiPoint:input withDimensions:3];
         }
         else if([typeGeometry isEqualToString:@"LINESTRING"])
         {
-            return [self parseLine:input withDimensions:2];
+            result = [self parseLine:input withDimensions:2];
         }
         else if([typeGeometry isEqualToString:@"LINESTRING Z"] ||
                 [typeGeometry isEqualToString:@"LINESTRINGZ"])
         {
-            return [self parseLine:input withDimensions:3];
+            result = [self parseLine:input withDimensions:3];
         }
         else if([typeGeometry isEqualToString:@"MULTILINESTRING"])
         {
-            return [self parseMultiLine:input withDimensions:2];
+            result = [self parseMultiLine:input withDimensions:2];
         }
         else if([typeGeometry isEqualToString:@"MULTILINESTRING Z"] ||
                 [typeGeometry isEqualToString:@"MULTILINESTRINGZ"])
         {
-            return [self parseMultiLine:input withDimensions:3];
+            result = [self parseMultiLine:input withDimensions:3];
         }
         else if([typeGeometry isEqualToString:@"POLYGON"])
         {
-            return [self parsePolygon:input withDimensions:2];
+            result = [self parsePolygon:input withDimensions:2];
         }
         else if([typeGeometry isEqualToString:@"POLYGON Z"] ||
                 [typeGeometry isEqualToString:@"POLYGONZ"])
         {
-            return [self parsePolygon:input withDimensions:3];
+            result = [self parsePolygon:input withDimensions:3];
         }
         else if([typeGeometry isEqualToString:@"MULTIPOLYGON"])
         {
-            return [self parseMultiPolygon:input withDimensions:2];
+            result = [self parseMultiPolygon:input withDimensions:2];
         }
         else if([typeGeometry isEqualToString:@"MULTIPOLYGON Z"] ||
                 [typeGeometry isEqualToString:@"MULTIPOLYGONZ"])
         {
-            return [self parseMultiPolygon:input withDimensions:3];
+            result = [self parseMultiPolygon:input withDimensions:3];
         }
         else if([typeGeometry isEqualToString:@"GEOMETRYCOLLECTION"])
         {
             NSArray *collection = [WKTString splitCommasNSString:input];
-            WKTGeometryCollection *result = [[WKTGeometryCollection alloc] init];
+            WKTGeometryCollection *resGeometry = [[WKTGeometryCollection alloc] init];
             for(int i = 0; i < collection.count; i++)
             {
                 @try
                 {
-                    [result addGeometry:[self parseGeometry:collection[i]]];
+                    [resGeometry addGeometry:[self parseGeometry:collection[i]]];
                 }
                 @catch (NSException *exception)
                 {
@@ -335,7 +358,7 @@
                     break;
                 }
             }
-            return result;
+            result = resGeometry;
         }
         else
         {
@@ -343,6 +366,9 @@
                 reason:@"Parameter input is invalid (WKT Geometry not recognised)"
                 userInfo:nil];
         }
+        [result setGis:gisType];
+        gisType = nil;
+        return result;
     }
     return nil;
 }

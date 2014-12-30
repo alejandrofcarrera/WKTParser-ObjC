@@ -159,6 +159,7 @@
         {
             description = [description stringByAppendingString:@", "];
         }
+        lString = nil;
     }
     lPolygons = nil;
     return description;

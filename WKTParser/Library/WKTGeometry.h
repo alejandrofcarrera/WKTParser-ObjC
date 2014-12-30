@@ -34,6 +34,8 @@
 
 @property (nonatomic, readwrite, strong) NSString *type;
 
+@property (nonatomic, readwrite, strong) NSString *gis;
+
 - (instancetype)init;
 
 @end

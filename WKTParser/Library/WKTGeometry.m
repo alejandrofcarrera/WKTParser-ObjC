@@ -31,6 +31,7 @@
 
 @synthesize dimensions;
 @synthesize type;
+@synthesize gis;
 
 - (instancetype)init
 {
@@ -39,6 +40,7 @@
         self = [super init];
         type = @"Geometry";
         dimensions = 0;
+        gis = @"CRS84";
     }
     return self;
 }
