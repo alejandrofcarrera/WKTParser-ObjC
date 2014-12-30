@@ -43,7 +43,7 @@
     return self;
 }
 
-- (instancetype)initWithDimensionX:(double)dimX andDimensionY:(double)dimY
+- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY
 {
     if(self = [self init])
     {
@@ -54,7 +54,7 @@
     return self;
 }
 
-- (instancetype)initWithDimensionX:(double)dimX andDimensionY:(double)dimY andDimensionZ:(double)dimZ
+- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY andDimensionZ:(long)dimZ
 {
     if(self = [self init])
     {
@@ -117,11 +117,11 @@
 {
     if(self.dimensions == 2)
     {
-        return [NSString stringWithFormat:@"%f %f", dimensionX, dimensionY];
+        return [NSString stringWithFormat:@"%lu %lu", dimensionX, dimensionY];
     }
     else
     {
-        return [NSString stringWithFormat:@"%f %f %f", dimensionX, dimensionY, dimensionZ];
+        return [NSString stringWithFormat:@"%lu %lu %lu", dimensionX, dimensionY, dimensionZ];
     }
 }
 
@@ -159,6 +159,18 @@
             userInfo:nil];
     }
     return CLLocationCoordinate2DMake(dimensionY, dimensionX);
+}
+
+// Latitude (DimensionY) Longitude (DimensionX)
+- (CLLocation *)toLocation
+{
+    if(![self.gis isEqualToString:@"CRS84"])
+    {
+        @throw [NSException exceptionWithName:@"WKTParser Point [toLocation]"
+            reason:@"Point dimensions are not CRS84 system"
+            userInfo:nil];
+    }
+    return [[CLLocation alloc] initWithLatitude:dimensionY longitude:dimensionX];
 }
 
 // X (DimensionX) Y (DimensionY)
