@@ -25,7 +25,7 @@
 {
     if(geometry == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Geometry Collection"
+        @throw [NSException exceptionWithName:@"WKTGeometryCollection [addGeometry]"
             reason:@"Parameter Geometry is nil"
             userInfo:nil];
     }
@@ -39,7 +39,7 @@
         }
         else
         {
-            @throw [NSException exceptionWithName:@"WKTParser Geometry Collection"
+            @throw [NSException exceptionWithName:@"WKTGeometryCollection [addGeometry]"
                 reason:@"Geometry is invalid (WKT Geometry not recognised)"
                 userInfo:nil];
         }
@@ -89,7 +89,7 @@
 {
     if(otherGeometries == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Geometry Collection [copyTo]"
+        @throw [NSException exceptionWithName:@"WKTGeometryCollection [copyTo]"
             reason:@"Parameter Geometry Collection is nil"
             userInfo:nil];
     }

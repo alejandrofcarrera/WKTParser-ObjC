@@ -135,6 +135,7 @@
 /**
  Pass all properties from itself to other WKTPolygon reference.
 
+ @exception WKTPolygon Parameter is nil.
  @param otherPolygon WKTPolygon to pass properties
  */
 - (void)copyTo:(WKTPolygon *)otherPolygon;
