@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Documentation.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WKTParser.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A1C292C01A53082600272769</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A1F323E4198D44D200D3FF4A</key>
 		<dict>
 			<key>primary</key>

@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A1C292C01A53082600272769 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A1C292C11A53082600272769 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				A1C292C41A53084F00272769 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		A11B5E3C19AD0CD300083C65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11B5E3B19AD0CD300083C65 /* ViewController.m */; };
 		A11C27DD1997DF5900261C41 /* WKTLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A11C27DC1997DF5900261C41 /* WKTLineTest.m */; };
@@ -278,6 +292,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Alejandro F. Carrera";
 				TargetAttributes = {
+					A1C292C01A53082600272769 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					A1F323E4198D44D200D3FF4A = {
 						DevelopmentTeam = Y28S7RK563;
 					};
@@ -300,6 +317,7 @@
 			targets = (
 				A1F323E4198D44D200D3FF4A /* WKTParser */,
 				A1F323FF198D44D200D3FF4A /* WKTParserTests */,
+				A1C292C01A53082600272769 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +341,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1C292C41A53084F00272769 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Alejandro F. Carrera\";\ncompanyID=\"com.wktparser\";\ncompanyURL=\"https://github.com/alejandrofcarrera/WKTParser\";\ntarget=\"iphoneos\";\noutputPath=\"${PROJECT_DIR}/Documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--output \"${outputPath}\" \\\n--docset-atom-filename \"WKTParser.atom\" \\\n--docset-package-filename \"WKTParser\" \\\n--docset-feed-url \"https://github.com/alejandrofcarrera/WKTParser/Documentation/publish/WKTParser.atom\" \\\n--docset-package-url \"https://github.com/alejandrofcarrera/WKTParser/Documentation/publish/WKTParser.xar\" \\\n--docset-fallback-url \"https://github.com/alejandrofcarrera/WKTParser/\" \\\n--create-html \\\n--create-docset \\\n--publish-docset \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--search-undocumented-doc \\\n--exit-threshold 2 \\\n--ignore \"*.m\" \\\n--ignore \"AppDelegate.h\" \\\n--ignore \"ViewController.h\" \\\n--index-desc \"${outputPath}/README.md\" \\\n\"${PROJECT_DIR}\"\nrm \"${outputPath}/docset-installed.txt\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1F323E1198D44D200D3FF4A /* Sources */ = {
@@ -387,6 +421,22 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A1C292C21A53082600272769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A1C292C31A53082600272769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A1F3240F198D44D200D3FF4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -538,6 +588,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A1C292C11A53082600272769 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1C292C21A53082600272769 /* Debug */,
+				A1C292C31A53082600272769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A1F323E0198D44D200D3FF4A /* Build configuration list for PBXProject "WKTParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
