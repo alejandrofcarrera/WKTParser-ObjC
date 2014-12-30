@@ -74,6 +74,8 @@ Alejandro Fdez. Carrera
 
 Ontology Engineering Group (OEG) [Map4RDF Lite](https://itunes.apple.com/es/app/map4rdf-lite/id828604407?mt=8)
 
+Center Open Middleware (COM) [YaaST Map (Appcelerator Module)](https://github.com/centeropenmiddleware/YaaST-Map)
+
 **License**
 
 WKTParser is available under the MIT License. See the LICENSE file for more info.
