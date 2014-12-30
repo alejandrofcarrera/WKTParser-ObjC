@@ -27,32 +27,132 @@
 
 #include "WKTLineM.h"
 
+/**
+ This class represent Polygon [Geometry](WKTGeometry) on WKT Format.
+ 
+ Its string representation always start with POLYGON.
+ 
+ Some common examples of this representation are:
+ 
+ - 2D Representation: ((0 0, 10 0, 10 10, 0 0))
+ 
+ - 3D Representation: ((0 0 0, 10 0 5, 10 10 5, 0 0 0))
+ 
+ Example of use:
+
+    WKTPoint *p1 = [[WKTPoint alloc] initWithDimensionX:5.0 andDimensionY:10.0];
+    WKTPoint *p2 = [[WKTPoint alloc] initWithDimensionX:10.0 andDimensionY:10.0];
+    WKTPoint *p3 = [[WKTPoint alloc] initWithDimensionX:10.0 andDimensionY:15.0];
+    WKTPoint *p4 = [[WKTPoint alloc] initWithDimensionX:5.0 andDimensionY:15.0];
+ 	WKTPointM *points = [[WKTPointM alloc] initWithPoints:@[p1, p2, p3, p4]];
+ 	WKTPolygon *p = [[WKTPolygon alloc] initWithMultiPoints:@[points]];
+ 
+ Example of MapKit Polygon creation:
+ 
+    MKPolygon *mapPolygon = [p toMapPolygon];
+    MKMapView *map = [[MKMapView alloc] init];
+    [map addOverlay: mapPolygon];
+ 
+ Example of WKT representation:
+ 
+    NSString *wktString = [p toWKT];
+	NSLog(@"WKT: %@", wktString);
+ 
+ 	// WKT: POLYGON ((5.000000 10.000000, 10.000000 10.000000, 10.000000 15.000000, 5.000000 15.000000))
+ 
+ */
 @interface WKTPolygon : WKTGeometry {
     
     NSMutableArray *listMultiPoints;
     
 }
 
+/// @name Constructor
+
+/**
+ Basic Constructor that set default values to new instance.
+ @return WKTPolygon instance
+ */
 - (instancetype)init;
 
+/**
+ Complex Constructor that set default values and points to new instance.
+ 
+ From this point of view, a polygon is similar to linestring.
+ 
+ This method is the same that init join setPolygons:
+ 
+ @param multiPoints List of WKTPointM
+ @return WKTPolygon instance
+ */
 - (instancetype)initWithMultiPoints:(NSArray *)multiPoints;
 
+/// @name Internal operations
+
+/**
+ Set and check Multi Points List internal property for after that to generate polygon correctly.
+ 
+ @exception WKTPolygon Parameter is nil, have a class that it is not Multi Point or these classes does not have same dimensions.
+ @param multiPoints List of WKTPointM
+ */
 - (void)setPolygons:(NSArray *)multiPoints;
 
+/// Clear Multi Points List internal property
 - (void)removePolygons;
 
+/**
+ Return Multi Points List internal property.
+
+ Multi Points List internal property never is nil.
+ @return List of WKTPointM that its count always will be equal or greater than zero
+ */
 - (NSArray *)getPolygon;
 
+/**
+ Return Multi Points List which are internal polygons.
+
+ @return List of WKTPointM that its count always will be equal or greater than zero
+ */
 - (NSArray *)getInteriorPolygons;
 
+/**
+ Return Multi Points which is external polygon.
+
+ @return WKTPointM
+ */
 - (WKTPointM *)getExteriorPolygon;
 
+/// @name WKTPolygon operations
+
+/**
+ Check if two WKTPolygon are equal.
+
+ @param otherPolygon WKTPolygon to compare with itself
+ @return Boolean
+ */
 - (BOOL)isEqual:(WKTPolygon *)otherPolygon;
 
+/**
+ Pass all properties from itself to other WKTPolygon reference.
+
+ @param otherPolygon WKTPolygon to pass properties
+ */
 - (void)copyTo:(WKTPolygon *)otherPolygon;
 
+/**
+ Return WKT representation.
+ 
+ @return String like POLYGON (( .... )) or POLYGON EMPTY
+ */
 - (NSString *)toWKT;
 
+/// @name MapKit operations
+
+/**
+ Return MKPolygon representation.
+ 
+ @return MapKit Polygon for add overlay to map or nil if there is not valid polygon
+ */
 - (MKPolygon *)toMapPolygon;
 
 @end
