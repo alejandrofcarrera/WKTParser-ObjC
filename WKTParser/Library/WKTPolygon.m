@@ -44,7 +44,12 @@
 {
     if (self = [self init])
     {
-        [self setPolygons:multiPoints];
+        @try {
+            [self setPolygons:multiPoints];
+        }
+        @catch (NSException *exception) {
+            @throw exception;
+        }
     }
     return self;
 }
@@ -53,7 +58,7 @@
 {
     if(multiPoints == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Polygon"
+        @throw [NSException exceptionWithName:@"WKTPolygon [setPolygons]"
             reason:@"Parameter Multi Points list is nil"
             userInfo:nil];
     }
@@ -64,7 +69,7 @@
         {
             if(![multiPoints[i] isKindOfClass:[WKTPointM class]])
             {
-                @throw [NSException exceptionWithName:@"WKTParser Polygon"
+                @throw [NSException exceptionWithName:@"WKTPolygon [setPolygons]"
                     reason:@"Parameter points have a class that is not WKTMultiPoint"
                     userInfo:nil];
             }
@@ -77,7 +82,7 @@
                 }
                 else if(dimBackup != [(WKTPointM *) multiPoints[i] dimensions])
                 {
-                    @throw [NSException exceptionWithName:@"WKTParser Polygon"
+                    @throw [NSException exceptionWithName:@"WKTPolygon [setPolygons]"
                         reason:@"Parameter Multi Points list have WKTMultiPoint with \
                         different dimensions" userInfo:nil];
                 }
@@ -235,7 +240,7 @@
     }
     
     // Create return Polygon
-    MKPolygon *result;
+    MKPolygon *result = nil;
     
     // Create Interior Polygon
     NSArray *listIntPolygons = [self getInteriorPolygons];
