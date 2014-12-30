@@ -53,7 +53,7 @@
 {
     if(points == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Multi Point"
+        @throw [NSException exceptionWithName:@"WKTPointM [setListPoints]"
             reason:@"Parameter points is nil"
             userInfo:nil];
     }
@@ -64,7 +64,7 @@
         {
             if(![points[i] isKindOfClass:[WKTPoint class]])
             {
-                @throw [NSException exceptionWithName:@"WKTParser Multi Point"
+                @throw [NSException exceptionWithName:@"WKTPointM [setListPoints]"
                     reason:@"Parameter points have a class that is not WKTPoint"
                     userInfo:nil];
             }
@@ -77,7 +77,7 @@
                 }
                 else if(dimBackup != [(WKTPoint *) points[i] dimensions])
                 {
-                    @throw [NSException exceptionWithName:@"WKTParser Multi Point"
+                    @throw [NSException exceptionWithName:@"WKTPointM [setListPoints]"
                         reason:@"Parameter points have WKTPoint with different dimensions"
                         userInfo:nil];
                 }
@@ -179,7 +179,7 @@
     }
 }
 
-- (NSArray *)toMapMultiPoint
+- (NSArray *)toMapMultiAnnotation
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];
     for(int i = 0; i < listPoints.count; i++)

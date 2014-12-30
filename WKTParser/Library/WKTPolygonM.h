@@ -34,9 +34,9 @@
 
  Its String representation are:
  
- - 2D Representation: MULTIPOLYGON ((0 0, 10 0, 10 10, 0 0), (10 10, 20 20, 30 30, 40 40))
+ - 2D Representation: MULTIPOLYGON (((0 0, 10 0, 10 10, 0 0)), ((10 10, 20 20, 30 30, 40 40)))
  
- - 3D Representation: MULTIPOLYGONZ ((0 0 0, 10 0 5, 10 10 5, 0 0 0), (10 10 0, 20 20 5, 30 30 5, 40 40 0))
+ - 3D Representation: MULTIPOLYGONZ (((0 0 0, 10 0 5, 10 10 5, 0 0 0)), ((10 10 0, 20 20 5, 30 30 5, 40 40 0)))
  
  At 3D representation may be MULTIPOLYGON Z too.
  
@@ -143,7 +143,7 @@
 /**
  Return WKT representation.
  
- @return String like MULTIPOLYGON (( .... )) or MULTIPOLYGON EMPTY
+ @return String like MULTIPOLYGON ((( .... ))) or MULTIPOLYGON EMPTY
  */
 - (NSString *)toWKT;
 
@@ -152,7 +152,7 @@
 /**
  Return MKPolygon List representation.
  
- @return MapKit Polygon List for add overlay to map or empty array if there is not valid polygon
+ @return MapKit Polygon List for add overlay to map or empty array if there are not valid polygons
  */
 - (NSArray *)toMapMultiPolygon;
 

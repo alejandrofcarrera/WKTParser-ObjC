@@ -136,7 +136,7 @@
     NSLog(@"   * Class: %@", [p class]);
     NSLog(@"   * Dimension: %d", p.dimensions);
     NSLog(@"   * WKTPoint number: %lu", (unsigned long)[p getListPoints].count);
-    NSArray *aPoints = [p toMapMultiPoint];
+    NSArray *aPoints = [p toMapMultiAnnotation];
     for(int i = 0; i < aPoints.count; i++)
     {
         MKPointAnnotation *p = aPoints[i];

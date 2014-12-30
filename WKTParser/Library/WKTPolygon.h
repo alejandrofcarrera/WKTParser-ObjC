@@ -78,7 +78,7 @@
 /**
  Complex Constructor that set default values and points to new instance.
  
- From this point of view, a polygon is similar to linestring.
+ From this point of view, a polygon is similar to multi linestring.
  
  This method is the same that init join setPolygons:
  
