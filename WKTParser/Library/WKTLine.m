@@ -29,7 +29,7 @@
 
 @implementation WKTLine
 
-- (id)init
+- (instancetype)init
 {
     if (self = [super init])
     {
@@ -40,7 +40,7 @@
     return self;
 }
 
-- (id)initWithPoints:(NSArray *)points
+- (instancetype)initWithPoints:(NSArray *)points
 {
     if (self = [self init])
     {

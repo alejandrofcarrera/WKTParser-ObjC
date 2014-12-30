@@ -29,7 +29,7 @@
 
 @implementation WKTLineM
 
-- (id)init
+- (instancetype)init
 {
     if (self = [super init])
     {
@@ -40,7 +40,7 @@
     return self;
 }
 
-- (id)initWithLines:(NSArray *)lines
+- (instancetype)initWithLines:(NSArray *)lines
 {
     if (self = [self init])
     {

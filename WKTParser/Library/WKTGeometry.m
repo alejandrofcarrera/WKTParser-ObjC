@@ -32,7 +32,7 @@
 @synthesize dimensions;
 @synthesize type;
 
-- (id)init
+- (instancetype)init
 {
     if(self == nil)
     {

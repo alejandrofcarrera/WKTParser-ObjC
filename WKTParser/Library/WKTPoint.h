@@ -35,11 +35,11 @@
 
 @property (nonatomic, readwrite) double dimensionZ;
 
-- (id)init;
+- (instancetype)init;
 
-- (id)initWithDimensionX:(double)dimX andDimensionY:(double)dimY;
+- (instancetype)initWithDimensionX:(double)dimX andDimensionY:(double)dimY;
 
-- (id)initWithDimensionX:(double)dimX andDimensionY:(double)dimY andDimensionZ:(double)dimZ;
+- (instancetype)initWithDimensionX:(double)dimX andDimensionY:(double)dimY andDimensionZ:(double)dimZ;
 
 - (BOOL)isEqual:(WKTPoint *)otherPoint;
 

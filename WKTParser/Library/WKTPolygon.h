@@ -33,9 +33,9 @@
     
 }
 
-- (id)init;
+- (instancetype)init;
 
-- (id)initWithMultiPoints:(NSArray *)multiPoints;
+- (instancetype)initWithMultiPoints:(NSArray *)multiPoints;
 
 - (void)setPolygons:(NSArray *)multiPoints;
 

@@ -33,7 +33,7 @@
 @synthesize dimensionY;
 @synthesize dimensionZ;
 
-- (id)init
+- (instancetype)init
 {
     if (self = [super init])
     {
@@ -43,7 +43,7 @@
     return self;
 }
 
-- (id)initWithDimensionX:(double)dimX andDimensionY:(double)dimY
+- (instancetype)initWithDimensionX:(double)dimX andDimensionY:(double)dimY
 {
     if(self = [self init])
     {
@@ -54,7 +54,7 @@
     return self;
 }
 
-- (id)initWithDimensionX:(double)dimX andDimensionY:(double)dimY andDimensionZ:(double)dimZ
+- (instancetype)initWithDimensionX:(double)dimX andDimensionY:(double)dimY andDimensionZ:(double)dimZ
 {
     if(self = [self init])
     {

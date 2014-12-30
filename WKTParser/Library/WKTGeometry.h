@@ -34,6 +34,6 @@
 
 @property (nonatomic, readwrite, strong) NSString *type;
 
-- (id)init;
+- (instancetype)init;
 
 @end

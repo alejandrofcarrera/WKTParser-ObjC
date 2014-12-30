@@ -33,7 +33,7 @@
     
 }
 
-- (id)init;
+- (instancetype)init;
 
 - (void)addGeometry:(WKTGeometry *)geometry;
 

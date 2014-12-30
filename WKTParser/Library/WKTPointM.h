@@ -33,9 +33,9 @@
     
 }
 
-- (id)init;
+- (instancetype)init;
 
-- (id)initWithPoints:(NSArray *)points;
+- (instancetype)initWithPoints:(NSArray *)points;
 
 - (void)setListPoints:(NSArray *)points;
 

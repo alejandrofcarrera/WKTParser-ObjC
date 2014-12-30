@@ -33,9 +33,9 @@
     
 }
 
-- (id)init;
+- (instancetype)init;
 
-- (id)initWithPolygons:(NSArray *)polygons;
+- (instancetype)initWithPolygons:(NSArray *)polygons;
 
 - (void)setPolygons:(NSArray *)polygons;
 

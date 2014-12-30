@@ -33,9 +33,9 @@
     
 }
 
-- (id)init;
+- (instancetype)init;
 
-- (id)initWithLines:(NSArray *)lines;
+- (instancetype)initWithLines:(NSArray *)lines;
 
 - (void)setListLines:(NSArray *)lines;
 

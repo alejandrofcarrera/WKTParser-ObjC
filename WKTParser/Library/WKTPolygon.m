@@ -29,7 +29,7 @@
 
 @implementation WKTPolygon
 
-- (id)init
+- (instancetype)init
 {
     if (self = [super init])
     {
@@ -40,7 +40,7 @@
     return self;
 }
 
-- (id)initWithMultiPoints:(NSArray *)multiPoints
+- (instancetype)initWithMultiPoints:(NSArray *)multiPoints
 {
     if (self = [self init])
     {
