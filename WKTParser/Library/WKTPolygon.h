@@ -30,13 +30,13 @@
 /**
  This class represent Polygon [Geometry](WKTGeometry) on WKT Format.
  
- Its string representation always start with POLYGON.
+ Its String representation are:
  
- Some common examples of this representation are:
+ - 2D Representation: POLYGON ((0 0, 10 0, 10 10, 0 0))
  
- - 2D Representation: ((0 0, 10 0, 10 10, 0 0))
+ - 3D Representation: POLYGONZ ((0 0 0, 10 0 5, 10 10 5, 0 0 0))
  
- - 3D Representation: ((0 0 0, 10 0 5, 10 10 5, 0 0 0))
+ At 3D representation may be POLYGON Z too.
  
  Example of use:
 
