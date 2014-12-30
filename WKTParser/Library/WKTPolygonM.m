@@ -34,7 +34,7 @@
     if (self = [super init])
     {
         self.type = @"MultiPolygon";
-        self.dimensions = 0;
+        self.gis = @"CRS84";
         listPolygons = [[NSMutableArray alloc] init];
     }
     return self;

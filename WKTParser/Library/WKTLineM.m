@@ -34,7 +34,7 @@
     if (self = [super init])
     {
         self.type = @"MultiLine";
-        self.dimensions = 0;
+        self.gis = @"CRS84";
         listLines = [[NSMutableArray alloc] init];
     }
     return self;

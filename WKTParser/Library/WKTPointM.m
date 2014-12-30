@@ -34,7 +34,7 @@
     if (self = [super init])
     {
         self.type = @"MultiPoint";
-        self.dimensions = 0;
+        self.gis = @"CRS84";
         listPoints = [[NSMutableArray alloc] init];
     }
     return self;

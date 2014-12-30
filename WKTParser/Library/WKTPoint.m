@@ -38,7 +38,7 @@
     if (self = [super init])
     {
         self.type = @"Point";
-        self.dimensions = 0;
+        self.gis = @"CRS84";
     }
     return self;
 }

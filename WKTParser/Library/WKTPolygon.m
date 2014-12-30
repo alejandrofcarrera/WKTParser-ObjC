@@ -34,7 +34,7 @@
     if (self = [super init])
     {
         self.type = @"Polygon";
-        self.dimensions = 0;
+        self.gis = @"CRS84";
         listMultiPoints = [[NSMutableArray alloc] init];
     }
     return self;

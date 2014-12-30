@@ -15,7 +15,7 @@
     if (self = [super init])
     {
         self.type = @"GeometryCollection";
-        self.dimensions = 0;
+        self.gis = @"CRS84";
         listGeometry = [[NSMutableArray alloc] init];
     }
     return self;

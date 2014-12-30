@@ -38,9 +38,6 @@
     if(self == nil)
     {
         self = [super init];
-        type = @"Geometry";
-        dimensions = 0;
-        gis = @"CRS84";
     }
     return self;
 }
