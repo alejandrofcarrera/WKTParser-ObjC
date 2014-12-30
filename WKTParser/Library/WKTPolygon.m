@@ -177,7 +177,7 @@
 {
     if(otherPolygon == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Polygon [copyTo]"
+        @throw [NSException exceptionWithName:@"WKTPolygon [copyTo]"
             reason:@"Parameter Polygon is nil"
             userInfo:nil];
     }

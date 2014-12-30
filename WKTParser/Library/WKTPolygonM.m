@@ -53,7 +53,7 @@
 {
     if(polygons == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Multi Polygon"
+        @throw [NSException exceptionWithName:@"WKTPolygonM [setPolygons]"
             reason:@"Parameter Polygons is nil"
             userInfo:nil];
     }
@@ -64,7 +64,7 @@
         {
             if(![polygons[i] isKindOfClass:[WKTPolygon class]])
             {
-                @throw [NSException exceptionWithName:@"WKTParser Multi Polygon"
+                @throw [NSException exceptionWithName:@"WKTPolygonM [setPolygons]"
                     reason:@"Parameter Polygons have a class that is not WKTPolygon"
                     userInfo:nil];
             }
@@ -77,7 +77,7 @@
                 }
                 else if(dimBackup != [(WKTPolygon *) polygons[i] dimensions])
                 {
-                    @throw [NSException exceptionWithName:@"WKTParser Multi Polygon"
+                    @throw [NSException exceptionWithName:@"WKTPolygonM [setPolygons]"
                         reason:@"Parameter Polygons have WKTPolygon with \
                         different dimensions" userInfo:nil];
                 }
@@ -134,7 +134,7 @@
 {
     if(otherPolygonM == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Multi Polygon [copyTo]"
+        @throw [NSException exceptionWithName:@"WKTPolygonM [copyTo]"
             reason:@"Parameter Multi Polygon is nil"
             userInfo:nil];
     }
