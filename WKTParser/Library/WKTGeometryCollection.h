@@ -95,7 +95,7 @@
  */
 - (NSArray *)getGeometries;
 
-/// @name WKTPolygon operations
+/// @name WKTGeometryCollection operations
 
 /**
  Check if two WKTGeometryCollection are equal.

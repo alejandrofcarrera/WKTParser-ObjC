@@ -49,7 +49,7 @@
  
 	NSArray *mapPoints = [mPoint toMapMultiAnnotation];
 	MKMapView *map = [[MKMapView alloc] init];
- 	for(MKPointAnnotation *i : mapPoints)
+ 	for(MKPointAnnotation *i in mapPoints)
  	{
  		[map addAnnotation: i];
  	}
@@ -107,7 +107,7 @@
 /// Clear Points List internal property
 - (void)removeListPoints;
 
-/// @name WKTPolygon operations
+/// @name WKTPointM operations
 
 /**
  Check if two WKTPointM are equal.

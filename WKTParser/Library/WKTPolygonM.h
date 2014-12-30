@@ -122,7 +122,7 @@
  */
 - (NSArray *)getPolygons;
 
-/// @name WKTPolygon operations
+/// @name WKTPolygonM operations
 
 /**
  Check if two WKTPolygonM are equal.

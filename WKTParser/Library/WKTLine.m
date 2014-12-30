@@ -53,7 +53,7 @@
 {
     if(points == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Line"
+        @throw [NSException exceptionWithName:@"WKTLine [setListPoints]"
             reason:@"Parameter points is nil"
             userInfo:nil];
     }
@@ -64,7 +64,7 @@
         {
             if(![points[i] isKindOfClass:[WKTPoint class]])
             {
-                @throw [NSException exceptionWithName:@"WKTParser Line"
+                @throw [NSException exceptionWithName:@"WKTLine [setListPoints]"
                     reason:@"Parameter points have a class that is not WKTPoint"
                     userInfo:nil];
             }
@@ -77,7 +77,7 @@
                 }
                 else if(dimBackup != [(WKTPoint *) points[i] dimensions])
                 {
-                    @throw [NSException exceptionWithName:@"WKTParser Line"
+                    @throw [NSException exceptionWithName:@"WKTLine [setListPoints]"
                         reason:@"Parameter points have WKTPoint with different dimensions"
                         userInfo:nil];
                 }
@@ -134,7 +134,7 @@
 {
     if(otherLine == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Line [copyTo]"
+        @throw [NSException exceptionWithName:@"WKTLine [copyTo]"
             reason:@"Parameter Line is nil"
             userInfo:nil];
     }

@@ -53,7 +53,7 @@
 {
     if(lines == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Multi Line"
+        @throw [NSException exceptionWithName:@"WKTLineM [setListLines]"
             reason:@"Parameter points is nil"
             userInfo:nil];
     }
@@ -64,7 +64,7 @@
         {
             if(![lines[i] isKindOfClass:[WKTLine class]])
             {
-                @throw [NSException exceptionWithName:@"WKTParser Multi Line"
+                @throw [NSException exceptionWithName:@"WKTLineM [setListLines]"
                     reason:@"Parameter lines have a class that is not WKTLine"
                     userInfo:nil];
             }
@@ -77,7 +77,7 @@
                 }
                 else if(dimBackup != [(WKTLine *) lines[i] dimensions])
                 {
-                    @throw [NSException exceptionWithName:@"WKTParser Multi Line"
+                    @throw [NSException exceptionWithName:@"WKTLineM [setListLines]"
                         reason:@"Parameter lines have WKTLine with different dimensions"
                         userInfo:nil];
                 }
@@ -134,7 +134,7 @@
 {
     if(otherLineM == nil)
     {
-        @throw [NSException exceptionWithName:@"WKTParser Multi Line [copyTo]"
+        @throw [NSException exceptionWithName:@"WKTLineM [copyTo]"
             reason:@"Parameter Multi Line is nil"
             userInfo:nil];
     }
