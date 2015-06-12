@@ -73,7 +73,7 @@ Example of WKT representation:
  Basic Constructor that set default values to new instance.
  @return WKTLine instance
  */
-- (instancetype)init;
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 /**
  Complex Constructor that set default values and points to new instance.

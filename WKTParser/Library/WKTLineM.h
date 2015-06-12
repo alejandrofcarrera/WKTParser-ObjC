@@ -81,7 +81,7 @@
  Basic Constructor that set default values to new instance.
  @return WKTLineM instance
  */
-- (instancetype)init;
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 /**
  Complex Constructor that set default values and polygons to new instance.

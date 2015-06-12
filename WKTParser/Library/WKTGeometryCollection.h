@@ -72,7 +72,7 @@
  Basic Constructor that set default values to new instance.
  @return WKTGeometryCollection instance
  */
-- (instancetype)init;
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 /// @name Internal operations
 

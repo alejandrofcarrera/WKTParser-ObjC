@@ -112,7 +112,7 @@
  Basic Constructor that set default values to new instance.
  @return WKTPoint instance
  */
-- (instancetype)init;
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 /**
  Complex Constructor that set default values and dimensions to new instance.
