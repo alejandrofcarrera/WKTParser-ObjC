@@ -124,14 +124,14 @@
     }
     else if(dims == 3)
     {
-        result = [[WKTPoint alloc] initWithDimensionX:[inputSplitted[0] doubleValue]
-            andDimensionY:[inputSplitted[1] doubleValue] andDimensionZ:
-            [inputSplitted[2] doubleValue]];
+        result = [[WKTPoint alloc] initWithDimensionX:[inputSplitted[0] floatValue]
+            andDimensionY:[inputSplitted[1] floatValue] andDimensionZ:
+            [inputSplitted[2] floatValue]];
     }
     else
     {
-        result = [[WKTPoint alloc] initWithDimensionX:[inputSplitted[0] doubleValue]
-            andDimensionY:[inputSplitted[1] doubleValue]];
+        result = [[WKTPoint alloc] initWithDimensionX:[inputSplitted[0] floatValue]
+            andDimensionY:[inputSplitted[1] floatValue]];
     }
     inputSplitted = nil;
     return result;

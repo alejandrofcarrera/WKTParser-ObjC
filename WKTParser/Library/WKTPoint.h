@@ -94,17 +94,17 @@
 /**
  Dimension X property same as Longitude
  */
-@property (nonatomic, readwrite) long dimensionX;
+@property (nonatomic, readwrite) float dimensionX;
 
 /**
  Dimension Y property same as Latitude
  */
-@property (nonatomic, readwrite) long dimensionY;
+@property (nonatomic, readwrite) float dimensionY;
 
 /**
  Dimension Z property same as Altitude
  */
-@property (nonatomic, readwrite) long dimensionZ;
+@property (nonatomic, readwrite) float dimensionZ;
 
 /// @name Constructor
 
@@ -119,23 +119,23 @@
  
  This method is the same that init join setDimensionX: and setDimensionY:
  
- @param dimX longitude value (long format)
- @param dimY latitude value (long format)
+ @param dimX longitude value (float format)
+ @param dimY latitude value (float format)
  @return WKTPoint instance
  */
-- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY;
+- (instancetype)initWithDimensionX:(float)dimX andDimensionY:(float)dimY;
 
 /**
  Complex Constructor that set default values and dimensions to new instance.
  
  This method is the same that init join setDimensionX:, setDimensionY: and setDimensionZ: 
  
- @param dimX longitude value (long format)
- @param dimY latitude value (long format)
- @param dimZ altitude value (long format)
+ @param dimX longitude value (float format)
+ @param dimY latitude value (float format)
+ @param dimZ altitude value (float format)
  @return WKTPoint instance
  */
-- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY andDimensionZ:(long)dimZ;
+- (instancetype)initWithDimensionX:(float)dimX andDimensionY:(float)dimY andDimensionZ:(float)dimZ;
 
 /// @name WKTPoint operations
 

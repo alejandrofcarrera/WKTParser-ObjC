@@ -43,7 +43,7 @@
     return self;
 }
 
-- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY
+- (instancetype)initWithDimensionX:(float)dimX andDimensionY:(float)dimY
 {
     if(self = [self init])
     {
@@ -54,7 +54,7 @@
     return self;
 }
 
-- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY andDimensionZ:(long)dimZ
+- (instancetype)initWithDimensionX:(float)dimX andDimensionY:(float)dimY andDimensionZ:(float)dimZ
 {
     if(self = [self init])
     {
@@ -66,7 +66,7 @@
     return self;
 }
 
-- (void)setDimensionZ:(long)dimZ
+- (void)setDimensionZ:(float)dimZ
 {
     if(self.dimensions)
     {
@@ -126,11 +126,11 @@
 {
     if(self.dimensions == 2)
     {
-        return [NSString stringWithFormat:@"%lu %lu", dimensionX, dimensionY];
+        return [NSString stringWithFormat:@"%f %f", dimensionX, dimensionY];
     }
     else
     {
-        return [NSString stringWithFormat:@"%lu %lu %lu", dimensionX, dimensionY, dimensionZ];
+        return [NSString stringWithFormat:@"%f %f %f", dimensionX, dimensionY, dimensionZ];
     }
 }
 
