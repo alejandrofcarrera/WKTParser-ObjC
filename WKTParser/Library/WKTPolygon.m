@@ -254,7 +254,7 @@
                 CLLocationCoordinate2D intPolygon[pointsIntPolygon.count];
                 for(int j = 0; j < pointsIntPolygon.count; j++)
                 {
-                    intPolygon[i] = [(WKTPoint *)pointsIntPolygon[i] toMapCoordinate];
+                    intPolygon[j] = [(WKTPoint *)pointsIntPolygon[j] toMapCoordinate];
                 }
                 MKPolygon *pInterior = [MKPolygon polygonWithCoordinates:intPolygon count:pointsIntPolygon.count];
                 [intPolygons addObject:pInterior];
