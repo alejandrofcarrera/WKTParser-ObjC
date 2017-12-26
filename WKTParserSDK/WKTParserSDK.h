@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WKTParserSDK/WKTParser.h"
 
 //! Project version number for WKTParserSDK.
 FOUNDATION_EXPORT double WKTParserSDKVersionNumber;
