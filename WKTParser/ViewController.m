@@ -39,6 +39,7 @@
     if (self) {
         [self.view setBackgroundColor:[UIColor whiteColor]];
         map = [[MKMapView alloc] initWithFrame:self.view.frame];
+        map.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.833333, -98.583333), MKCoordinateSpanMake(70, 50));
         map.delegate = self;
         [self.view addSubview:map];
     }
@@ -49,7 +50,7 @@
 {
     [super viewDidLoad];
     UIBarButtonItem *myNavBtn = [[UIBarButtonItem alloc] initWithTitle:
-         @"Unit Tests" style:UIBarButtonItemStyleBordered target:
+         @"Unit Tests" style:UIBarButtonItemStylePlain target:
          self action:@selector(myButtonClicked:)];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
     [self.navigationItem setRightBarButtonItem:myNavBtn];
@@ -314,36 +315,5 @@
     }
     return nil;
 }
-
-- (MKOverlayView *)mapView:(MKMapView *)map viewForOverlay:(id <MKOverlay>)ovl {
-    if([ovl isKindOfClass:[MKPolyline class]])
-    {
-        MKPolylineView *p = [[MKPolylineView alloc] initWithPolyline: (MKPolyline *) ovl];
-        p.fillColor = [[UIColor redColor] colorWithAlphaComponent:1.0];
-        p.strokeColor = [[UIColor blackColor] colorWithAlphaComponent:1.0];
-        p.lineWidth = 2.5f;
-        return p;
-    }
-    else if([ovl isKindOfClass:[MKPolygon class]])
-    {
-        MKPolygonView *p = [[MKPolygonView alloc] initWithPolygon: (MKPolygon *) ovl];
-        p.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.25];
-        p.strokeColor = [[UIColor blackColor] colorWithAlphaComponent:0.25];
-        p.lineWidth = 2.5f;
-        return p;
-    }
-    return nil;
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

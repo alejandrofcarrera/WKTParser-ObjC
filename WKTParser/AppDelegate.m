@@ -31,10 +31,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    if([UIDevice currentDevice].systemVersion.floatValue < 7.0)
-    {
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
-    }
     self.vc = [[ViewController alloc] initWithNibName:nil bundle:nil];
     self.nvc = [[UINavigationController alloc] initWithRootViewController:self.vc];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
