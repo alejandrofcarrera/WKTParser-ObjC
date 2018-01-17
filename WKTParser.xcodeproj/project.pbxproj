@@ -21,6 +21,29 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		559D428E1FE81AAC00B83B29 /* WKTParserSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 559D428C1FE81AAC00B83B29 /* WKTParserSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559D42911FE81AAC00B83B29 /* WKTParserSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559D428A1FE81AAB00B83B29 /* WKTParserSDK.framework */; };
+		559D42921FE81AAC00B83B29 /* WKTParserSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 559D428A1FE81AAB00B83B29 /* WKTParserSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		559D42971FE81AE200B83B29 /* WKTParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70CD1993724F0027DE51 /* WKTParser.m */; };
+		559D42981FE81AE200B83B29 /* WKTString.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70CF1993724F0027DE51 /* WKTString.m */; };
+		559D42991FE81AEF00B83B29 /* WKTGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70D3199372700027DE51 /* WKTGeometry.m */; };
+		559D429A1FE81AEF00B83B29 /* WKTLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70D5199372700027DE51 /* WKTLine.m */; };
+		559D429B1FE81AEF00B83B29 /* WKTLineM.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70D7199372700027DE51 /* WKTLineM.m */; };
+		559D429C1FE81AEF00B83B29 /* WKTPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70D9199372700027DE51 /* WKTPoint.m */; };
+		559D429D1FE81AEF00B83B29 /* WKTPointM.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70DB199372700027DE51 /* WKTPointM.m */; };
+		559D429E1FE81AEF00B83B29 /* WKTPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70DD199372700027DE51 /* WKTPolygon.m */; };
+		559D429F1FE81AEF00B83B29 /* WKTPolygonM.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C70DF199372700027DE51 /* WKTPolygonM.m */; };
+		559D42A01FE81AEF00B83B29 /* WKTGeometryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E8364E19B4C04A00170362 /* WKTGeometryCollection.m */; };
+		559D42A11FE81B1100B83B29 /* WKTParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A19C70CC1993724F0027DE51 /* WKTParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559D42A21FE81B1100B83B29 /* WKTString.h in Headers */ = {isa = PBXBuildFile; fileRef = A19C70CE1993724F0027DE51 /* WKTString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559D42A31FE81B1100B83B29 /* WKTGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = A19C70D2199372700027DE51 /* WKTGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559D42A41FE81B1100B83B29 /* WKTLine.h in Headers */ = {isa = PBXBuildFile; fileRef = A19C70D4199372700027DE51 /* WKTLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559D42A51FE81B1100B83B29 /* WKTLineM.h in Headers */ = {isa = PBXBuildFile; fileRef = A19C70D6199372700027DE51 /* WKTLineM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559D42A61FE81B1100B83B29 /* WKTPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = A19C70D8199372700027DE51 /* WKTPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559D42A71FE81B1100B83B29 /* WKTPointM.h in Headers */ = {isa = PBXBuildFile; fileRef = A19C70DA199372700027DE51 /* WKTPointM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559D42A81FE81B1100B83B29 /* WKTPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = A19C70DC199372700027DE51 /* WKTPolygon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559D42A91FE81B1100B83B29 /* WKTPolygonM.h in Headers */ = {isa = PBXBuildFile; fileRef = A19C70DE199372700027DE51 /* WKTPolygonM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		559D42AA1FE81B1100B83B29 /* WKTGeometryCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E8364D19B4C04A00170362 /* WKTGeometryCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A11B5E3C19AD0CD300083C65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11B5E3B19AD0CD300083C65 /* ViewController.m */; };
 		A11C27DD1997DF5900261C41 /* WKTLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A11C27DC1997DF5900261C41 /* WKTLineTest.m */; };
 		A11C27DF1997F5DF00261C41 /* WKTPolygonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A11C27DE1997F5DF00261C41 /* WKTPolygonTest.m */; };
@@ -53,6 +76,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		559D428F1FE81AAC00B83B29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1F323DD198D44D200D3FF4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 559D42891FE81AAB00B83B29;
+			remoteInfo = WKTParserSDK;
+		};
 		A1F32405198D44D200D3FF4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A1F323DD198D44D200D3FF4A /* Project object */;
@@ -62,7 +92,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		559D42961FE81AAC00B83B29 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				559D42921FE81AAC00B83B29 /* WKTParserSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		559D428A1FE81AAB00B83B29 /* WKTParserSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WKTParserSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		559D428C1FE81AAC00B83B29 /* WKTParserSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKTParserSDK.h; sourceTree = "<group>"; };
+		559D428D1FE81AAC00B83B29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A11B5E3A19AD0CD300083C65 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A11B5E3B19AD0CD300083C65 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A11C27DC1997DF5900261C41 /* WKTLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTLineTest.m; sourceTree = "<group>"; };
@@ -110,11 +157,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		559D42861FE81AAB00B83B29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1F323E2198D44D200D3FF4A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A11C27E11997FE2600261C41 /* MapKit.framework in Frameworks */,
+				559D42911FE81AAC00B83B29 /* WKTParserSDK.framework in Frameworks */,
 				A1F323EB198D44D200D3FF4A /* CoreGraphics.framework in Frameworks */,
 				A1F323ED198D44D200D3FF4A /* UIKit.framework in Frameworks */,
 				A1F323E9198D44D200D3FF4A /* Foundation.framework in Frameworks */,
@@ -134,6 +189,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		559D428B1FE81AAC00B83B29 /* WKTParserSDK */ = {
+			isa = PBXGroup;
+			children = (
+				559D428C1FE81AAC00B83B29 /* WKTParserSDK.h */,
+				559D428D1FE81AAC00B83B29 /* Info.plist */,
+			);
+			path = WKTParserSDK;
+			sourceTree = "<group>";
+		};
 		A12FEA5F198F7BC1009B8C6D /* Library Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +237,7 @@
 			children = (
 				A1F323EE198D44D200D3FF4A /* WKTParser */,
 				A1F32407198D44D200D3FF4A /* WKTParserTests */,
+				559D428B1FE81AAC00B83B29 /* WKTParserSDK */,
 				A1F323E7198D44D200D3FF4A /* Frameworks */,
 				A1F323E6198D44D200D3FF4A /* Products */,
 			);
@@ -183,6 +248,7 @@
 			children = (
 				A1F323E5198D44D200D3FF4A /* WKTParser.app */,
 				A1F32400198D44D200D3FF4A /* WKTParserTests.xctest */,
+				559D428A1FE81AAB00B83B29 /* WKTParserSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,7 +316,46 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		559D42871FE81AAB00B83B29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				559D428E1FE81AAC00B83B29 /* WKTParserSDK.h in Headers */,
+				559D42A11FE81B1100B83B29 /* WKTParser.h in Headers */,
+				559D42A21FE81B1100B83B29 /* WKTString.h in Headers */,
+				559D42A31FE81B1100B83B29 /* WKTGeometry.h in Headers */,
+				559D42A41FE81B1100B83B29 /* WKTLine.h in Headers */,
+				559D42A51FE81B1100B83B29 /* WKTLineM.h in Headers */,
+				559D42A61FE81B1100B83B29 /* WKTPoint.h in Headers */,
+				559D42A71FE81B1100B83B29 /* WKTPointM.h in Headers */,
+				559D42A81FE81B1100B83B29 /* WKTPolygon.h in Headers */,
+				559D42A91FE81B1100B83B29 /* WKTPolygonM.h in Headers */,
+				559D42AA1FE81B1100B83B29 /* WKTGeometryCollection.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		559D42891FE81AAB00B83B29 /* WKTParserSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 559D42951FE81AAC00B83B29 /* Build configuration list for PBXNativeTarget "WKTParserSDK" */;
+			buildPhases = (
+				559D42851FE81AAB00B83B29 /* Sources */,
+				559D42861FE81AAB00B83B29 /* Frameworks */,
+				559D42871FE81AAB00B83B29 /* Headers */,
+				559D42881FE81AAB00B83B29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WKTParserSDK;
+			productName = WKTParserSDK;
+			productReference = 559D428A1FE81AAB00B83B29 /* WKTParserSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		A1F323E4198D44D200D3FF4A /* WKTParser */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1F32411198D44D200D3FF4A /* Build configuration list for PBXNativeTarget "WKTParser" */;
@@ -258,10 +363,12 @@
 				A1F323E1198D44D200D3FF4A /* Sources */,
 				A1F323E2198D44D200D3FF4A /* Frameworks */,
 				A1F323E3198D44D200D3FF4A /* Resources */,
+				559D42961FE81AAC00B83B29 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				559D42901FE81AAC00B83B29 /* PBXTargetDependency */,
 			);
 			name = WKTParser;
 			productName = WKTParser;
@@ -295,6 +402,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Alejandro F. Carrera";
 				TargetAttributes = {
+					559D42891FE81AAB00B83B29 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 					A1C292C01A53082600272769 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -325,11 +436,19 @@
 				A1F323E4198D44D200D3FF4A /* WKTParser */,
 				A1F323FF198D44D200D3FF4A /* WKTParserTests */,
 				A1C292C01A53082600272769 /* Documentation */,
+				559D42891FE81AAB00B83B29 /* WKTParserSDK */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		559D42881FE81AAB00B83B29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1F323E3198D44D200D3FF4A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +486,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		559D42851FE81AAB00B83B29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				559D42991FE81AEF00B83B29 /* WKTGeometry.m in Sources */,
+				559D429A1FE81AEF00B83B29 /* WKTLine.m in Sources */,
+				559D429B1FE81AEF00B83B29 /* WKTLineM.m in Sources */,
+				559D429C1FE81AEF00B83B29 /* WKTPoint.m in Sources */,
+				559D429D1FE81AEF00B83B29 /* WKTPointM.m in Sources */,
+				559D429E1FE81AEF00B83B29 /* WKTPolygon.m in Sources */,
+				559D429F1FE81AEF00B83B29 /* WKTPolygonM.m in Sources */,
+				559D42A01FE81AEF00B83B29 /* WKTGeometryCollection.m in Sources */,
+				559D42971FE81AE200B83B29 /* WKTParser.m in Sources */,
+				559D42981FE81AE200B83B29 /* WKTString.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1F323E1198D44D200D3FF4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,6 +538,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		559D42901FE81AAC00B83B29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 559D42891FE81AAB00B83B29 /* WKTParserSDK */;
+			targetProxy = 559D428F1FE81AAC00B83B29 /* PBXContainerItemProxy */;
+		};
 		A1F32406198D44D200D3FF4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A1F323E4198D44D200D3FF4A /* WKTParser */;
@@ -429,6 +570,93 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		559D42931FE81AAC00B83B29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = WKTParserSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BeghouConsulting.WKTParserSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		559D42941FE81AAC00B83B29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = WKTParserSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BeghouConsulting.WKTParserSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A1C292C21A53082600272769 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -549,6 +777,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WKTParser/WKTParser-Prefix.pch";
 				INFOPLIST_FILE = "WKTParser/WKTParser-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.afc.${PRODUCT_NAME:rfc1034identifier}";
@@ -570,6 +799,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WKTParser/WKTParser-Prefix.pch";
 				INFOPLIST_FILE = "WKTParser/WKTParser-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.afc.${PRODUCT_NAME:rfc1034identifier}";
@@ -627,6 +857,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		559D42951FE81AAC00B83B29 /* Build configuration list for PBXNativeTarget "WKTParserSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				559D42931FE81AAC00B83B29 /* Debug */,
+				559D42941FE81AAC00B83B29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A1C292C11A53082600272769 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
