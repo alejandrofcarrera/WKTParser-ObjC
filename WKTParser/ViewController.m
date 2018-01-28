@@ -50,17 +50,17 @@
 {
     [super viewDidLoad];
     UIBarButtonItem *myNavBtn = [[UIBarButtonItem alloc] initWithTitle:
-         @"Unit Tests" style:UIBarButtonItemStylePlain target:
-         self action:@selector(myButtonClicked:)];
+        @"Unit Tests" style:UIBarButtonItemStylePlain target:
+        self action:@selector(myButtonClicked:)];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
     [self.navigationItem setRightBarButtonItem:myNavBtn];
 }
 
 -(void)myButtonClicked:(id)sender{
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Choose option"
-                 message:@"" delegate:self cancelButtonTitle:@"Cancel"
-                 otherButtonTitles:@"Point", @"MultiPoint", @"LineString",
-                 @"MultiLineString", @"Polygon", @"MultiPolygon", nil];
+        message:@"" delegate:self cancelButtonTitle:@"Cancel"
+        otherButtonTitles:@"Point", @"MultiPoint", @"LineString",
+        @"MultiLineString", @"Polygon", @"MultiPolygon", nil];
     [alertView show];
 }
 
@@ -132,7 +132,7 @@
     NSLog(@" - Data: MULTIPOINT (-86.300942 32.377447, -134.410467 58.302197, -112.097094 33.448097)");
     NSLog(@" - Real Information: Alabama, Alaska and Arizona");
     WKTPointM *p = (WKTPointM *)[WKTParser parseGeometry:@"MULTIPOINT (-86.300942 32.377447, \
-          -134.410467 58.302197, -112.097094 33.448097)"];
+        -134.410467 58.302197, -112.097094 33.448097)"];
     NSLog(@" - Data WKTGeometry");
     NSLog(@"   * Class: %@", [p class]);
     NSLog(@"   * Dimension: %d", p.dimensions);
@@ -157,7 +157,7 @@
     NSLog(@" - Data: LINESTRING (-86.300942 32.377447, -134.410467 58.302197, -112.097094 33.448097)");
     NSLog(@" - Real Information: Alabama, Alaska and Arizona");
     WKTLine *p = (WKTLine *)[WKTParser parseGeometry:@"LINESTRING (-86.300942 32.377447, \
-          -134.410467 58.302197, -112.097094 33.448097)"];
+        -134.410467 58.302197, -112.097094 33.448097)"];
     NSLog(@" - Data WKTGeometry");
     NSLog(@"   * Class: %@", [p class]);
     NSLog(@"   * Dimension: %d", p.dimensions);
@@ -187,12 +187,12 @@
 - (void)doTestMULTILINESTRING
 {
     NSArray *names = @[@"Alabama State Capitol", @"Alaska State Capitol", @"Arizona State Capitol",\
-                       @"Arkansas State Capitol", @"California State Capitol", @"Colorado State Capitol"];
+        @"Arkansas State Capitol", @"California State Capitol", @"Colorado State Capitol"];
     NSLog(@" - Data: MULTILINESTRING ((-86.300942 32.377447, -134.410467 58.302197, -112.097094 33.448097),\
-          (-92.288761 34.746758, -121.493411 38.576572, -104.984897 39.739094))");
+        (-92.288761 34.746758, -121.493411 38.576572, -104.984897 39.739094))");
     NSLog(@" - Real Information: Alabama, Alaska, Arizona, Arkansas, California and Colorado");
     WKTLineM *p = (WKTLineM *)[WKTParser parseGeometry:@"MULTILINESTRING ((-86.300942 32.377447, -134.410467 58.302197,\
-          -112.097094 33.448097), (-92.288761 34.746758, -121.493411 38.576572, -104.984897 39.739094))"];
+        -112.097094 33.448097), (-92.288761 34.746758, -121.493411 38.576572, -104.984897 39.739094))"];
     NSLog(@" - Data WKTGeometry");
     NSLog(@"   * Class: %@", [p class]);
     NSLog(@"   * Dimension: %d", p.dimensions);
@@ -287,7 +287,7 @@
     if (pinView == nil)
     {
         pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
-                  reuseIdentifier:defaultPin];
+            reuseIdentifier:defaultPin];
         pinView.pinColor = MKPinAnnotationColorRed;
     }
     pinView.enabled = YES;

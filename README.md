@@ -1,7 +1,7 @@
 **WKTParser**
 **Well-Known-Text Parser for Objective-C**
 
-[![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)]() [![XCode](https://img.shields.io/badge/xcode-7.0-lightgrey.svg)]() [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)]() [![Build Status](https://travis-ci.org/alejandrofcarrera/WKTParser.svg?branch=master)](https://travis-ci.org/alejandrofcarrera/WKTParser) 
+[![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)]() [![XCode](https://img.shields.io/badge/xcode-7.0-lightgrey.svg)]() [![Build Status](https://travis-ci.org/alejandrofcarrera/WKTParser-ObjC.svg?branch=master)](https://travis-ci.org/alejandrofcarrera/WKTParser-ObjC) 
 
 WKTParser Library have any conversions, parsers and formats. This library allow you parser three main types of WKT data: points, lines and polygons (single, multi, 2D and 3D).
 Also you can convert WKT format to MK format (2D) like MKMapPoint, Polyline, Polygon or Annotation.
@@ -15,7 +15,7 @@ Also you can convert WKT format to MK format (2D) like MKMapPoint, Polyline, Pol
 
 **Via xCode Project**
 
-Open WKT Parser Project, Drag & Drop Library and Library Support group over your Project and reference at your header WKTParser.h
+Open WKTParser.xcodeproj, Drag & Drop Library and Library Support group over your Project and reference at your header WKTParser.h
 
 **Via Source Code**
 
@@ -39,13 +39,7 @@ Run via the Product menu > Test or CMD + U
 
 **Credits**
 
-Alejandro Fdez. Carrera
-
-**Apps using this library**
-
-Ontology Engineering Group (OEG) [Map4RDF Lite](https://itunes.apple.com/es/app/map4rdf-lite/id828604407?mt=8)
-
-Center Open Middleware (COM) [YaaST Map (Appcelerator Module)](https://github.com/centeropenmiddleware/YaaST-Map)
+Alejandro F. Carrera
 
 **License**
 

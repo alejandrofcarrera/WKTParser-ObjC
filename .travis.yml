@@ -4,4 +4,5 @@ language: objective-c
 notifications:
   email: false
 xcode_project: WKTParser.xcodeproj
-xcode_scheme: WKTParserTests 
+xcode_scheme: WKTParserTests
+script: xcodebuild clean && xcodebuild test -project WKTParser.xcodeproj -scheme WKTParserTests -destination 'platform=iOS Simulator,name=iPhone 5s' CODE_SIGNING_REQUIRED=NO
