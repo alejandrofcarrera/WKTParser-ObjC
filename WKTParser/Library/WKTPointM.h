@@ -58,8 +58,7 @@
  
 	NSString *wktString = [mPoint toWKT];
  	NSLog(@"WKT: %@", wktString);
- 
-	// WKT: MULTIPOINT (5 10, 5 10)
+    > WKT: MULTIPOINT (5 10, 5 10)
  
  */
 @interface WKTPointM : WKTGeometry {

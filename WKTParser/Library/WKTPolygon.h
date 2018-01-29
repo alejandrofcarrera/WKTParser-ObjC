@@ -45,6 +45,7 @@
     WKTPoint *p3 = [[WKTPoint alloc] initWithDimensionX:10.0 andDimensionY:15.0];
     WKTPoint *p4 = [[WKTPoint alloc] initWithDimensionX:5.0 andDimensionY:15.0];
  	WKTPointM *points = [[WKTPointM alloc] initWithPoints:@[p1, p2, p3, p4]];
+ 
  	WKTPolygon *p = [[WKTPolygon alloc] initWithMultiPoints:@[points]];
  
  Example of MapKit Polygon creation:
@@ -57,8 +58,7 @@
  
     NSString *wktString = [p toWKT];
 	NSLog(@"WKT: %@", wktString);
- 
- 	// WKT: POLYGON ((5.000000 10.000000, 10.000000 10.000000, 10.000000 15.000000, 5.000000 15.000000))
+ 	> WKT: POLYGON ((5.000000 10.000000, 10.000000 10.000000, 10.000000 15.000000, 5.000000 15.000000))
  
  */
 @interface WKTPolygon : WKTGeometry {

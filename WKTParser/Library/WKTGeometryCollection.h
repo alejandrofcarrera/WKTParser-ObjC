@@ -44,20 +44,19 @@
 	WKTPoint *p4 = [[WKTPoint alloc] initWithDimensionX:5.0 andDimensionY:15.0];
 	WKTPointM *pointsP1 = [[WKTPointM alloc] initWithPoints:@[p1, p2, p3, p4]];
 	WKTPolygon *polygon1 = [[WKTPolygon alloc] initWithMultiPoints:@[pointsP1]];
- 
-	WKTPoint *p5 = [[WKTPoint alloc] initWithDimensionX:10.0 andDimensionY:10.0];
- 
+
 	WKTGeometryCollection *gC = [[WKTGeometryCollection alloc] init];
  	[gC addGeometry:polygon1];
+ 
+    WKTPoint *p5 = [[WKTPoint alloc] initWithDimensionX:10.0 andDimensionY:10.0];
  	[gC addGeometry:p5];
  
  Example of WKT representation:
  
  	NSString *wktString = [gC toWKT];
  	NSLog(@"WKT: %@", wktString);
- 
- 	// WKT: GEOMETRYCOLLECTION(POLYGON ((5.000000 10.000000, 10.000000 10.000000, 10.000000
- 	// 15.000000, 5.000000 15.000000)), POINT (10.000000 10.000000))
+    > WKT: GEOMETRYCOLLECTION(POLYGON ((5.000000 10.000000, 10.000000 10.000000, 10.000000
+ 	     15.000000, 5.000000 15.000000)), POINT (10.000000 10.000000))
  
  */
 @interface WKTGeometryCollection : WKTGeometry {

@@ -17,7 +17,7 @@
 			<Abstract type="html">Dimension X property same as Longitude</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) long dimensionX</Declaration>
+			<Declaration>@property (nonatomic, readwrite) float dimensionX</Declaration>
 			
 			
 			<Anchor>//api/name/dimensionX</Anchor>
@@ -29,7 +29,7 @@
 			<Abstract type="html">Dimension X property same as Longitude</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) long dimensionX</Declaration>
+			<Declaration>@property (nonatomic, readwrite) float dimensionX</Declaration>
 			
 			
 			<Anchor>//api/name/dimensionX</Anchor>
@@ -41,7 +41,7 @@
 			<Abstract type="html">Dimension X property same as Longitude</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) long dimensionX</Declaration>
+			<Declaration>@property (nonatomic, readwrite) float dimensionX</Declaration>
 			
 			
 			<Anchor>//api/name/dimensionX</Anchor>
@@ -53,7 +53,7 @@
 			<Abstract type="html">Dimension Y property same as Latitude</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) long dimensionY</Declaration>
+			<Declaration>@property (nonatomic, readwrite) float dimensionY</Declaration>
 			
 			
 			<Anchor>//api/name/dimensionY</Anchor>
@@ -65,7 +65,7 @@
 			<Abstract type="html">Dimension Y property same as Latitude</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) long dimensionY</Declaration>
+			<Declaration>@property (nonatomic, readwrite) float dimensionY</Declaration>
 			
 			
 			<Anchor>//api/name/dimensionY</Anchor>
@@ -77,7 +77,7 @@
 			<Abstract type="html">Dimension Y property same as Latitude</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) long dimensionY</Declaration>
+			<Declaration>@property (nonatomic, readwrite) float dimensionY</Declaration>
 			
 			
 			<Anchor>//api/name/dimensionY</Anchor>
@@ -89,7 +89,7 @@
 			<Abstract type="html">Dimension Z property same as Altitude</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) long dimensionZ</Declaration>
+			<Declaration>@property (nonatomic, readwrite) float dimensionZ</Declaration>
 			
 			
 			<Anchor>//api/name/dimensionZ</Anchor>
@@ -101,7 +101,7 @@
 			<Abstract type="html">Dimension Z property same as Altitude</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) long dimensionZ</Declaration>
+			<Declaration>@property (nonatomic, readwrite) float dimensionZ</Declaration>
 			
 			
 			<Anchor>//api/name/dimensionZ</Anchor>
@@ -113,7 +113,7 @@
 			<Abstract type="html">Dimension Z property same as Altitude</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readwrite) long dimensionZ</Declaration>
+			<Declaration>@property (nonatomic, readwrite) float dimensionZ</Declaration>
 			
 			
 			<Anchor>//api/name/dimensionZ</Anchor>
@@ -137,14 +137,14 @@
 			<Abstract type="html">Complex Constructor that set default values and dimensions to new instance.</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY</Declaration>
+			<Declaration>- (instancetype)initWithDimensionX:(float)dimX andDimensionY:(float)dimY</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>dimX</Name>
-					<Abstract type="html">longitude value (long format)</Abstract>
+					<Abstract type="html">longitude value (float format)</Abstract>
 				</Parameter><Parameter>
 					<Name>dimY</Name>
-					<Abstract type="html">latitude value (long format)</Abstract>
+					<Abstract type="html">latitude value (float format)</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">WKTPoint instance</Abstract></ReturnValue>
@@ -157,17 +157,17 @@
 			<Abstract type="html">Complex Constructor that set default values and dimensions to new instance.</Abstract>
 			<DeclaredIn>WKTPoint.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithDimensionX:(long)dimX andDimensionY:(long)dimY andDimensionZ:(long)dimZ</Declaration>
+			<Declaration>- (instancetype)initWithDimensionX:(float)dimX andDimensionY:(float)dimY andDimensionZ:(float)dimZ</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>dimX</Name>
-					<Abstract type="html">longitude value (long format)</Abstract>
+					<Abstract type="html">longitude value (float format)</Abstract>
 				</Parameter><Parameter>
 					<Name>dimY</Name>
-					<Abstract type="html">latitude value (long format)</Abstract>
+					<Abstract type="html">latitude value (float format)</Abstract>
 				</Parameter><Parameter>
 					<Name>dimZ</Name>
-					<Abstract type="html">altitude value (long format)</Abstract>
+					<Abstract type="html">altitude value (float format)</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">WKTPoint instance</Abstract></ReturnValue>

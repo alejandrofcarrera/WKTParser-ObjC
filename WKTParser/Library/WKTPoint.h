@@ -41,7 +41,7 @@
  Example of use:
  
 	WKTPoint *p1 = [[WKTPoint alloc] initWithDimensionX:5.0 andDimensionY:10.0];
-	
+ 
 	WKTPoint *p2 = [[WKTPoint alloc] initWithDimensionX:10.0 andDimensionY:10.0 andDimensionZ:5.0];
  
  Example of MapKit Annotation creation:
@@ -61,12 +61,11 @@
  	[a1 setSubtitle: @"Annotation subtitle"];
 	[map addAnnotation: a1];
 
- Example of Location creation:
+ Example of Distance between Locations:
  
 	CLLocation *loc1 = [p1 toLocation];
  	CLLocation *loc2 = [p2 toLocation];
  
- 	// Distance between two locations
  	CLLocationDistance distance = [loc1 distanceFromLocation:loc2];
  
  Example of Coordinate creation:
@@ -83,8 +82,7 @@
  
 	NSString *wktString = [p1 toWKT];
  	NSLog(@"WKT: %@", wktString);
- 
-	// WKT: POINT (5.000000 10.000000)
+	> WKT: POINT (5.000000 10.000000)
  
  */
 @interface WKTPoint : WKTGeometry

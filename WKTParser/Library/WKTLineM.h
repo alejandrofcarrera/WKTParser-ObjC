@@ -65,8 +65,7 @@
  
  	NSString *wktString = [mLine toWKT];
  	NSLog(@"WKT: %@", wktString);
- 
-	// WKT: MULTILINESTRING ((5 10, 10 10), (5 10, 10 10))
+	> WKT: MULTILINESTRING ((5 10, 10 10), (5 10, 10 10))
  
  */
 @interface WKTLineM : WKTGeometry {

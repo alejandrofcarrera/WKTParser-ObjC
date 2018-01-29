@@ -1,3 +1,4 @@
 build
 .gitignore
 ./WKTParser.*
+.DS_Store

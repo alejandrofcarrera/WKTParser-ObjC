@@ -57,8 +57,7 @@ Example of WKT representation:
  
  	NSString *wktString = [mLine toWKT];
  	NSLog(@"WKT: %@", wktString);
- 
-	// WKT: LINESTRING (5 10, 10 10)
+	> WKT: LINESTRING (5 10, 10 10)
  
  */
 @interface WKTLine : WKTGeometry {
